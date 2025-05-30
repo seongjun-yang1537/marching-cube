@@ -52,8 +52,18 @@ namespace MCube
             return magnitude > LIMIT_SIZE;
         }
 
+        public void ClearField()
+        {
+            foreach (Vector3Int i in Index())
+            {
+                this[i] = 0;
+            }
+        }
+
         public void GenerateRandom()
         {
+            ClearField();
+
             uint seed = (uint)(DateTime.Now.Ticks & 0xFFFFFFFF);
             MT19937 mt = new MT19937(seed);
 
@@ -61,6 +71,26 @@ namespace MCube
             {
                 this[i] = mt.NextFloat();
             }
+        }
+
+        public void GeneratePerlinNoise(float scale = 0.1f)
+        {
+            ClearField();
+
+            uint seed = (uint)(DateTime.Now.Ticks & 0xFFFFFFFF);
+            MT19937 mt = new MT19937(seed);
+            float seedX = mt.NextFloat();
+            float seedZ = mt.NextFloat();
+
+            for (int x = 0; x < size.x; x++)
+                for (int z = 0; z < size.z; z++)
+                {
+                    float yRatio = Mathf.PerlinNoise(x * scale + seedX, z * scale + seedZ);
+                    for (int y = 0; y < size.y * yRatio; y++)
+                    {
+                        this[new Vector3Int(x, y, z)] = 1;
+                    }
+                }
         }
 
         public IEnumerable<Vector3Int> Index()

@@ -46,11 +46,20 @@ namespace MCube
                 }
             }
 
+            Inspector_Generator();
+        }
+
+        private void Inspector_Generator()
+        {
             { EditorGUILayout.BeginVertical("helpbox"); }
             {
                 if (GUILayout.Button("Generate Random"))
                 {
                     script.GenerateRandom();
+                }
+                if (GUILayout.Button("Generate Perlin Noise"))
+                {
+                    script.GeneratePerlinNoise();
                 }
             }
             { EditorGUILayout.EndVertical(); }

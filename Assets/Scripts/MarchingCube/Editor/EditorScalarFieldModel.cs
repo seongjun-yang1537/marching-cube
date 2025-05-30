@@ -23,6 +23,12 @@ namespace MCube
 
             base.OnInspectorGUI();
             Inspector_ScalarFieldScriptableObject();
+            Inspector_Option();
+
+            if (GUILayout.Button("Marching Cube"))
+            {
+                script.GenerateMarchingCube();
+            }
 
             serializedObject.ApplyModifiedProperties();
         }
@@ -32,7 +38,6 @@ namespace MCube
         {
             if (!script.scalarField)
                 return;
-
 
             { EditorGUILayout.BeginVertical("helpbox"); }
             {
@@ -60,6 +65,16 @@ namespace MCube
             }
 
             { EditorGUILayout.EndFoldoutHeaderGroup(); }
+        }
+
+        private void Inspector_Option()
+        {
+            { EditorGUILayout.BeginVertical("box"); }
+            {
+                script.bVisibleMarchingCubeGizmos = EditorGUILayout.Toggle(script.bVisibleMarchingCubeGizmos, "Marching Cube Gizmos");
+                script.bVisibleScalarField = EditorGUILayout.Toggle(script.bVisibleScalarField, "Scalar Field");
+            }
+            { EditorGUILayout.EndVertical(); }
         }
     }
 
