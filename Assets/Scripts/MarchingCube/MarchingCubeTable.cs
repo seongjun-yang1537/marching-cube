@@ -17,6 +17,9 @@ namespace MCube
                 new Vector3Int(1, 1, 1),
             };
 
+        public const int VERTEX_COUNT = 8;
+        public const int EDGE_COUNT = 12;
+
         //
         // Lookup Tables for Marching Cubes
         //
@@ -57,12 +60,12 @@ namespace MCube
         public static readonly int[,] EdgeVertexIndices = new int[12, 2]{
             {0, 1},
             {1, 3},
-            { 3, 2},
-            { 2, 0},
+            { 2,3},
+            { 0,2},
             { 4, 5},
             { 5, 7},
-            { 7, 6},
-            { 6, 4},
+            { 6,7},
+            { 4,6},
             { 0, 4},
             { 1, 5},
             { 3, 7},

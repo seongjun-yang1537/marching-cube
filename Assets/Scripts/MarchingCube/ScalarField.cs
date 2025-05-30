@@ -93,6 +93,24 @@ namespace MCube
                 }
         }
 
+        public int GetIndex(Vector3Int pos)
+        {
+            return GetIndex(pos.x, pos.y, pos.z);
+        }
+        public int GetIndex(int x, int y, int z)
+        {
+            return GetIndex(x, y, z, size);
+        }
+        public Vector3Int SpreadIndex(int idx)
+        {
+            int xy = size.x * size.y;
+            int z = idx / xy;
+            int rem = idx % xy;
+            int y = rem / size.x;
+            int x = rem % size.x;
+            return new Vector3Int(x, y, z);
+        }
+
         public IEnumerable<Vector3Int> Index()
         {
             for (int x = 0; x < size.x; x++)
@@ -116,6 +134,12 @@ namespace MCube
         {
             get => this[coord.x, coord.y, coord.z];
             set => this[coord.x, coord.y, coord.z] = value;
+        }
+
+        public float this[int idx]
+        {
+            get => field[idx];
+            set => field[idx] = value;
         }
     }
 }
