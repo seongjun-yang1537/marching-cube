@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using Corelib.SUI;
 
 namespace MCube
 {
@@ -69,12 +70,25 @@ namespace MCube
 
         private void Inspector_Option()
         {
-            { EditorGUILayout.BeginVertical("box"); }
-            {
-                script.bVisibleMarchingCubeGizmos = EditorGUILayout.Toggle(script.bVisibleMarchingCubeGizmos, "Marching Cube Gizmos");
-                script.bVisibleScalarField = EditorGUILayout.Toggle(script.bVisibleScalarField, "Scalar Field");
-            }
-            { EditorGUILayout.EndVertical(); }
+            SEditorGUILayout.Vertical(
+                SEditorGUILayout.Label("[Option]")
+                + SEditorGUILayout.Horizontal(
+                    SEditorGUILayout.Toggle("Gizmos Marching Cube", script.bVisibleMarchingCubeGizmos)
+                        .OnValueChanged(value =>
+                        {
+                            script.bVisibleMarchingCubeGizmos = value;
+                            SceneView.RepaintAll();
+                        })
+                    + SEditorGUILayout.Toggle("Gizmos Scalar Field", script.bVisibleScalarField)
+                        .OnValueChanged(value =>
+                        {
+                            script.bVisibleScalarField = value;
+                            SceneView.RepaintAll();
+                        })
+                )
+            )
+            .Style("box")
+            .Render();
         }
     }
 

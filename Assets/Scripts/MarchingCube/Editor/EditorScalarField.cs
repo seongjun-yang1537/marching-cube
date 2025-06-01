@@ -55,11 +55,11 @@ namespace MCube
             {
                 if (GUILayout.Button("Generate Random"))
                 {
-                    script.GenerateRandom();
+                    ScalarFieldGenerator.Random(script);
                 }
                 if (GUILayout.Button("Generate Perlin Noise"))
                 {
-                    script.GeneratePerlinNoise();
+                    ScalarFieldGenerator.PerlinNoise(script);
                 }
             }
             { EditorGUILayout.EndVertical(); }

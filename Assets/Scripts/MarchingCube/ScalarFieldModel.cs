@@ -23,7 +23,9 @@ namespace MCube
         List<Vector3> marchingCubeTriangles;
         private Material _material;
 
+        [HideInInspector]
         public bool bVisibleScalarField = true;
+        [HideInInspector]
         public bool bVisibleMarchingCubeGizmos = true;
 
         private Material CreateMaterial()
@@ -287,7 +289,7 @@ namespace MCube
                 Vector3Int size = scalarField.size;
                 Gizmos.DrawWireCube(Vector3.zero + (size - Vector3.one) / 2, size - Vector3.one);
 
-                foreach (Vector3Int i in scalarField.Index())
+                foreach (Vector3Int i in scalarField.Indices)
                 {
                     float weight = scalarField[i];
                     if (weight < threshold)

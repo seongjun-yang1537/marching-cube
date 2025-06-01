@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using Corelib.Utils;
+using Sirenix.Utilities;
 using UnityEngine;
 
 namespace MCube
@@ -12,6 +14,8 @@ namespace MCube
         public Vector3Int size;
         public float[] field;
 
+        public IEnumerable<Vector3Int> Indices { get => CIterator.GetArray3D(size); }
+
         public void Resize(Vector3Int newSize)
         {
             if (IsLimitSize(newSize))
@@ -21,29 +25,15 @@ namespace MCube
             }
 
             float[] newField = new float[newSize.x * newSize.y * newSize.z];
-
             if (field != null)
             {
-                int minX = Mathf.Min(size.x, newSize.x);
-                int minY = Mathf.Min(size.y, newSize.y);
-                int minZ = Mathf.Min(size.z, newSize.z);
-
-                for (int x = 0; x < minX; x++)
-                {
-                    for (int y = 0; y < minY; y++)
-                    {
-                        for (int z = 0; z < minZ; z++)
-                        {
-                            int oldIndex = GetIndex(x, y, z, size);
-                            int newIndex = GetIndex(x, y, z, newSize);
-                            newField[newIndex] = field[oldIndex];
-                        }
-                    }
-                }
+                Vector3Int minSize = size.Min(newSize);
+                CIterator.GetArray3D(minSize)
+                    .ForEach(
+                        idx => newField[GetIndex(idx, newSize)] = field[GetIndex(idx, size)]
+                    );
             }
-
-            size = newSize;
-            field = newField;
+            (size, field) = (newSize, newField);
         }
 
         public bool IsLimitSize(Vector3Int newSize)
@@ -52,55 +42,11 @@ namespace MCube
             return magnitude > LIMIT_SIZE;
         }
 
-        public void ClearField()
-        {
-            foreach (Vector3Int i in Index())
-            {
-                this[i] = 0;
-            }
-        }
+        public void ClearField() => Indices.ForEach(idx => this[idx] = 0.0f);
 
-        public void GenerateRandom()
-        {
-            ClearField();
+        public int GetIndex(Vector3Int pos) => GetIndex(pos.x, pos.y, pos.z);
+        public int GetIndex(int x, int y, int z) => GetIndex(x, y, z, size);
 
-            uint seed = (uint)(DateTime.Now.Ticks & 0xFFFFFFFF);
-            MT19937 mt = new MT19937(seed);
-
-            foreach (Vector3Int i in Index())
-            {
-                this[i] = mt.NextFloat();
-            }
-        }
-
-        public void GeneratePerlinNoise(float scale = 0.1f)
-        {
-            ClearField();
-
-            uint seed = (uint)(DateTime.Now.Ticks & 0xFFFFFFFF);
-            MT19937 mt = new MT19937(seed);
-            float seedX = mt.NextFloat();
-            float seedZ = mt.NextFloat();
-
-            for (int x = 0; x < size.x; x++)
-                for (int z = 0; z < size.z; z++)
-                {
-                    float yRatio = Mathf.PerlinNoise(x * scale + seedX, z * scale + seedZ);
-                    for (int y = 0; y < size.y * yRatio; y++)
-                    {
-                        this[new Vector3Int(x, y, z)] = 1;
-                    }
-                }
-        }
-
-        public int GetIndex(Vector3Int pos)
-        {
-            return GetIndex(pos.x, pos.y, pos.z);
-        }
-        public int GetIndex(int x, int y, int z)
-        {
-            return GetIndex(x, y, z, size);
-        }
         public Vector3Int SpreadIndex(int idx)
         {
             int xy = size.x * size.y;
@@ -111,18 +57,10 @@ namespace MCube
             return new Vector3Int(x, y, z);
         }
 
-        public IEnumerable<Vector3Int> Index()
-        {
-            for (int x = 0; x < size.x; x++)
-                for (int y = 0; y < size.y; y++)
-                    for (int z = 0; z < size.z; z++)
-                        yield return new Vector3Int(x, y, z);
-        }
-
         private static int GetIndex(int x, int y, int z, Vector3Int size)
-        {
-            return x + size.x * (y + size.y * z);
-        }
+            => x + size.x * (y + size.y * z);
+        private static int GetIndex(Vector3Int idx, Vector3Int size)
+            => GetIndex(idx.x, idx.y, idx.z, size);
 
         public float this[int x, int y, int z]
         {
