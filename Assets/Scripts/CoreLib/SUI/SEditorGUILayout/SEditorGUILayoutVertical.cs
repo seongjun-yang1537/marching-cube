@@ -14,9 +14,15 @@ namespace Corelib.SUI
 
         }
 
-        public SEditorGUILayoutVertical(SUIElement content)
+        public SEditorGUILayoutVertical(string style)
+        {
+            this.style = style;
+        }
+
+        public SEditorGUILayoutVertical Content(SUIElement content = null)
         {
             this.content = content;
+            return this;
         }
 
         public SEditorGUILayoutVertical Style(string style)

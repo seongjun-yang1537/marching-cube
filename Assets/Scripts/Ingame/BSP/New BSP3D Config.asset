@@ -1,0 +1,2283 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96656a4db5db69e4aa9f5b742e4cdf77, type: 3}
+  m_Name: New BSP3D Config
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  root:
+    childs:
+    - childs:
+      - childs:
+        - childs:
+          - childs:
+            - childs: []
+              cube:
+                topLeft: {x: 0, y: 0, z: 0}
+                bottomRight: {x: 14, y: 16, z: 14}
+              separator:
+                topLeft: {x: 0, y: 0, z: 0}
+                bottomRight: {x: 0, y: 0, z: 0}
+              room:
+                topLeft: {x: 1, y: 3, z: 3}
+                bottomRight: {x: 11, y: 13, z: 13}
+                idx: 0
+              depth: 5
+            - childs: []
+              cube:
+                topLeft: {x: 0, y: 0, z: 14}
+                bottomRight: {x: 14, y: 16, z: 30}
+              separator:
+                topLeft: {x: 0, y: 0, z: 0}
+                bottomRight: {x: 0, y: 0, z: 0}
+              room:
+                topLeft: {x: 3, y: 2, z: 14}
+                bottomRight: {x: 6, y: 5, z: 17}
+                idx: 0
+              depth: 5
+            cube:
+              topLeft: {x: 0, y: 0, z: 0}
+              bottomRight: {x: 14, y: 16, z: 30}
+            separator:
+              topLeft: {x: 0, y: 0, z: 14}
+              bottomRight: {x: 14, y: 16, z: 14}
+            room:
+              topLeft: {x: 0, y: 0, z: 0}
+              bottomRight: {x: 0, y: 0, z: 0}
+              idx: 0
+            depth: 4
+          - childs:
+            - childs: []
+              cube:
+                topLeft: {x: 0, y: 0, z: 30}
+                bottomRight: {x: 14, y: 16, z: 46}
+              separator:
+                topLeft: {x: 0, y: 0, z: 0}
+                bottomRight: {x: 0, y: 0, z: 0}
+              room:
+                topLeft: {x: 4, y: 12, z: 32}
+                bottomRight: {x: 7, y: 15, z: 35}
+                idx: 0
+              depth: 5
+            - childs: []
+              cube:
+                topLeft: {x: 0, y: 0, z: 46}
+                bottomRight: {x: 14, y: 16, z: 64}
+              separator:
+                topLeft: {x: 0, y: 0, z: 0}
+                bottomRight: {x: 0, y: 0, z: 0}
+              room:
+                topLeft: {x: 4, y: 1, z: 49}
+                bottomRight: {x: 13, y: 11, z: 63}
+                idx: 0
+              depth: 5
+            cube:
+              topLeft: {x: 0, y: 0, z: 30}
+              bottomRight: {x: 14, y: 16, z: 64}
+            separator:
+              topLeft: {x: 0, y: 0, z: 46}
+              bottomRight: {x: 14, y: 16, z: 46}
+            room:
+              topLeft: {x: 0, y: 0, z: 0}
+              bottomRight: {x: 0, y: 0, z: 0}
+              idx: 0
+            depth: 4
+          cube:
+            topLeft: {x: 0, y: 0, z: 0}
+            bottomRight: {x: 14, y: 16, z: 64}
+          separator:
+            topLeft: {x: 0, y: 0, z: 30}
+            bottomRight: {x: 14, y: 16, z: 30}
+          room:
+            topLeft: {x: 0, y: 0, z: 0}
+            bottomRight: {x: 0, y: 0, z: 0}
+            idx: 0
+          depth: 3
+        - childs:
+          - childs:
+            - childs: []
+              cube:
+                topLeft: {x: 14, y: 0, z: 0}
+                bottomRight: {x: 25, y: 16, z: 17}
+              separator:
+                topLeft: {x: 0, y: 0, z: 0}
+                bottomRight: {x: 0, y: 0, z: 0}
+              room:
+                topLeft: {x: 0, y: 0, z: 0}
+                bottomRight: {x: 0, y: 0, z: 0}
+                idx: 0
+              depth: 5
+            - childs: []
+              cube:
+                topLeft: {x: 14, y: 0, z: 17}
+                bottomRight: {x: 25, y: 16, z: 31}
+              separator:
+                topLeft: {x: 0, y: 0, z: 0}
+                bottomRight: {x: 0, y: 0, z: 0}
+              room:
+                topLeft: {x: 0, y: 0, z: 0}
+                bottomRight: {x: 0, y: 0, z: 0}
+                idx: 0
+              depth: 5
+            cube:
+              topLeft: {x: 14, y: 0, z: 0}
+              bottomRight: {x: 25, y: 16, z: 31}
+            separator:
+              topLeft: {x: 14, y: 0, z: 17}
+              bottomRight: {x: 25, y: 16, z: 17}
+            room:
+              topLeft: {x: 0, y: 0, z: 0}
+              bottomRight: {x: 0, y: 0, z: 0}
+              idx: 0
+            depth: 4
+          - childs:
+            - childs: []
+              cube:
+                topLeft: {x: 14, y: 0, z: 31}
+                bottomRight: {x: 25, y: 16, z: 46}
+              separator:
+                topLeft: {x: 0, y: 0, z: 0}
+                bottomRight: {x: 0, y: 0, z: 0}
+              room:
+                topLeft: {x: 18, y: 2, z: 36}
+                bottomRight: {x: 21, y: 5, z: 39}
+                idx: 0
+              depth: 5
+            - childs: []
+              cube:
+                topLeft: {x: 14, y: 0, z: 46}
+                bottomRight: {x: 25, y: 16, z: 64}
+              separator:
+                topLeft: {x: 0, y: 0, z: 0}
+                bottomRight: {x: 0, y: 0, z: 0}
+              room:
+                topLeft: {x: 17, y: 9, z: 53}
+                bottomRight: {x: 20, y: 12, z: 56}
+                idx: 0
+              depth: 5
+            cube:
+              topLeft: {x: 14, y: 0, z: 31}
+              bottomRight: {x: 25, y: 16, z: 64}
+            separator:
+              topLeft: {x: 14, y: 0, z: 46}
+              bottomRight: {x: 25, y: 16, z: 46}
+            room:
+              topLeft: {x: 0, y: 0, z: 0}
+              bottomRight: {x: 0, y: 0, z: 0}
+              idx: 0
+            depth: 4
+          cube:
+            topLeft: {x: 14, y: 0, z: 0}
+            bottomRight: {x: 25, y: 16, z: 64}
+          separator:
+            topLeft: {x: 14, y: 0, z: 31}
+            bottomRight: {x: 25, y: 16, z: 31}
+          room:
+            topLeft: {x: 0, y: 0, z: 0}
+            bottomRight: {x: 0, y: 0, z: 0}
+            idx: 0
+          depth: 3
+        cube:
+          topLeft: {x: 0, y: 0, z: 0}
+          bottomRight: {x: 25, y: 16, z: 64}
+        separator:
+          topLeft: {x: 14, y: 0, z: 0}
+          bottomRight: {x: 14, y: 16, z: 64}
+        room:
+          topLeft: {x: 0, y: 0, z: 0}
+          bottomRight: {x: 0, y: 0, z: 0}
+          idx: 0
+        depth: 2
+      - childs:
+        - childs: []
+          cube:
+            topLeft: {x: 25, y: 0, z: 0}
+            bottomRight: {x: 36, y: 16, z: 27}
+          separator:
+            topLeft: {x: 0, y: 0, z: 0}
+            bottomRight: {x: 0, y: 0, z: 0}
+          room:
+            topLeft: {x: 32, y: 11, z: 6}
+            bottomRight: {x: 35, y: 14, z: 9}
+            idx: 0
+          depth: 3
+        - childs:
+          - childs: []
+            cube:
+              topLeft: {x: 25, y: 0, z: 27}
+              bottomRight: {x: 36, y: 16, z: 46}
+            separator:
+              topLeft: {x: 0, y: 0, z: 0}
+              bottomRight: {x: 0, y: 0, z: 0}
+            room:
+              topLeft: {x: 26, y: 3, z: 30}
+              bottomRight: {x: 33, y: 15, z: 44}
+              idx: 0
+            depth: 4
+          - childs: []
+            cube:
+              topLeft: {x: 25, y: 0, z: 46}
+              bottomRight: {x: 36, y: 16, z: 64}
+            separator:
+              topLeft: {x: 0, y: 0, z: 0}
+              bottomRight: {x: 0, y: 0, z: 0}
+            room:
+              topLeft: {x: 28, y: 1, z: 46}
+              bottomRight: {x: 35, y: 11, z: 62}
+              idx: 0
+            depth: 4
+          cube:
+            topLeft: {x: 25, y: 0, z: 27}
+            bottomRight: {x: 36, y: 16, z: 64}
+          separator:
+            topLeft: {x: 25, y: 0, z: 46}
+            bottomRight: {x: 36, y: 16, z: 46}
+          room:
+            topLeft: {x: 0, y: 0, z: 0}
+            bottomRight: {x: 0, y: 0, z: 0}
+            idx: 0
+          depth: 3
+        cube:
+          topLeft: {x: 25, y: 0, z: 0}
+          bottomRight: {x: 36, y: 16, z: 64}
+        separator:
+          topLeft: {x: 25, y: 0, z: 27}
+          bottomRight: {x: 36, y: 16, z: 27}
+        room:
+          topLeft: {x: 0, y: 0, z: 0}
+          bottomRight: {x: 0, y: 0, z: 0}
+          idx: 0
+        depth: 2
+      cube:
+        topLeft: {x: 0, y: 0, z: 0}
+        bottomRight: {x: 36, y: 16, z: 64}
+      separator:
+        topLeft: {x: 25, y: 0, z: 0}
+        bottomRight: {x: 25, y: 16, z: 64}
+      room:
+        topLeft: {x: 0, y: 0, z: 0}
+        bottomRight: {x: 0, y: 0, z: 0}
+        idx: 0
+      depth: 1
+    - childs:
+      - childs:
+        - childs: []
+          cube:
+            topLeft: {x: 36, y: 0, z: 0}
+            bottomRight: {x: 49, y: 16, z: 12}
+          separator:
+            topLeft: {x: 0, y: 0, z: 0}
+            bottomRight: {x: 0, y: 0, z: 0}
+          room:
+            topLeft: {x: 36, y: 5, z: 1}
+            bottomRight: {x: 47, y: 15, z: 11}
+            idx: 0
+          depth: 3
+        - childs:
+          - childs: []
+            cube:
+              topLeft: {x: 36, y: 0, z: 12}
+              bottomRight: {x: 49, y: 16, z: 23}
+            separator:
+              topLeft: {x: 0, y: 0, z: 0}
+              bottomRight: {x: 0, y: 0, z: 0}
+            room:
+              topLeft: {x: 0, y: 0, z: 0}
+              bottomRight: {x: 0, y: 0, z: 0}
+              idx: 0
+            depth: 4
+          - childs:
+            - childs: []
+              cube:
+                topLeft: {x: 36, y: 0, z: 23}
+                bottomRight: {x: 49, y: 16, z: 51}
+              separator:
+                topLeft: {x: 0, y: 0, z: 0}
+                bottomRight: {x: 0, y: 0, z: 0}
+              room:
+                topLeft: {x: 36, y: 0, z: 25}
+                bottomRight: {x: 47, y: 11, z: 43}
+                idx: 0
+              depth: 5
+            - childs: []
+              cube:
+                topLeft: {x: 36, y: 0, z: 51}
+                bottomRight: {x: 49, y: 16, z: 64}
+              separator:
+                topLeft: {x: 0, y: 0, z: 0}
+                bottomRight: {x: 0, y: 0, z: 0}
+              room:
+                topLeft: {x: 36, y: 1, z: 53}
+                bottomRight: {x: 47, y: 13, z: 63}
+                idx: 0
+              depth: 5
+            cube:
+              topLeft: {x: 36, y: 0, z: 23}
+              bottomRight: {x: 49, y: 16, z: 64}
+            separator:
+              topLeft: {x: 36, y: 0, z: 51}
+              bottomRight: {x: 49, y: 16, z: 51}
+            room:
+              topLeft: {x: 0, y: 0, z: 0}
+              bottomRight: {x: 0, y: 0, z: 0}
+              idx: 0
+            depth: 4
+          cube:
+            topLeft: {x: 36, y: 0, z: 12}
+            bottomRight: {x: 49, y: 16, z: 64}
+          separator:
+            topLeft: {x: 36, y: 0, z: 23}
+            bottomRight: {x: 49, y: 16, z: 23}
+          room:
+            topLeft: {x: 0, y: 0, z: 0}
+            bottomRight: {x: 0, y: 0, z: 0}
+            idx: 0
+          depth: 3
+        cube:
+          topLeft: {x: 36, y: 0, z: 0}
+          bottomRight: {x: 49, y: 16, z: 64}
+        separator:
+          topLeft: {x: 36, y: 0, z: 12}
+          bottomRight: {x: 49, y: 16, z: 12}
+        room:
+          topLeft: {x: 0, y: 0, z: 0}
+          bottomRight: {x: 0, y: 0, z: 0}
+          idx: 0
+        depth: 2
+      - childs:
+        - childs: []
+          cube:
+            topLeft: {x: 49, y: 0, z: 0}
+            bottomRight: {x: 64, y: 16, z: 19}
+          separator:
+            topLeft: {x: 0, y: 0, z: 0}
+            bottomRight: {x: 0, y: 0, z: 0}
+          room:
+            topLeft: {x: 0, y: 0, z: 0}
+            bottomRight: {x: 0, y: 0, z: 0}
+            idx: 0
+          depth: 3
+        - childs:
+          - childs:
+            - childs: []
+              cube:
+                topLeft: {x: 49, y: 0, z: 19}
+                bottomRight: {x: 64, y: 16, z: 29}
+              separator:
+                topLeft: {x: 0, y: 0, z: 0}
+                bottomRight: {x: 0, y: 0, z: 0}
+              room:
+                topLeft: {x: 0, y: 0, z: 0}
+                bottomRight: {x: 0, y: 0, z: 0}
+                idx: 0
+              depth: 5
+            - childs: []
+              cube:
+                topLeft: {x: 49, y: 0, z: 29}
+                bottomRight: {x: 64, y: 16, z: 40}
+              separator:
+                topLeft: {x: 0, y: 0, z: 0}
+                bottomRight: {x: 0, y: 0, z: 0}
+              room:
+                topLeft: {x: 52, y: 0, z: 30}
+                bottomRight: {x: 62, y: 10, z: 39}
+                idx: 0
+              depth: 5
+            cube:
+              topLeft: {x: 49, y: 0, z: 19}
+              bottomRight: {x: 64, y: 16, z: 40}
+            separator:
+              topLeft: {x: 49, y: 0, z: 29}
+              bottomRight: {x: 64, y: 16, z: 29}
+            room:
+              topLeft: {x: 0, y: 0, z: 0}
+              bottomRight: {x: 0, y: 0, z: 0}
+              idx: 0
+            depth: 4
+          - childs: []
+            cube:
+              topLeft: {x: 49, y: 0, z: 40}
+              bottomRight: {x: 64, y: 16, z: 64}
+            separator:
+              topLeft: {x: 0, y: 0, z: 0}
+              bottomRight: {x: 0, y: 0, z: 0}
+            room:
+              topLeft: {x: 50, y: 1, z: 42}
+              bottomRight: {x: 59, y: 14, z: 62}
+              idx: 0
+            depth: 4
+          cube:
+            topLeft: {x: 49, y: 0, z: 19}
+            bottomRight: {x: 64, y: 16, z: 64}
+          separator:
+            topLeft: {x: 49, y: 0, z: 40}
+            bottomRight: {x: 64, y: 16, z: 40}
+          room:
+            topLeft: {x: 0, y: 0, z: 0}
+            bottomRight: {x: 0, y: 0, z: 0}
+            idx: 0
+          depth: 3
+        cube:
+          topLeft: {x: 49, y: 0, z: 0}
+          bottomRight: {x: 64, y: 16, z: 64}
+        separator:
+          topLeft: {x: 49, y: 0, z: 19}
+          bottomRight: {x: 64, y: 16, z: 19}
+        room:
+          topLeft: {x: 0, y: 0, z: 0}
+          bottomRight: {x: 0, y: 0, z: 0}
+          idx: 0
+        depth: 2
+      cube:
+        topLeft: {x: 36, y: 0, z: 0}
+        bottomRight: {x: 64, y: 16, z: 64}
+      separator:
+        topLeft: {x: 49, y: 0, z: 0}
+        bottomRight: {x: 49, y: 16, z: 64}
+      room:
+        topLeft: {x: 0, y: 0, z: 0}
+        bottomRight: {x: 0, y: 0, z: 0}
+        idx: 0
+      depth: 1
+    cube:
+      topLeft: {x: 0, y: 0, z: 0}
+      bottomRight: {x: 64, y: 16, z: 64}
+    separator:
+      topLeft: {x: 36, y: 0, z: 0}
+      bottomRight: {x: 36, y: 16, z: 64}
+    room:
+      topLeft: {x: 0, y: 0, z: 0}
+      bottomRight: {x: 0, y: 0, z: 0}
+      idx: 0
+    depth: 0
+  graph:
+    nodes:
+    - topLeft: {x: 25, y: 0, z: 0}
+      bottomRight: {x: 36, y: 16, z: 27}
+      idx: 0
+    - topLeft: {x: 36, y: 0, z: 0}
+      bottomRight: {x: 49, y: 16, z: 12}
+      idx: 0
+    - topLeft: {x: 49, y: 0, z: 0}
+      bottomRight: {x: 64, y: 16, z: 19}
+      idx: 0
+    - topLeft: {x: 25, y: 0, z: 27}
+      bottomRight: {x: 36, y: 16, z: 46}
+      idx: 0
+    - topLeft: {x: 25, y: 0, z: 46}
+      bottomRight: {x: 36, y: 16, z: 64}
+      idx: 0
+    - topLeft: {x: 36, y: 0, z: 12}
+      bottomRight: {x: 49, y: 16, z: 23}
+      idx: 0
+    - topLeft: {x: 49, y: 0, z: 40}
+      bottomRight: {x: 64, y: 16, z: 64}
+      idx: 0
+    - topLeft: {x: 0, y: 0, z: 0}
+      bottomRight: {x: 14, y: 16, z: 14}
+      idx: 0
+    - topLeft: {x: 0, y: 0, z: 14}
+      bottomRight: {x: 14, y: 16, z: 30}
+      idx: 0
+    - topLeft: {x: 0, y: 0, z: 30}
+      bottomRight: {x: 14, y: 16, z: 46}
+      idx: 0
+    - topLeft: {x: 0, y: 0, z: 46}
+      bottomRight: {x: 14, y: 16, z: 64}
+      idx: 0
+    - topLeft: {x: 14, y: 0, z: 0}
+      bottomRight: {x: 25, y: 16, z: 17}
+      idx: 0
+    - topLeft: {x: 14, y: 0, z: 17}
+      bottomRight: {x: 25, y: 16, z: 31}
+      idx: 0
+    - topLeft: {x: 14, y: 0, z: 31}
+      bottomRight: {x: 25, y: 16, z: 46}
+      idx: 0
+    - topLeft: {x: 14, y: 0, z: 46}
+      bottomRight: {x: 25, y: 16, z: 64}
+      idx: 0
+    - topLeft: {x: 36, y: 0, z: 23}
+      bottomRight: {x: 49, y: 16, z: 51}
+      idx: 0
+    - topLeft: {x: 36, y: 0, z: 51}
+      bottomRight: {x: 49, y: 16, z: 64}
+      idx: 0
+    - topLeft: {x: 49, y: 0, z: 19}
+      bottomRight: {x: 64, y: 16, z: 29}
+      idx: 0
+    - topLeft: {x: 49, y: 0, z: 29}
+      bottomRight: {x: 64, y: 16, z: 40}
+      idx: 0
+    edges:
+    - from: 0
+      to: 1
+      idx: 0
+      plane:
+        topLeft: {x: 36, y: 0, z: 0}
+        bottomRight: {x: 36, y: 16, z: 12}
+    - from: 1
+      to: 0
+      idx: 1
+      plane:
+        topLeft: {x: 36, y: 0, z: 0}
+        bottomRight: {x: 36, y: 16, z: 12}
+    - from: 0
+      to: 3
+      idx: 2
+      plane:
+        topLeft: {x: 25, y: 0, z: 27}
+        bottomRight: {x: 36, y: 16, z: 27}
+    - from: 3
+      to: 0
+      idx: 3
+      plane:
+        topLeft: {x: 25, y: 0, z: 27}
+        bottomRight: {x: 36, y: 16, z: 27}
+    - from: 0
+      to: 5
+      idx: 4
+      plane:
+        topLeft: {x: 36, y: 0, z: 12}
+        bottomRight: {x: 36, y: 16, z: 23}
+    - from: 5
+      to: 0
+      idx: 5
+      plane:
+        topLeft: {x: 36, y: 0, z: 12}
+        bottomRight: {x: 36, y: 16, z: 23}
+    - from: 0
+      to: 11
+      idx: 6
+      plane:
+        topLeft: {x: 25, y: 0, z: 0}
+        bottomRight: {x: 25, y: 16, z: 17}
+    - from: 11
+      to: 0
+      idx: 7
+      plane:
+        topLeft: {x: 25, y: 0, z: 0}
+        bottomRight: {x: 25, y: 16, z: 17}
+    - from: 0
+      to: 12
+      idx: 8
+      plane:
+        topLeft: {x: 25, y: 0, z: 17}
+        bottomRight: {x: 25, y: 16, z: 27}
+    - from: 12
+      to: 0
+      idx: 9
+      plane:
+        topLeft: {x: 25, y: 0, z: 17}
+        bottomRight: {x: 25, y: 16, z: 27}
+    - from: 0
+      to: 15
+      idx: 10
+      plane:
+        topLeft: {x: 36, y: 0, z: 23}
+        bottomRight: {x: 36, y: 16, z: 27}
+    - from: 15
+      to: 0
+      idx: 11
+      plane:
+        topLeft: {x: 36, y: 0, z: 23}
+        bottomRight: {x: 36, y: 16, z: 27}
+    - from: 1
+      to: 2
+      idx: 12
+      plane:
+        topLeft: {x: 49, y: 0, z: 0}
+        bottomRight: {x: 49, y: 16, z: 12}
+    - from: 2
+      to: 1
+      idx: 13
+      plane:
+        topLeft: {x: 49, y: 0, z: 0}
+        bottomRight: {x: 49, y: 16, z: 12}
+    - from: 1
+      to: 5
+      idx: 14
+      plane:
+        topLeft: {x: 36, y: 0, z: 12}
+        bottomRight: {x: 49, y: 16, z: 12}
+    - from: 5
+      to: 1
+      idx: 15
+      plane:
+        topLeft: {x: 36, y: 0, z: 12}
+        bottomRight: {x: 49, y: 16, z: 12}
+    - from: 2
+      to: 5
+      idx: 16
+      plane:
+        topLeft: {x: 49, y: 0, z: 12}
+        bottomRight: {x: 49, y: 16, z: 19}
+    - from: 5
+      to: 2
+      idx: 17
+      plane:
+        topLeft: {x: 49, y: 0, z: 12}
+        bottomRight: {x: 49, y: 16, z: 19}
+    - from: 2
+      to: 17
+      idx: 18
+      plane:
+        topLeft: {x: 49, y: 0, z: 19}
+        bottomRight: {x: 64, y: 16, z: 19}
+    - from: 17
+      to: 2
+      idx: 19
+      plane:
+        topLeft: {x: 49, y: 0, z: 19}
+        bottomRight: {x: 64, y: 16, z: 19}
+    - from: 3
+      to: 4
+      idx: 20
+      plane:
+        topLeft: {x: 25, y: 0, z: 46}
+        bottomRight: {x: 36, y: 16, z: 46}
+    - from: 4
+      to: 3
+      idx: 21
+      plane:
+        topLeft: {x: 25, y: 0, z: 46}
+        bottomRight: {x: 36, y: 16, z: 46}
+    - from: 3
+      to: 12
+      idx: 22
+      plane:
+        topLeft: {x: 25, y: 0, z: 27}
+        bottomRight: {x: 25, y: 16, z: 31}
+    - from: 12
+      to: 3
+      idx: 23
+      plane:
+        topLeft: {x: 25, y: 0, z: 27}
+        bottomRight: {x: 25, y: 16, z: 31}
+    - from: 3
+      to: 13
+      idx: 24
+      plane:
+        topLeft: {x: 25, y: 0, z: 31}
+        bottomRight: {x: 25, y: 16, z: 46}
+    - from: 13
+      to: 3
+      idx: 25
+      plane:
+        topLeft: {x: 25, y: 0, z: 31}
+        bottomRight: {x: 25, y: 16, z: 46}
+    - from: 3
+      to: 15
+      idx: 26
+      plane:
+        topLeft: {x: 36, y: 0, z: 27}
+        bottomRight: {x: 36, y: 16, z: 46}
+    - from: 15
+      to: 3
+      idx: 27
+      plane:
+        topLeft: {x: 36, y: 0, z: 27}
+        bottomRight: {x: 36, y: 16, z: 46}
+    - from: 4
+      to: 14
+      idx: 28
+      plane:
+        topLeft: {x: 25, y: 0, z: 46}
+        bottomRight: {x: 25, y: 16, z: 64}
+    - from: 14
+      to: 4
+      idx: 29
+      plane:
+        topLeft: {x: 25, y: 0, z: 46}
+        bottomRight: {x: 25, y: 16, z: 64}
+    - from: 4
+      to: 15
+      idx: 30
+      plane:
+        topLeft: {x: 36, y: 0, z: 46}
+        bottomRight: {x: 36, y: 16, z: 51}
+    - from: 15
+      to: 4
+      idx: 31
+      plane:
+        topLeft: {x: 36, y: 0, z: 46}
+        bottomRight: {x: 36, y: 16, z: 51}
+    - from: 4
+      to: 16
+      idx: 32
+      plane:
+        topLeft: {x: 36, y: 0, z: 51}
+        bottomRight: {x: 36, y: 16, z: 64}
+    - from: 16
+      to: 4
+      idx: 33
+      plane:
+        topLeft: {x: 36, y: 0, z: 51}
+        bottomRight: {x: 36, y: 16, z: 64}
+    - from: 5
+      to: 15
+      idx: 34
+      plane:
+        topLeft: {x: 36, y: 0, z: 23}
+        bottomRight: {x: 49, y: 16, z: 23}
+    - from: 15
+      to: 5
+      idx: 35
+      plane:
+        topLeft: {x: 36, y: 0, z: 23}
+        bottomRight: {x: 49, y: 16, z: 23}
+    - from: 5
+      to: 17
+      idx: 36
+      plane:
+        topLeft: {x: 49, y: 0, z: 19}
+        bottomRight: {x: 49, y: 16, z: 23}
+    - from: 17
+      to: 5
+      idx: 37
+      plane:
+        topLeft: {x: 49, y: 0, z: 19}
+        bottomRight: {x: 49, y: 16, z: 23}
+    - from: 6
+      to: 15
+      idx: 38
+      plane:
+        topLeft: {x: 49, y: 0, z: 40}
+        bottomRight: {x: 49, y: 16, z: 51}
+    - from: 15
+      to: 6
+      idx: 39
+      plane:
+        topLeft: {x: 49, y: 0, z: 40}
+        bottomRight: {x: 49, y: 16, z: 51}
+    - from: 6
+      to: 16
+      idx: 40
+      plane:
+        topLeft: {x: 49, y: 0, z: 51}
+        bottomRight: {x: 49, y: 16, z: 64}
+    - from: 16
+      to: 6
+      idx: 41
+      plane:
+        topLeft: {x: 49, y: 0, z: 51}
+        bottomRight: {x: 49, y: 16, z: 64}
+    - from: 6
+      to: 18
+      idx: 42
+      plane:
+        topLeft: {x: 49, y: 0, z: 40}
+        bottomRight: {x: 64, y: 16, z: 40}
+    - from: 18
+      to: 6
+      idx: 43
+      plane:
+        topLeft: {x: 49, y: 0, z: 40}
+        bottomRight: {x: 64, y: 16, z: 40}
+    - from: 7
+      to: 8
+      idx: 44
+      plane:
+        topLeft: {x: 0, y: 0, z: 14}
+        bottomRight: {x: 14, y: 16, z: 14}
+    - from: 8
+      to: 7
+      idx: 45
+      plane:
+        topLeft: {x: 0, y: 0, z: 14}
+        bottomRight: {x: 14, y: 16, z: 14}
+    - from: 7
+      to: 11
+      idx: 46
+      plane:
+        topLeft: {x: 14, y: 0, z: 0}
+        bottomRight: {x: 14, y: 16, z: 14}
+    - from: 11
+      to: 7
+      idx: 47
+      plane:
+        topLeft: {x: 14, y: 0, z: 0}
+        bottomRight: {x: 14, y: 16, z: 14}
+    - from: 8
+      to: 9
+      idx: 48
+      plane:
+        topLeft: {x: 0, y: 0, z: 30}
+        bottomRight: {x: 14, y: 16, z: 30}
+    - from: 9
+      to: 8
+      idx: 49
+      plane:
+        topLeft: {x: 0, y: 0, z: 30}
+        bottomRight: {x: 14, y: 16, z: 30}
+    - from: 8
+      to: 11
+      idx: 50
+      plane:
+        topLeft: {x: 14, y: 0, z: 14}
+        bottomRight: {x: 14, y: 16, z: 17}
+    - from: 11
+      to: 8
+      idx: 51
+      plane:
+        topLeft: {x: 14, y: 0, z: 14}
+        bottomRight: {x: 14, y: 16, z: 17}
+    - from: 8
+      to: 12
+      idx: 52
+      plane:
+        topLeft: {x: 14, y: 0, z: 17}
+        bottomRight: {x: 14, y: 16, z: 30}
+    - from: 12
+      to: 8
+      idx: 53
+      plane:
+        topLeft: {x: 14, y: 0, z: 17}
+        bottomRight: {x: 14, y: 16, z: 30}
+    - from: 9
+      to: 10
+      idx: 54
+      plane:
+        topLeft: {x: 0, y: 0, z: 46}
+        bottomRight: {x: 14, y: 16, z: 46}
+    - from: 10
+      to: 9
+      idx: 55
+      plane:
+        topLeft: {x: 0, y: 0, z: 46}
+        bottomRight: {x: 14, y: 16, z: 46}
+    - from: 9
+      to: 12
+      idx: 56
+      plane:
+        topLeft: {x: 14, y: 0, z: 30}
+        bottomRight: {x: 14, y: 16, z: 31}
+    - from: 12
+      to: 9
+      idx: 57
+      plane:
+        topLeft: {x: 14, y: 0, z: 30}
+        bottomRight: {x: 14, y: 16, z: 31}
+    - from: 9
+      to: 13
+      idx: 58
+      plane:
+        topLeft: {x: 14, y: 0, z: 31}
+        bottomRight: {x: 14, y: 16, z: 46}
+    - from: 13
+      to: 9
+      idx: 59
+      plane:
+        topLeft: {x: 14, y: 0, z: 31}
+        bottomRight: {x: 14, y: 16, z: 46}
+    - from: 10
+      to: 14
+      idx: 60
+      plane:
+        topLeft: {x: 14, y: 0, z: 46}
+        bottomRight: {x: 14, y: 16, z: 64}
+    - from: 14
+      to: 10
+      idx: 61
+      plane:
+        topLeft: {x: 14, y: 0, z: 46}
+        bottomRight: {x: 14, y: 16, z: 64}
+    - from: 11
+      to: 12
+      idx: 62
+      plane:
+        topLeft: {x: 14, y: 0, z: 17}
+        bottomRight: {x: 25, y: 16, z: 17}
+    - from: 12
+      to: 11
+      idx: 63
+      plane:
+        topLeft: {x: 14, y: 0, z: 17}
+        bottomRight: {x: 25, y: 16, z: 17}
+    - from: 12
+      to: 13
+      idx: 64
+      plane:
+        topLeft: {x: 14, y: 0, z: 31}
+        bottomRight: {x: 25, y: 16, z: 31}
+    - from: 13
+      to: 12
+      idx: 65
+      plane:
+        topLeft: {x: 14, y: 0, z: 31}
+        bottomRight: {x: 25, y: 16, z: 31}
+    - from: 13
+      to: 14
+      idx: 66
+      plane:
+        topLeft: {x: 14, y: 0, z: 46}
+        bottomRight: {x: 25, y: 16, z: 46}
+    - from: 14
+      to: 13
+      idx: 67
+      plane:
+        topLeft: {x: 14, y: 0, z: 46}
+        bottomRight: {x: 25, y: 16, z: 46}
+    - from: 15
+      to: 16
+      idx: 68
+      plane:
+        topLeft: {x: 36, y: 0, z: 51}
+        bottomRight: {x: 49, y: 16, z: 51}
+    - from: 16
+      to: 15
+      idx: 69
+      plane:
+        topLeft: {x: 36, y: 0, z: 51}
+        bottomRight: {x: 49, y: 16, z: 51}
+    - from: 15
+      to: 17
+      idx: 70
+      plane:
+        topLeft: {x: 49, y: 0, z: 23}
+        bottomRight: {x: 49, y: 16, z: 29}
+    - from: 17
+      to: 15
+      idx: 71
+      plane:
+        topLeft: {x: 49, y: 0, z: 23}
+        bottomRight: {x: 49, y: 16, z: 29}
+    - from: 15
+      to: 18
+      idx: 72
+      plane:
+        topLeft: {x: 49, y: 0, z: 29}
+        bottomRight: {x: 49, y: 16, z: 40}
+    - from: 18
+      to: 15
+      idx: 73
+      plane:
+        topLeft: {x: 49, y: 0, z: 29}
+        bottomRight: {x: 49, y: 16, z: 40}
+    - from: 17
+      to: 18
+      idx: 74
+      plane:
+        topLeft: {x: 49, y: 0, z: 29}
+        bottomRight: {x: 64, y: 16, z: 29}
+    - from: 18
+      to: 17
+      idx: 75
+      plane:
+        topLeft: {x: 49, y: 0, z: 29}
+        bottomRight: {x: 64, y: 16, z: 29}
+    csr:
+      nodeCount: 19
+      edgeCount: 76
+      edges:
+      - from: 0
+        to: 1
+        idx: 0
+        plane:
+          topLeft: {x: 36, y: 0, z: 0}
+          bottomRight: {x: 36, y: 16, z: 12}
+      - from: 1
+        to: 0
+        idx: 1
+        plane:
+          topLeft: {x: 36, y: 0, z: 0}
+          bottomRight: {x: 36, y: 16, z: 12}
+      - from: 0
+        to: 3
+        idx: 2
+        plane:
+          topLeft: {x: 25, y: 0, z: 27}
+          bottomRight: {x: 36, y: 16, z: 27}
+      - from: 3
+        to: 0
+        idx: 3
+        plane:
+          topLeft: {x: 25, y: 0, z: 27}
+          bottomRight: {x: 36, y: 16, z: 27}
+      - from: 0
+        to: 5
+        idx: 4
+        plane:
+          topLeft: {x: 36, y: 0, z: 12}
+          bottomRight: {x: 36, y: 16, z: 23}
+      - from: 5
+        to: 0
+        idx: 5
+        plane:
+          topLeft: {x: 36, y: 0, z: 12}
+          bottomRight: {x: 36, y: 16, z: 23}
+      - from: 0
+        to: 11
+        idx: 6
+        plane:
+          topLeft: {x: 25, y: 0, z: 0}
+          bottomRight: {x: 25, y: 16, z: 17}
+      - from: 11
+        to: 0
+        idx: 7
+        plane:
+          topLeft: {x: 25, y: 0, z: 0}
+          bottomRight: {x: 25, y: 16, z: 17}
+      - from: 0
+        to: 12
+        idx: 8
+        plane:
+          topLeft: {x: 25, y: 0, z: 17}
+          bottomRight: {x: 25, y: 16, z: 27}
+      - from: 12
+        to: 0
+        idx: 9
+        plane:
+          topLeft: {x: 25, y: 0, z: 17}
+          bottomRight: {x: 25, y: 16, z: 27}
+      - from: 0
+        to: 15
+        idx: 10
+        plane:
+          topLeft: {x: 36, y: 0, z: 23}
+          bottomRight: {x: 36, y: 16, z: 27}
+      - from: 15
+        to: 0
+        idx: 11
+        plane:
+          topLeft: {x: 36, y: 0, z: 23}
+          bottomRight: {x: 36, y: 16, z: 27}
+      - from: 1
+        to: 2
+        idx: 12
+        plane:
+          topLeft: {x: 49, y: 0, z: 0}
+          bottomRight: {x: 49, y: 16, z: 12}
+      - from: 2
+        to: 1
+        idx: 13
+        plane:
+          topLeft: {x: 49, y: 0, z: 0}
+          bottomRight: {x: 49, y: 16, z: 12}
+      - from: 1
+        to: 5
+        idx: 14
+        plane:
+          topLeft: {x: 36, y: 0, z: 12}
+          bottomRight: {x: 49, y: 16, z: 12}
+      - from: 5
+        to: 1
+        idx: 15
+        plane:
+          topLeft: {x: 36, y: 0, z: 12}
+          bottomRight: {x: 49, y: 16, z: 12}
+      - from: 2
+        to: 5
+        idx: 16
+        plane:
+          topLeft: {x: 49, y: 0, z: 12}
+          bottomRight: {x: 49, y: 16, z: 19}
+      - from: 5
+        to: 2
+        idx: 17
+        plane:
+          topLeft: {x: 49, y: 0, z: 12}
+          bottomRight: {x: 49, y: 16, z: 19}
+      - from: 2
+        to: 17
+        idx: 18
+        plane:
+          topLeft: {x: 49, y: 0, z: 19}
+          bottomRight: {x: 64, y: 16, z: 19}
+      - from: 17
+        to: 2
+        idx: 19
+        plane:
+          topLeft: {x: 49, y: 0, z: 19}
+          bottomRight: {x: 64, y: 16, z: 19}
+      - from: 3
+        to: 4
+        idx: 20
+        plane:
+          topLeft: {x: 25, y: 0, z: 46}
+          bottomRight: {x: 36, y: 16, z: 46}
+      - from: 4
+        to: 3
+        idx: 21
+        plane:
+          topLeft: {x: 25, y: 0, z: 46}
+          bottomRight: {x: 36, y: 16, z: 46}
+      - from: 3
+        to: 12
+        idx: 22
+        plane:
+          topLeft: {x: 25, y: 0, z: 27}
+          bottomRight: {x: 25, y: 16, z: 31}
+      - from: 12
+        to: 3
+        idx: 23
+        plane:
+          topLeft: {x: 25, y: 0, z: 27}
+          bottomRight: {x: 25, y: 16, z: 31}
+      - from: 3
+        to: 13
+        idx: 24
+        plane:
+          topLeft: {x: 25, y: 0, z: 31}
+          bottomRight: {x: 25, y: 16, z: 46}
+      - from: 13
+        to: 3
+        idx: 25
+        plane:
+          topLeft: {x: 25, y: 0, z: 31}
+          bottomRight: {x: 25, y: 16, z: 46}
+      - from: 3
+        to: 15
+        idx: 26
+        plane:
+          topLeft: {x: 36, y: 0, z: 27}
+          bottomRight: {x: 36, y: 16, z: 46}
+      - from: 15
+        to: 3
+        idx: 27
+        plane:
+          topLeft: {x: 36, y: 0, z: 27}
+          bottomRight: {x: 36, y: 16, z: 46}
+      - from: 4
+        to: 14
+        idx: 28
+        plane:
+          topLeft: {x: 25, y: 0, z: 46}
+          bottomRight: {x: 25, y: 16, z: 64}
+      - from: 14
+        to: 4
+        idx: 29
+        plane:
+          topLeft: {x: 25, y: 0, z: 46}
+          bottomRight: {x: 25, y: 16, z: 64}
+      - from: 4
+        to: 15
+        idx: 30
+        plane:
+          topLeft: {x: 36, y: 0, z: 46}
+          bottomRight: {x: 36, y: 16, z: 51}
+      - from: 15
+        to: 4
+        idx: 31
+        plane:
+          topLeft: {x: 36, y: 0, z: 46}
+          bottomRight: {x: 36, y: 16, z: 51}
+      - from: 4
+        to: 16
+        idx: 32
+        plane:
+          topLeft: {x: 36, y: 0, z: 51}
+          bottomRight: {x: 36, y: 16, z: 64}
+      - from: 16
+        to: 4
+        idx: 33
+        plane:
+          topLeft: {x: 36, y: 0, z: 51}
+          bottomRight: {x: 36, y: 16, z: 64}
+      - from: 5
+        to: 15
+        idx: 34
+        plane:
+          topLeft: {x: 36, y: 0, z: 23}
+          bottomRight: {x: 49, y: 16, z: 23}
+      - from: 15
+        to: 5
+        idx: 35
+        plane:
+          topLeft: {x: 36, y: 0, z: 23}
+          bottomRight: {x: 49, y: 16, z: 23}
+      - from: 5
+        to: 17
+        idx: 36
+        plane:
+          topLeft: {x: 49, y: 0, z: 19}
+          bottomRight: {x: 49, y: 16, z: 23}
+      - from: 17
+        to: 5
+        idx: 37
+        plane:
+          topLeft: {x: 49, y: 0, z: 19}
+          bottomRight: {x: 49, y: 16, z: 23}
+      - from: 6
+        to: 15
+        idx: 38
+        plane:
+          topLeft: {x: 49, y: 0, z: 40}
+          bottomRight: {x: 49, y: 16, z: 51}
+      - from: 15
+        to: 6
+        idx: 39
+        plane:
+          topLeft: {x: 49, y: 0, z: 40}
+          bottomRight: {x: 49, y: 16, z: 51}
+      - from: 6
+        to: 16
+        idx: 40
+        plane:
+          topLeft: {x: 49, y: 0, z: 51}
+          bottomRight: {x: 49, y: 16, z: 64}
+      - from: 16
+        to: 6
+        idx: 41
+        plane:
+          topLeft: {x: 49, y: 0, z: 51}
+          bottomRight: {x: 49, y: 16, z: 64}
+      - from: 6
+        to: 18
+        idx: 42
+        plane:
+          topLeft: {x: 49, y: 0, z: 40}
+          bottomRight: {x: 64, y: 16, z: 40}
+      - from: 18
+        to: 6
+        idx: 43
+        plane:
+          topLeft: {x: 49, y: 0, z: 40}
+          bottomRight: {x: 64, y: 16, z: 40}
+      - from: 7
+        to: 8
+        idx: 44
+        plane:
+          topLeft: {x: 0, y: 0, z: 14}
+          bottomRight: {x: 14, y: 16, z: 14}
+      - from: 8
+        to: 7
+        idx: 45
+        plane:
+          topLeft: {x: 0, y: 0, z: 14}
+          bottomRight: {x: 14, y: 16, z: 14}
+      - from: 7
+        to: 11
+        idx: 46
+        plane:
+          topLeft: {x: 14, y: 0, z: 0}
+          bottomRight: {x: 14, y: 16, z: 14}
+      - from: 11
+        to: 7
+        idx: 47
+        plane:
+          topLeft: {x: 14, y: 0, z: 0}
+          bottomRight: {x: 14, y: 16, z: 14}
+      - from: 8
+        to: 9
+        idx: 48
+        plane:
+          topLeft: {x: 0, y: 0, z: 30}
+          bottomRight: {x: 14, y: 16, z: 30}
+      - from: 9
+        to: 8
+        idx: 49
+        plane:
+          topLeft: {x: 0, y: 0, z: 30}
+          bottomRight: {x: 14, y: 16, z: 30}
+      - from: 8
+        to: 11
+        idx: 50
+        plane:
+          topLeft: {x: 14, y: 0, z: 14}
+          bottomRight: {x: 14, y: 16, z: 17}
+      - from: 11
+        to: 8
+        idx: 51
+        plane:
+          topLeft: {x: 14, y: 0, z: 14}
+          bottomRight: {x: 14, y: 16, z: 17}
+      - from: 8
+        to: 12
+        idx: 52
+        plane:
+          topLeft: {x: 14, y: 0, z: 17}
+          bottomRight: {x: 14, y: 16, z: 30}
+      - from: 12
+        to: 8
+        idx: 53
+        plane:
+          topLeft: {x: 14, y: 0, z: 17}
+          bottomRight: {x: 14, y: 16, z: 30}
+      - from: 9
+        to: 10
+        idx: 54
+        plane:
+          topLeft: {x: 0, y: 0, z: 46}
+          bottomRight: {x: 14, y: 16, z: 46}
+      - from: 10
+        to: 9
+        idx: 55
+        plane:
+          topLeft: {x: 0, y: 0, z: 46}
+          bottomRight: {x: 14, y: 16, z: 46}
+      - from: 9
+        to: 12
+        idx: 56
+        plane:
+          topLeft: {x: 14, y: 0, z: 30}
+          bottomRight: {x: 14, y: 16, z: 31}
+      - from: 12
+        to: 9
+        idx: 57
+        plane:
+          topLeft: {x: 14, y: 0, z: 30}
+          bottomRight: {x: 14, y: 16, z: 31}
+      - from: 9
+        to: 13
+        idx: 58
+        plane:
+          topLeft: {x: 14, y: 0, z: 31}
+          bottomRight: {x: 14, y: 16, z: 46}
+      - from: 13
+        to: 9
+        idx: 59
+        plane:
+          topLeft: {x: 14, y: 0, z: 31}
+          bottomRight: {x: 14, y: 16, z: 46}
+      - from: 10
+        to: 14
+        idx: 60
+        plane:
+          topLeft: {x: 14, y: 0, z: 46}
+          bottomRight: {x: 14, y: 16, z: 64}
+      - from: 14
+        to: 10
+        idx: 61
+        plane:
+          topLeft: {x: 14, y: 0, z: 46}
+          bottomRight: {x: 14, y: 16, z: 64}
+      - from: 11
+        to: 12
+        idx: 62
+        plane:
+          topLeft: {x: 14, y: 0, z: 17}
+          bottomRight: {x: 25, y: 16, z: 17}
+      - from: 12
+        to: 11
+        idx: 63
+        plane:
+          topLeft: {x: 14, y: 0, z: 17}
+          bottomRight: {x: 25, y: 16, z: 17}
+      - from: 12
+        to: 13
+        idx: 64
+        plane:
+          topLeft: {x: 14, y: 0, z: 31}
+          bottomRight: {x: 25, y: 16, z: 31}
+      - from: 13
+        to: 12
+        idx: 65
+        plane:
+          topLeft: {x: 14, y: 0, z: 31}
+          bottomRight: {x: 25, y: 16, z: 31}
+      - from: 13
+        to: 14
+        idx: 66
+        plane:
+          topLeft: {x: 14, y: 0, z: 46}
+          bottomRight: {x: 25, y: 16, z: 46}
+      - from: 14
+        to: 13
+        idx: 67
+        plane:
+          topLeft: {x: 14, y: 0, z: 46}
+          bottomRight: {x: 25, y: 16, z: 46}
+      - from: 15
+        to: 16
+        idx: 68
+        plane:
+          topLeft: {x: 36, y: 0, z: 51}
+          bottomRight: {x: 49, y: 16, z: 51}
+      - from: 16
+        to: 15
+        idx: 69
+        plane:
+          topLeft: {x: 36, y: 0, z: 51}
+          bottomRight: {x: 49, y: 16, z: 51}
+      - from: 15
+        to: 17
+        idx: 70
+        plane:
+          topLeft: {x: 49, y: 0, z: 23}
+          bottomRight: {x: 49, y: 16, z: 29}
+      - from: 17
+        to: 15
+        idx: 71
+        plane:
+          topLeft: {x: 49, y: 0, z: 23}
+          bottomRight: {x: 49, y: 16, z: 29}
+      - from: 15
+        to: 18
+        idx: 72
+        plane:
+          topLeft: {x: 49, y: 0, z: 29}
+          bottomRight: {x: 49, y: 16, z: 40}
+      - from: 18
+        to: 15
+        idx: 73
+        plane:
+          topLeft: {x: 49, y: 0, z: 29}
+          bottomRight: {x: 49, y: 16, z: 40}
+      - from: 17
+        to: 18
+        idx: 74
+        plane:
+          topLeft: {x: 49, y: 0, z: 29}
+          bottomRight: {x: 64, y: 16, z: 29}
+      - from: 18
+        to: 17
+        idx: 75
+        plane:
+          topLeft: {x: 49, y: 0, z: 29}
+          bottomRight: {x: 64, y: 16, z: 29}
+      cnt: 0000000006000000090000000c00000011000000150000001a0000001d0000001f0000002300000027000000290000002d00000033000000370000003a0000004200000045000000490000004c0000004c000000
+      csr:
+      - from: 0
+        to: 1
+        idx: 0
+        plane:
+          topLeft: {x: 36, y: 0, z: 0}
+          bottomRight: {x: 36, y: 16, z: 12}
+      - from: 0
+        to: 3
+        idx: 2
+        plane:
+          topLeft: {x: 25, y: 0, z: 27}
+          bottomRight: {x: 36, y: 16, z: 27}
+      - from: 0
+        to: 5
+        idx: 4
+        plane:
+          topLeft: {x: 36, y: 0, z: 12}
+          bottomRight: {x: 36, y: 16, z: 23}
+      - from: 0
+        to: 11
+        idx: 6
+        plane:
+          topLeft: {x: 25, y: 0, z: 0}
+          bottomRight: {x: 25, y: 16, z: 17}
+      - from: 0
+        to: 12
+        idx: 8
+        plane:
+          topLeft: {x: 25, y: 0, z: 17}
+          bottomRight: {x: 25, y: 16, z: 27}
+      - from: 0
+        to: 15
+        idx: 10
+        plane:
+          topLeft: {x: 36, y: 0, z: 23}
+          bottomRight: {x: 36, y: 16, z: 27}
+      - from: 1
+        to: 0
+        idx: 1
+        plane:
+          topLeft: {x: 36, y: 0, z: 0}
+          bottomRight: {x: 36, y: 16, z: 12}
+      - from: 1
+        to: 2
+        idx: 12
+        plane:
+          topLeft: {x: 49, y: 0, z: 0}
+          bottomRight: {x: 49, y: 16, z: 12}
+      - from: 1
+        to: 5
+        idx: 14
+        plane:
+          topLeft: {x: 36, y: 0, z: 12}
+          bottomRight: {x: 49, y: 16, z: 12}
+      - from: 2
+        to: 1
+        idx: 13
+        plane:
+          topLeft: {x: 49, y: 0, z: 0}
+          bottomRight: {x: 49, y: 16, z: 12}
+      - from: 2
+        to: 5
+        idx: 16
+        plane:
+          topLeft: {x: 49, y: 0, z: 12}
+          bottomRight: {x: 49, y: 16, z: 19}
+      - from: 2
+        to: 17
+        idx: 18
+        plane:
+          topLeft: {x: 49, y: 0, z: 19}
+          bottomRight: {x: 64, y: 16, z: 19}
+      - from: 3
+        to: 0
+        idx: 3
+        plane:
+          topLeft: {x: 25, y: 0, z: 27}
+          bottomRight: {x: 36, y: 16, z: 27}
+      - from: 3
+        to: 4
+        idx: 20
+        plane:
+          topLeft: {x: 25, y: 0, z: 46}
+          bottomRight: {x: 36, y: 16, z: 46}
+      - from: 3
+        to: 12
+        idx: 22
+        plane:
+          topLeft: {x: 25, y: 0, z: 27}
+          bottomRight: {x: 25, y: 16, z: 31}
+      - from: 3
+        to: 13
+        idx: 24
+        plane:
+          topLeft: {x: 25, y: 0, z: 31}
+          bottomRight: {x: 25, y: 16, z: 46}
+      - from: 3
+        to: 15
+        idx: 26
+        plane:
+          topLeft: {x: 36, y: 0, z: 27}
+          bottomRight: {x: 36, y: 16, z: 46}
+      - from: 4
+        to: 3
+        idx: 21
+        plane:
+          topLeft: {x: 25, y: 0, z: 46}
+          bottomRight: {x: 36, y: 16, z: 46}
+      - from: 4
+        to: 14
+        idx: 28
+        plane:
+          topLeft: {x: 25, y: 0, z: 46}
+          bottomRight: {x: 25, y: 16, z: 64}
+      - from: 4
+        to: 15
+        idx: 30
+        plane:
+          topLeft: {x: 36, y: 0, z: 46}
+          bottomRight: {x: 36, y: 16, z: 51}
+      - from: 4
+        to: 16
+        idx: 32
+        plane:
+          topLeft: {x: 36, y: 0, z: 51}
+          bottomRight: {x: 36, y: 16, z: 64}
+      - from: 5
+        to: 0
+        idx: 5
+        plane:
+          topLeft: {x: 36, y: 0, z: 12}
+          bottomRight: {x: 36, y: 16, z: 23}
+      - from: 5
+        to: 1
+        idx: 15
+        plane:
+          topLeft: {x: 36, y: 0, z: 12}
+          bottomRight: {x: 49, y: 16, z: 12}
+      - from: 5
+        to: 2
+        idx: 17
+        plane:
+          topLeft: {x: 49, y: 0, z: 12}
+          bottomRight: {x: 49, y: 16, z: 19}
+      - from: 5
+        to: 15
+        idx: 34
+        plane:
+          topLeft: {x: 36, y: 0, z: 23}
+          bottomRight: {x: 49, y: 16, z: 23}
+      - from: 5
+        to: 17
+        idx: 36
+        plane:
+          topLeft: {x: 49, y: 0, z: 19}
+          bottomRight: {x: 49, y: 16, z: 23}
+      - from: 6
+        to: 15
+        idx: 38
+        plane:
+          topLeft: {x: 49, y: 0, z: 40}
+          bottomRight: {x: 49, y: 16, z: 51}
+      - from: 6
+        to: 16
+        idx: 40
+        plane:
+          topLeft: {x: 49, y: 0, z: 51}
+          bottomRight: {x: 49, y: 16, z: 64}
+      - from: 6
+        to: 18
+        idx: 42
+        plane:
+          topLeft: {x: 49, y: 0, z: 40}
+          bottomRight: {x: 64, y: 16, z: 40}
+      - from: 7
+        to: 8
+        idx: 44
+        plane:
+          topLeft: {x: 0, y: 0, z: 14}
+          bottomRight: {x: 14, y: 16, z: 14}
+      - from: 7
+        to: 11
+        idx: 46
+        plane:
+          topLeft: {x: 14, y: 0, z: 0}
+          bottomRight: {x: 14, y: 16, z: 14}
+      - from: 8
+        to: 7
+        idx: 45
+        plane:
+          topLeft: {x: 0, y: 0, z: 14}
+          bottomRight: {x: 14, y: 16, z: 14}
+      - from: 8
+        to: 9
+        idx: 48
+        plane:
+          topLeft: {x: 0, y: 0, z: 30}
+          bottomRight: {x: 14, y: 16, z: 30}
+      - from: 8
+        to: 11
+        idx: 50
+        plane:
+          topLeft: {x: 14, y: 0, z: 14}
+          bottomRight: {x: 14, y: 16, z: 17}
+      - from: 8
+        to: 12
+        idx: 52
+        plane:
+          topLeft: {x: 14, y: 0, z: 17}
+          bottomRight: {x: 14, y: 16, z: 30}
+      - from: 9
+        to: 8
+        idx: 49
+        plane:
+          topLeft: {x: 0, y: 0, z: 30}
+          bottomRight: {x: 14, y: 16, z: 30}
+      - from: 9
+        to: 10
+        idx: 54
+        plane:
+          topLeft: {x: 0, y: 0, z: 46}
+          bottomRight: {x: 14, y: 16, z: 46}
+      - from: 9
+        to: 12
+        idx: 56
+        plane:
+          topLeft: {x: 14, y: 0, z: 30}
+          bottomRight: {x: 14, y: 16, z: 31}
+      - from: 9
+        to: 13
+        idx: 58
+        plane:
+          topLeft: {x: 14, y: 0, z: 31}
+          bottomRight: {x: 14, y: 16, z: 46}
+      - from: 10
+        to: 9
+        idx: 55
+        plane:
+          topLeft: {x: 0, y: 0, z: 46}
+          bottomRight: {x: 14, y: 16, z: 46}
+      - from: 10
+        to: 14
+        idx: 60
+        plane:
+          topLeft: {x: 14, y: 0, z: 46}
+          bottomRight: {x: 14, y: 16, z: 64}
+      - from: 11
+        to: 0
+        idx: 7
+        plane:
+          topLeft: {x: 25, y: 0, z: 0}
+          bottomRight: {x: 25, y: 16, z: 17}
+      - from: 11
+        to: 7
+        idx: 47
+        plane:
+          topLeft: {x: 14, y: 0, z: 0}
+          bottomRight: {x: 14, y: 16, z: 14}
+      - from: 11
+        to: 8
+        idx: 51
+        plane:
+          topLeft: {x: 14, y: 0, z: 14}
+          bottomRight: {x: 14, y: 16, z: 17}
+      - from: 11
+        to: 12
+        idx: 62
+        plane:
+          topLeft: {x: 14, y: 0, z: 17}
+          bottomRight: {x: 25, y: 16, z: 17}
+      - from: 12
+        to: 0
+        idx: 9
+        plane:
+          topLeft: {x: 25, y: 0, z: 17}
+          bottomRight: {x: 25, y: 16, z: 27}
+      - from: 12
+        to: 3
+        idx: 23
+        plane:
+          topLeft: {x: 25, y: 0, z: 27}
+          bottomRight: {x: 25, y: 16, z: 31}
+      - from: 12
+        to: 8
+        idx: 53
+        plane:
+          topLeft: {x: 14, y: 0, z: 17}
+          bottomRight: {x: 14, y: 16, z: 30}
+      - from: 12
+        to: 9
+        idx: 57
+        plane:
+          topLeft: {x: 14, y: 0, z: 30}
+          bottomRight: {x: 14, y: 16, z: 31}
+      - from: 12
+        to: 11
+        idx: 63
+        plane:
+          topLeft: {x: 14, y: 0, z: 17}
+          bottomRight: {x: 25, y: 16, z: 17}
+      - from: 12
+        to: 13
+        idx: 64
+        plane:
+          topLeft: {x: 14, y: 0, z: 31}
+          bottomRight: {x: 25, y: 16, z: 31}
+      - from: 13
+        to: 3
+        idx: 25
+        plane:
+          topLeft: {x: 25, y: 0, z: 31}
+          bottomRight: {x: 25, y: 16, z: 46}
+      - from: 13
+        to: 9
+        idx: 59
+        plane:
+          topLeft: {x: 14, y: 0, z: 31}
+          bottomRight: {x: 14, y: 16, z: 46}
+      - from: 13
+        to: 12
+        idx: 65
+        plane:
+          topLeft: {x: 14, y: 0, z: 31}
+          bottomRight: {x: 25, y: 16, z: 31}
+      - from: 13
+        to: 14
+        idx: 66
+        plane:
+          topLeft: {x: 14, y: 0, z: 46}
+          bottomRight: {x: 25, y: 16, z: 46}
+      - from: 14
+        to: 4
+        idx: 29
+        plane:
+          topLeft: {x: 25, y: 0, z: 46}
+          bottomRight: {x: 25, y: 16, z: 64}
+      - from: 14
+        to: 10
+        idx: 61
+        plane:
+          topLeft: {x: 14, y: 0, z: 46}
+          bottomRight: {x: 14, y: 16, z: 64}
+      - from: 14
+        to: 13
+        idx: 67
+        plane:
+          topLeft: {x: 14, y: 0, z: 46}
+          bottomRight: {x: 25, y: 16, z: 46}
+      - from: 15
+        to: 0
+        idx: 11
+        plane:
+          topLeft: {x: 36, y: 0, z: 23}
+          bottomRight: {x: 36, y: 16, z: 27}
+      - from: 15
+        to: 3
+        idx: 27
+        plane:
+          topLeft: {x: 36, y: 0, z: 27}
+          bottomRight: {x: 36, y: 16, z: 46}
+      - from: 15
+        to: 4
+        idx: 31
+        plane:
+          topLeft: {x: 36, y: 0, z: 46}
+          bottomRight: {x: 36, y: 16, z: 51}
+      - from: 15
+        to: 5
+        idx: 35
+        plane:
+          topLeft: {x: 36, y: 0, z: 23}
+          bottomRight: {x: 49, y: 16, z: 23}
+      - from: 15
+        to: 6
+        idx: 39
+        plane:
+          topLeft: {x: 49, y: 0, z: 40}
+          bottomRight: {x: 49, y: 16, z: 51}
+      - from: 15
+        to: 16
+        idx: 68
+        plane:
+          topLeft: {x: 36, y: 0, z: 51}
+          bottomRight: {x: 49, y: 16, z: 51}
+      - from: 15
+        to: 17
+        idx: 70
+        plane:
+          topLeft: {x: 49, y: 0, z: 23}
+          bottomRight: {x: 49, y: 16, z: 29}
+      - from: 15
+        to: 18
+        idx: 72
+        plane:
+          topLeft: {x: 49, y: 0, z: 29}
+          bottomRight: {x: 49, y: 16, z: 40}
+      - from: 16
+        to: 4
+        idx: 33
+        plane:
+          topLeft: {x: 36, y: 0, z: 51}
+          bottomRight: {x: 36, y: 16, z: 64}
+      - from: 16
+        to: 6
+        idx: 41
+        plane:
+          topLeft: {x: 49, y: 0, z: 51}
+          bottomRight: {x: 49, y: 16, z: 64}
+      - from: 16
+        to: 15
+        idx: 69
+        plane:
+          topLeft: {x: 36, y: 0, z: 51}
+          bottomRight: {x: 49, y: 16, z: 51}
+      - from: 17
+        to: 2
+        idx: 19
+        plane:
+          topLeft: {x: 49, y: 0, z: 19}
+          bottomRight: {x: 64, y: 16, z: 19}
+      - from: 17
+        to: 5
+        idx: 37
+        plane:
+          topLeft: {x: 49, y: 0, z: 19}
+          bottomRight: {x: 49, y: 16, z: 23}
+      - from: 17
+        to: 15
+        idx: 71
+        plane:
+          topLeft: {x: 49, y: 0, z: 23}
+          bottomRight: {x: 49, y: 16, z: 29}
+      - from: 17
+        to: 18
+        idx: 74
+        plane:
+          topLeft: {x: 49, y: 0, z: 29}
+          bottomRight: {x: 64, y: 16, z: 29}
+      - from: 18
+        to: 6
+        idx: 43
+        plane:
+          topLeft: {x: 49, y: 0, z: 40}
+          bottomRight: {x: 64, y: 16, z: 40}
+      - from: 18
+        to: 15
+        idx: 73
+        plane:
+          topLeft: {x: 49, y: 0, z: 29}
+          bottomRight: {x: 49, y: 16, z: 40}
+      - from: 18
+        to: 17
+        idx: 75
+        plane:
+          topLeft: {x: 49, y: 0, z: 29}
+          bottomRight: {x: 64, y: 16, z: 29}
+  roomGraph:
+    nodes:
+    - topLeft: {x: 25, y: 0, z: 0}
+      bottomRight: {x: 36, y: 16, z: 27}
+      idx: 0
+    - topLeft: {x: 36, y: 0, z: 0}
+      bottomRight: {x: 49, y: 16, z: 12}
+      idx: 0
+    - topLeft: {x: 25, y: 0, z: 27}
+      bottomRight: {x: 36, y: 16, z: 46}
+      idx: 0
+    - topLeft: {x: 25, y: 0, z: 46}
+      bottomRight: {x: 36, y: 16, z: 64}
+      idx: 0
+    - topLeft: {x: 49, y: 0, z: 40}
+      bottomRight: {x: 64, y: 16, z: 64}
+      idx: 0
+    - topLeft: {x: 0, y: 0, z: 0}
+      bottomRight: {x: 14, y: 16, z: 14}
+      idx: 0
+    - topLeft: {x: 0, y: 0, z: 14}
+      bottomRight: {x: 14, y: 16, z: 30}
+      idx: 0
+    - topLeft: {x: 0, y: 0, z: 30}
+      bottomRight: {x: 14, y: 16, z: 46}
+      idx: 0
+    - topLeft: {x: 0, y: 0, z: 46}
+      bottomRight: {x: 14, y: 16, z: 64}
+      idx: 0
+    - topLeft: {x: 14, y: 0, z: 31}
+      bottomRight: {x: 25, y: 16, z: 46}
+      idx: 0
+    - topLeft: {x: 14, y: 0, z: 46}
+      bottomRight: {x: 25, y: 16, z: 64}
+      idx: 0
+    - topLeft: {x: 36, y: 0, z: 23}
+      bottomRight: {x: 49, y: 16, z: 51}
+      idx: 0
+    - topLeft: {x: 36, y: 0, z: 51}
+      bottomRight: {x: 49, y: 16, z: 64}
+      idx: 0
+    - topLeft: {x: 49, y: 0, z: 29}
+      bottomRight: {x: 64, y: 16, z: 40}
+      idx: 0
+    edges:
+    - from: 12
+      to: 3
+      idx: 17
+      plane:
+        topLeft: {x: 36, y: 0, z: 51}
+        bottomRight: {x: 36, y: 16, z: 64}
+    - from: 12
+      to: 11
+      idx: 37
+      plane:
+        topLeft: {x: 36, y: 0, z: 51}
+        bottomRight: {x: 49, y: 16, z: 51}
+    - from: 11
+      to: 0
+      idx: 5
+      plane:
+        topLeft: {x: 36, y: 0, z: 23}
+        bottomRight: {x: 36, y: 16, z: 27}
+    - from: 10
+      to: 3
+      idx: 13
+      plane:
+        topLeft: {x: 25, y: 0, z: 46}
+        bottomRight: {x: 25, y: 16, z: 64}
+    - from: 8
+      to: 7
+      idx: 29
+      plane:
+        topLeft: {x: 0, y: 0, z: 46}
+        bottomRight: {x: 14, y: 16, z: 46}
+    - from: 4
+      to: 13
+      idx: 22
+      plane:
+        topLeft: {x: 49, y: 0, z: 40}
+        bottomRight: {x: 64, y: 16, z: 40}
+    - from: 9
+      to: 10
+      idx: 34
+      plane:
+        topLeft: {x: 14, y: 0, z: 46}
+        bottomRight: {x: 25, y: 16, z: 46}
+    - from: 7
+      to: 9
+      idx: 30
+      plane:
+        topLeft: {x: 14, y: 0, z: 31}
+        bottomRight: {x: 14, y: 16, z: 46}
+    - from: 4
+      to: 11
+      idx: 18
+      plane:
+        topLeft: {x: 49, y: 0, z: 40}
+        bottomRight: {x: 49, y: 16, z: 51}
+    - from: 7
+      to: 6
+      idx: 27
+      plane:
+        topLeft: {x: 0, y: 0, z: 30}
+        bottomRight: {x: 14, y: 16, z: 30}
+    - from: 3
+      to: 2
+      idx: 7
+      plane:
+        topLeft: {x: 25, y: 0, z: 46}
+        bottomRight: {x: 36, y: 16, z: 46}
+    - from: 0
+      to: 1
+      idx: 0
+      plane:
+        topLeft: {x: 36, y: 0, z: 0}
+        bottomRight: {x: 36, y: 16, z: 12}
+    - from: 5
+      to: 6
+      idx: 24
+      plane:
+        topLeft: {x: 0, y: 0, z: 14}
+        bottomRight: {x: 14, y: 16, z: 14}
+    csr:
+      nodeCount: 14
+      edgeCount: 13
+      edges:
+      - from: 12
+        to: 3
+        idx: 17
+        plane:
+          topLeft: {x: 36, y: 0, z: 51}
+          bottomRight: {x: 36, y: 16, z: 64}
+      - from: 12
+        to: 11
+        idx: 37
+        plane:
+          topLeft: {x: 36, y: 0, z: 51}
+          bottomRight: {x: 49, y: 16, z: 51}
+      - from: 11
+        to: 0
+        idx: 5
+        plane:
+          topLeft: {x: 36, y: 0, z: 23}
+          bottomRight: {x: 36, y: 16, z: 27}
+      - from: 10
+        to: 3
+        idx: 13
+        plane:
+          topLeft: {x: 25, y: 0, z: 46}
+          bottomRight: {x: 25, y: 16, z: 64}
+      - from: 8
+        to: 7
+        idx: 29
+        plane:
+          topLeft: {x: 0, y: 0, z: 46}
+          bottomRight: {x: 14, y: 16, z: 46}
+      - from: 4
+        to: 13
+        idx: 22
+        plane:
+          topLeft: {x: 49, y: 0, z: 40}
+          bottomRight: {x: 64, y: 16, z: 40}
+      - from: 9
+        to: 10
+        idx: 34
+        plane:
+          topLeft: {x: 14, y: 0, z: 46}
+          bottomRight: {x: 25, y: 16, z: 46}
+      - from: 7
+        to: 9
+        idx: 30
+        plane:
+          topLeft: {x: 14, y: 0, z: 31}
+          bottomRight: {x: 14, y: 16, z: 46}
+      - from: 4
+        to: 11
+        idx: 18
+        plane:
+          topLeft: {x: 49, y: 0, z: 40}
+          bottomRight: {x: 49, y: 16, z: 51}
+      - from: 7
+        to: 6
+        idx: 27
+        plane:
+          topLeft: {x: 0, y: 0, z: 30}
+          bottomRight: {x: 14, y: 16, z: 30}
+      - from: 3
+        to: 2
+        idx: 7
+        plane:
+          topLeft: {x: 25, y: 0, z: 46}
+          bottomRight: {x: 36, y: 16, z: 46}
+      - from: 0
+        to: 1
+        idx: 0
+        plane:
+          topLeft: {x: 36, y: 0, z: 0}
+          bottomRight: {x: 36, y: 16, z: 12}
+      - from: 5
+        to: 6
+        idx: 24
+        plane:
+          topLeft: {x: 0, y: 0, z: 14}
+          bottomRight: {x: 14, y: 16, z: 14}
+      cnt: 00000000010000000100000001000000020000000400000005000000050000000700000008000000090000000a0000000b0000000d0000000d0000000d000000
+      csr:
+      - from: 0
+        to: 1
+        idx: 0
+        plane:
+          topLeft: {x: 36, y: 0, z: 0}
+          bottomRight: {x: 36, y: 16, z: 12}
+      - from: 3
+        to: 2
+        idx: 7
+        plane:
+          topLeft: {x: 25, y: 0, z: 46}
+          bottomRight: {x: 36, y: 16, z: 46}
+      - from: 4
+        to: 13
+        idx: 22
+        plane:
+          topLeft: {x: 49, y: 0, z: 40}
+          bottomRight: {x: 64, y: 16, z: 40}
+      - from: 4
+        to: 11
+        idx: 18
+        plane:
+          topLeft: {x: 49, y: 0, z: 40}
+          bottomRight: {x: 49, y: 16, z: 51}
+      - from: 5
+        to: 6
+        idx: 24
+        plane:
+          topLeft: {x: 0, y: 0, z: 14}
+          bottomRight: {x: 14, y: 16, z: 14}
+      - from: 7
+        to: 9
+        idx: 30
+        plane:
+          topLeft: {x: 14, y: 0, z: 31}
+          bottomRight: {x: 14, y: 16, z: 46}
+      - from: 7
+        to: 6
+        idx: 27
+        plane:
+          topLeft: {x: 0, y: 0, z: 30}
+          bottomRight: {x: 14, y: 16, z: 30}
+      - from: 8
+        to: 7
+        idx: 29
+        plane:
+          topLeft: {x: 0, y: 0, z: 46}
+          bottomRight: {x: 14, y: 16, z: 46}
+      - from: 9
+        to: 10
+        idx: 34
+        plane:
+          topLeft: {x: 14, y: 0, z: 46}
+          bottomRight: {x: 25, y: 16, z: 46}
+      - from: 10
+        to: 3
+        idx: 13
+        plane:
+          topLeft: {x: 25, y: 0, z: 46}
+          bottomRight: {x: 25, y: 16, z: 64}
+      - from: 11
+        to: 0
+        idx: 5
+        plane:
+          topLeft: {x: 36, y: 0, z: 23}
+          bottomRight: {x: 36, y: 16, z: 27}
+      - from: 12
+        to: 3
+        idx: 17
+        plane:
+          topLeft: {x: 36, y: 0, z: 51}
+          bottomRight: {x: 36, y: 16, z: 64}
+      - from: 12
+        to: 11
+        idx: 37
+        plane:
+          topLeft: {x: 36, y: 0, z: 51}
+          bottomRight: {x: 49, y: 16, z: 51}
+  size: {x: 64, y: 16, z: 64}
+  param:
+    maxDepth: 0
+    minCellSize: {x: -1, y: -1, z: -1}
+    maxCellSize: {x: -1, y: -1, z: -1}
+    minCellSizeRatio: {x: -1, y: -1, z: -1}
+    maxCellSizeRatio: {x: -1, y: -1, z: -1}
+    splitByDepthCurve:
+      units: []
+      value: []
+      minUnit: 0
+      maxUnit: 0
+    cellSizeRatioCurve:
+      xCurve:
+        units: []
+        value: []
+        minUnit: 0
+        maxUnit: 0
+      yCurve:
+        units: []
+        value: []
+        minUnit: 0
+        maxUnit: 0
+      zCurve:
+        units: []
+        value: []
+        minUnit: 0
+        maxUnit: 0
+    splitLengthRatioCurve:
+      xCurve:
+        units: []
+        value: []
+        minUnit: 0
+        maxUnit: 0
+      yCurve:
+        units: []
+        value: []
+        minUnit: 0
+        maxUnit: 0
+      zCurve:
+        units: []
+        value: []
+        minUnit: 0
+        maxUnit: 0
+    roomByDepthCurve:
+      units: []
+      value: []
+      minUnit: 0
+      maxUnit: 0
+  maxDepth: 7
+  minCellSize: 22
+  maxCellSize: 64
+  depthSplitCurve:
+    units:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    value:
+    - 0.5333333
+    - 0.5
+    - 0.659259
+    - 0.4666667
+    - 0.6296292
+    - 0.5555556
+    - 0.65555555
+    minUnit: 0
+    maxUnit: 6
+  cellSizeCurve:
+    units:
+    - 0
+    - 0.1
+    - 0.2
+    - 0.3
+    - 0.4
+    - 0.5
+    - 0.6
+    - 0.7
+    - 0.8
+    - 0.9
+    value:
+    - 0.64444447
+    - 0.49629587
+    - 0.7111111
+    - 0.2518514
+    - 0.32962987
+    - 0.70370346
+    - 0.37407362
+    - 0.31111112
+    - 0.3740743
+    - 0.5
+    minUnit: 0
+    maxUnit: 0.9

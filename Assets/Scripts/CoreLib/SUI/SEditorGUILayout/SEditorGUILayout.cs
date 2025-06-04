@@ -1,6 +1,7 @@
 using System;
 using NUnit.Framework.Internal.Builders;
 using UnityEditor;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Corelib.SUI
@@ -11,19 +12,40 @@ namespace Corelib.SUI
         {
         }
 
-        public static SUIElement Label(string text) =>
-            new SEditorGUILayout(() => EditorGUILayout.LabelField(text));
+        public static SEditorGUILayoutLabel Label(string label)
+            => new SEditorGUILayoutLabel(label);
 
         public static SEditorGUILayoutButton Button(string label)
             => new SEditorGUILayoutButton(label);
 
-        public static SEditorGUILayoutHorizontal Horizontal(SUIElement content = null) =>
-            new SEditorGUILayoutHorizontal(content);
+        public static SEditorGUILayoutHorizontal Horizontal(string style = "") =>
+            new SEditorGUILayoutHorizontal(style);
 
-        public static SEditorGUILayoutVertical Vertical(SUIElement content = null) =>
-            new SEditorGUILayoutVertical(content);
+        public static SEditorGUILayoutVertical Vertical(string style = "") =>
+            new SEditorGUILayoutVertical(style);
 
         public static SEditorGUILayoutToggle Toggle(string label, bool value)
             => new SEditorGUILayoutToggle(label, value);
+
+        public static SEditorGUILayoutSlider Slider(float value, float minValue = 0f, float maxValue = 1.0f)
+            => new SEditorGUILayoutSlider(value, minValue, maxValue);
+
+        public static SEditorGUILayoutFoldoutHeaderGroup FoldoutHeaderGroup(string prefix, bool foldout) =>
+            new SEditorGUILayoutFoldoutHeaderGroup(prefix, foldout);
+
+        public static SUIElement Action(UnityAction action) =>
+            new SEditorGUILayout(() => action?.Invoke());
+
+        public static SEditorGUILayoutVector3Int Vector3Int(string prefix, Vector3Int value)
+            => new SEditorGUILayoutVector3Int(prefix, value);
+
+        public static SEditorGUILayoutInt Int(string prefix, int value)
+            => new SEditorGUILayoutInt(prefix, value);
+
+        public static SEditorGUILayoutFloat Float(string prefix, float value)
+            => new SEditorGUILayoutFloat(prefix, value);
+
+        public static SEditorGUILayoutMinMaxSlider MinMaxSlider(float minValue, float maxValue)
+            => new SEditorGUILayoutMinMaxSlider(minValue, maxValue);
     }
 }

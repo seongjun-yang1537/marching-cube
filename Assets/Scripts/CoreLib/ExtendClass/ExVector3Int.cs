@@ -7,6 +7,51 @@ namespace Corelib.Utils
 {
     public static class ExVector3Int
     {
+        public static readonly List<Vector3Int> DIR6;
+        public static readonly List<Vector3Int> DIR26;
+        public static readonly List<Vector3Int> DIR27;
+
+        static ExVector3Int()
+        {
+            List<Vector3Int> allDirectionsList = new List<Vector3Int>();
+            for (int z = -1; z <= 1; z++)
+            {
+                for (int y = -1; y <= 1; y++)
+                {
+                    for (int x = -1; x <= 1; x++)
+                    {
+                        if (x == 0 && y == 0 && z == 0)
+                        {
+                            continue;
+                        }
+                        allDirectionsList.Add(new Vector3Int(x, y, z));
+                    }
+                }
+            }
+            DIR26 = allDirectionsList;
+            DIR27 = new(DIR26);
+            DIR27.Add(Vector3Int.zero);
+
+            DIR6 = new()
+            {
+                new Vector3Int(1, 0, 0),
+                new Vector3Int(-1, 0, 0),
+                new Vector3Int(0, 1, 0),
+                new Vector3Int(0, -1, 0),
+                new Vector3Int(0, 0, 1),
+                new Vector3Int(0, 0, -1)
+            };
+        }
+
+        public static void Deconstruct(this Vector3Int vec, out int x, out int y, out int z)
+        {
+            x = vec.x;
+            y = vec.y;
+            z = vec.z;
+        }
+
+        public static int Area(this Vector3Int vec) => vec.x * vec.y * vec.z;
+
         public static IEnumerable<Vector3Int> Spread(Vector3Int from, Vector3Int to)
         {
             List<Vector3Int> spreads = new();
@@ -49,6 +94,20 @@ namespace Corelib.Utils
 
         public static bool InRange(this Vector3Int vec, Vector3Int l, Vector3Int r)
             => l.GreaterEqual(vec) && vec.LessEqual(r);
+
+        public static List<int> ToArray(this Vector3Int vec)
+            => new List<int>() { vec.x, vec.y, vec.z };
+
+        public static Vector3Int RandomRange(this Vector3Int left, Vector3Int right, MT19937 rng = null)
+        {
+            if (rng == null)
+                rng = MT19937.Create();
+            return new Vector3Int(
+                rng.NextInt(left.x, right.x),
+                rng.NextInt(left.y, right.y),
+                rng.NextInt(left.z, right.z)
+            );
+        }
     }
 }
 

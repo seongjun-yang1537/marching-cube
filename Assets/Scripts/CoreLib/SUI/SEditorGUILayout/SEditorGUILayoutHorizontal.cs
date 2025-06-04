@@ -6,17 +6,24 @@ namespace Corelib.SUI
 {
     public class SEditorGUILayoutHorizontal : SUIElement
     {
-        private readonly SUIElement content;
+        private SUIElement content;
         private string style = "";
+
 
         public SEditorGUILayoutHorizontal()
         {
 
         }
 
-        public SEditorGUILayoutHorizontal(SUIElement content)
+        public SEditorGUILayoutHorizontal(string style)
+        {
+            this.style = style;
+        }
+
+        public SEditorGUILayoutHorizontal Content(SUIElement content = null)
         {
             this.content = content;
+            return this;
         }
 
         public SEditorGUILayoutHorizontal Style(string style)
