@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 311687414}
   - component: {fileID: 311687413}
   - component: {fileID: 311687412}
+  - component: {fileID: 311687415}
   m_Layer: 0
   m_Name: BSP3D
   m_TagString: Untagged
@@ -401,6 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalarField: {fileID: 1287076437}
+  caveMaterial: {fileID: 0}
   bVisibleScalarField: 0
   bVisibleMarchingCubeGizmos: 0
 --- !u!23 &311687413
@@ -452,6 +454,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311687407}
+  m_Mesh: {fileID: 289037143}
+--- !u!64 &311687415
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311687407}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 289037143}
 --- !u!1 &661975152
 GameObject:
@@ -656,6 +680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalarField: {fileID: 11400000, guid: 72184ef406d044545bbe4d9367dc372b, type: 2}
+  caveMaterial: {fileID: 0}
   bVisibleScalarField: 0
   bVisibleMarchingCubeGizmos: 0
 --- !u!23 &874329278
@@ -149353,6 +149378,71 @@ MonoBehaviour:
   - 1
   - 1
   threshold: 1e-45
+--- !u!1 &1435037977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1435037980}
+  - component: {fileID: 1435037979}
+  - component: {fileID: 1435037978}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1435037978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435037977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfaed65b4e65d334182e9e2ccaa15636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applyCustomFogInPlayMode: 1
+  fogColor: {r: 0, g: 0, b: 0, a: 1}
+  fogMode: 3
+  fogDensity: 0.1
+  linearFogStart: 20
+  linearFogEnd: 100
+--- !u!114 &1435037979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435037977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203b9dd05a30cb34dba22bda5c57234a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedCategory: 0
+  selectedIdx: 0
+--- !u!4 &1435037980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435037977}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6875, y: 39.332664, z: 53.60409}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2075121631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -154764,3 +154854,4 @@ SceneRoots:
   - {fileID: 874329276}
   - {fileID: 311687410}
   - {fileID: 2121675521}
+  - {fileID: 1435037980}
