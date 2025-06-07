@@ -1,3 +1,4 @@
+using Corelib.SUI;
 using UnityEditor;
 using UnityEngine;
 
@@ -90,6 +91,114 @@ namespace Ingame
                 float labelY = graphY + graphHeight + Spacing;
                 GUI.Label(new Rect(centerX - 15f, labelY, 30f, XLabelHeight), unitElement.floatValue.ToString("0.0"), EditorStyles.miniLabel);
             }
+        }
+
+        public static void Draw(BSP3DProbabilityCurve curve)
+        {
+            if (curve == null || curve.units == null || curve.UnitsCount == 0 || curve.ValueCount != curve.UnitsCount)
+            {
+                EditorGUILayout.LabelField("(Invalid or No Curve Data)");
+                return;
+            }
+
+            int count = curve.UnitsCount;
+
+            Rect graphAreaRect = GUILayoutUtility.GetRect(GUIContent.none, GUIStyle.none, GUILayout.ExpandWidth(true), GUILayout.Height(GraphHeight));
+
+            float availableWidthForGraphAndSliders = graphAreaRect.width - YAxisLabelWidth;
+            float sliderWidth = Mathf.Max(MinSliderWidth, (availableWidthForGraphAndSliders - (count - 1) * Spacing) / count);
+            float totalContentWidthForSliders = sliderWidth * count + Spacing * (count - 1);
+
+            float graphContentStartX = graphAreaRect.x + YAxisLabelWidth;
+            if (totalContentWidthForSliders < availableWidthForGraphAndSliders)
+            {
+                graphContentStartX += (availableWidthForGraphAndSliders - totalContentWidthForSliders) * 0.5f;
+            }
+
+            for (int i = 0; i <= YTicks; i++)
+            {
+                float t = i / (float)YTicks;
+                float yPos = graphAreaRect.y + (1f - t) * GraphHeight;
+                GUI.Label(new Rect(graphAreaRect.x, yPos - 8f, YAxisLabelWidth - 2f, 16f), t.ToString("0.0"), EditorStyles.miniLabel);
+            }
+
+            Rect actualGraphDrawingRect = new Rect(graphContentStartX, graphAreaRect.y, totalContentWidthForSliders, GraphHeight);
+
+            Vector3[] curvePoints = new Vector3[count];
+            for (int i = 0; i < count; i++)
+            {
+                float val = Mathf.Clamp01(curve.GetValue(i)); // GetValue 사용
+                float centerX = actualGraphDrawingRect.x + i * (sliderWidth + Spacing) + sliderWidth * 0.5f;
+                float y = actualGraphDrawingRect.y + (1f - val) * actualGraphDrawingRect.height;
+                curvePoints[i] = new Vector3(centerX, y, 0f);
+            }
+
+            Handles.BeginGUI();
+            EditorGUI.DrawRect(actualGraphDrawingRect, new Color(0f, 0f, 0f, 0.2f));
+            Handles.color = new Color(1f, 1f, 1f, 0.15f);
+
+            for (int i = 0; i <= YTicks; i++)
+            {
+                float t = i / (float)YTicks;
+                float yPos = actualGraphDrawingRect.y + (1f - t) * actualGraphDrawingRect.height;
+                Handles.DrawLine(new Vector3(actualGraphDrawingRect.x, yPos), new Vector3(actualGraphDrawingRect.xMax, yPos));
+            }
+
+            Handles.color = new Color(0f, 1f, 1f, 0.6f);
+            Handles.DrawAAPolyLine(3f, curvePoints);
+            Handles.EndGUI();
+
+            for (int i = 0; i < count; i++)
+            {
+                Rect sliderRect = new Rect(actualGraphDrawingRect.x + i * (sliderWidth + Spacing), actualGraphDrawingRect.y, sliderWidth, actualGraphDrawingRect.height);
+
+                EditorGUI.BeginChangeCheck();
+                float newValue = GUI.VerticalSlider(sliderRect, curve.GetValue(i), 1f, 0f); // GetValue 사용
+                if (EditorGUI.EndChangeCheck())
+                {
+                    // curve.SetValue(i, newValue)를 호출하기 전에 Undo를 기록해야 할 수 있습니다.
+                    // 예: if (myUnityEngineObject != null) Undo.RecordObject(myUnityEngineObject, "Modify Curve Value");
+                    curve.SetValue(i, newValue); // SetValue 사용
+                    // 예: if (myUnityEngineObject != null) EditorUtility.SetDirty(myUnityEngineObject);
+                }
+            }
+
+            Rect xLabelAreaRect = GUILayoutUtility.GetRect(GUIContent.none, GUIStyle.none, GUILayout.ExpandWidth(true), GUILayout.Height(XLabelHeight));
+            for (int i = 0; i < count; i++)
+            {
+                float unitVal = curve.units[i]; // units는 public이므로 직접 접근
+                float labelCenterX = graphContentStartX + i * (sliderWidth + Spacing) + sliderWidth * 0.5f;
+                GUI.Label(new Rect(labelCenterX - 15f, xLabelAreaRect.y, 30f, XLabelHeight), unitVal.ToString("0.0"), EditorStyles.miniLabel);
+            }
+            EditorGUILayout.Space(Spacing);
+        }
+
+        public static void DrawVector3(BSP3DProbabilityVector3Curve vectorCurves)
+        {
+            SEditorGUILayout.Vertical("helpbox")
+            .Content(
+                SEditorGUILayout.Vertical("helpbox")
+                .Content(
+                    SEditorGUILayout.Label("X").Bold()
+                )
+                + SGUILayout.Space(10)
+                + SEditorGUILayout.Action(() => Draw(vectorCurves.xCurve))
+
+                + SEditorGUILayout.Vertical("helpbox")
+                .Content(
+                    SEditorGUILayout.Label("Y").Bold()
+                )
+                + SGUILayout.Space(10)
+                + SEditorGUILayout.Action(() => Draw(vectorCurves.yCurve))
+
+                + SEditorGUILayout.Vertical("helpbox")
+                .Content(
+                    SEditorGUILayout.Label("Z").Bold()
+                )
+                + SGUILayout.Space(10)
+                + SEditorGUILayout.Action(() => Draw(vectorCurves.zCurve))
+            )
+            .Render();
         }
     }
 }

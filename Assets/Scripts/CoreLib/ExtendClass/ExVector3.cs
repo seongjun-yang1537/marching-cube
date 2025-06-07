@@ -27,6 +27,31 @@ namespace Corelib.Utils
                 Mathf.CeilToInt(vec.y),
                 Mathf.CeilToInt(vec.z)
             );
+
+        public static List<float> Flatten(this Vector3 vec)
+            => new List<float>() { vec.x, vec.y, vec.z };
+
+        public static float GetAt(this Vector3 vec, int idx)
+        {
+            switch (idx)
+            {
+                case 0: return vec.x;
+                case 1: return vec.y;
+                case 2: return vec.z;
+            }
+            return -1;
+        }
+
+        public static Vector3 SetAt(this ref Vector3 vec, int idx, float value)
+        {
+            switch (idx)
+            {
+                case 0: { vec.x = value; } break;
+                case 1: { vec.y = value; } break;
+                case 2: { vec.z = value; } break;
+            }
+            return vec;
+        }
     }
 }
 

@@ -18,7 +18,6 @@ namespace Ingame
         {
             serializedObject.Update();
 
-            base.OnInspectorGUI();
             Inspector_BSP3DMapAssetScriptableObject();
 
             SEditorGUILayout.Vertical("box")

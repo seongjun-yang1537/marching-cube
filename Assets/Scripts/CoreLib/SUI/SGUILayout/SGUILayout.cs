@@ -21,5 +21,8 @@ namespace Corelib.SUI
 
         public static SGUILayoutVertical Vertical(SUIElement content = null) =>
             new SGUILayoutVertical(content);
+
+        public static SUIElement FlexibleSpace() =>
+            new SGUILayout(() => GUILayout.FlexibleSpace());
     }
 }

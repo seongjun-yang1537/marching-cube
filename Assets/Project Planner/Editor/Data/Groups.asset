@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f38a61b9a7c37429355b6864d6cab2, type: 3}
+  m_Name: Groups
+  m_EditorClassIdentifier: 
+  _all:
+  - _id: 04e3fe181f79a711952e1155fc0af6cc92647696-5d68f7f6-bb5d-461c-822d-b236eb391734
+    _boardID: 04e3fe181f79a711952e1155fc0af6cc92647696-15511c80-e864-4bc6-991b-3e9e94ddb6ef
+    _name: Planned
+    _taskIds:
+    - 04e3fe181f79a711952e1155fc0af6cc92647696-28325aa4-2a97-47cf-8067-23e819861e21
+    - 04e3fe181f79a711952e1155fc0af6cc92647696-44c9c0b9-f4a7-4fb6-a670-1d0062755fb7
+    _scrollPosition: {x: 0, y: 0}
+    _treeWindow_SearchShow: 1
+    TreeWindowShowAnimation:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    _treeWindow_ShowTasks: 0
+  - _id: 04e3fe181f79a711952e1155fc0af6cc92647696-548f0e41-12aa-415c-9570-e5c9568c7259
+    _boardID: 04e3fe181f79a711952e1155fc0af6cc92647696-15511c80-e864-4bc6-991b-3e9e94ddb6ef
+    _name: In Progress
+    _taskIds:
+    - 04e3fe181f79a711952e1155fc0af6cc92647696-988cd5c6-65a9-4b38-ac4c-0a30147b2025
+    _scrollPosition: {x: 0, y: 0}
+    _treeWindow_SearchShow: 1
+    TreeWindowShowAnimation:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    _treeWindow_ShowTasks: 0
+  - _id: 04e3fe181f79a711952e1155fc0af6cc92647696-ab737206-3e68-4736-909b-960bbea09ddf
+    _boardID: 04e3fe181f79a711952e1155fc0af6cc92647696-15511c80-e864-4bc6-991b-3e9e94ddb6ef
+    _name: Testing
+    _taskIds: []
+    _scrollPosition: {x: 0, y: 0}
+    _treeWindow_SearchShow: 1
+    TreeWindowShowAnimation:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    _treeWindow_ShowTasks: 0
+  - _id: 04e3fe181f79a711952e1155fc0af6cc92647696-6750df0e-989a-4021-a70f-6d91f71e1c4b
+    _boardID: 04e3fe181f79a711952e1155fc0af6cc92647696-15511c80-e864-4bc6-991b-3e9e94ddb6ef
+    _name: Completed
+    _taskIds: []
+    _scrollPosition: {x: 0, y: 0}
+    _treeWindow_SearchShow: 1
+    TreeWindowShowAnimation:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    _treeWindow_ShowTasks: 0

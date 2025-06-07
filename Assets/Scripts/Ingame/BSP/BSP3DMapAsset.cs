@@ -21,7 +21,11 @@ namespace Ingame
         public ScalarField scalarField; // DEBUG
         public BSP3DScalarGrid scalarGrid;
 
-        public Vector3Int size;
+        public Vector3Int size
+        {
+            get => param.size;
+            set => param.size = value;
+        }
 
         [SerializeField]
         public BSP3DGenerationParam param;

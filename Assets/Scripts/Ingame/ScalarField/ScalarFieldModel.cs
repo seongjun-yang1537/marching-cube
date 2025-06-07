@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace MCube
 {
-    [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
+    [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer), typeof(MeshCollider))]
     public class ScalarFieldModel : MonoBehaviour
     {
         public ScalarField scalarField;
@@ -20,30 +20,13 @@ namespace MCube
 
         public Material caveMaterial;
 
-        List<Vector3> marchingCubeTriangles;
-        private Material _material;
-
         [HideInInspector]
         public bool bVisibleScalarField = true;
         [HideInInspector]
         public bool bVisibleMarchingCubeGizmos = true;
 
-        private Material CreateMaterial()
-        {
-            Shader shader = Shader.Find("Hidden/Internal-Colored");
-            Material _material = new Material(shader);
-            _material.hideFlags = HideFlags.HideAndDontSave;
-            _material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
-            _material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
-            _material.SetInt("_Cull", (int)UnityEngine.Rendering.CullMode.Off);
-            _material.SetInt("_ZWrite", 0);
-            return _material;
-        }
-
         public void GenerateMarchingCube()
         {
-            marchingCubeTriangles = new();
-
             GenerateMarchingCubeMesh();
         }
 
@@ -53,6 +36,9 @@ namespace MCube
 
             MeshFilter meshFilter = GetComponent<MeshFilter>();
             meshFilter.mesh = mesh;
+
+            MeshCollider meshCollider = GetComponent<MeshCollider>();
+            meshCollider.sharedMesh = mesh;
         }
 
         public Mesh CreateMarchingCubeMesh()
@@ -61,7 +47,6 @@ namespace MCube
             MarchingCubeMesher.ApplyContourLineColor(scalarField, mesh);
 
             MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
-
             meshRenderer.material = caveMaterial;
 
             return mesh;
@@ -69,7 +54,6 @@ namespace MCube
 
         public void OnDrawGizmosSelected()
         {
-            OnDrawGizmosMarchingCubes();
             DrawGizmosScalarField();
         }
 
@@ -80,13 +64,6 @@ namespace MCube
 
             foreach (Vector3Int idx in scalarField.Indices)
             {
-                // SGizmos.Scope(
-                //     SGizmos.Sphere(idx, 0.25f)
-                // )
-                // .Color(new Color(1f, 1f, 1f, 1.0f - scalarField[idx]))
-                // .Matrix(transform.localToWorldMatrix)
-                // .Render();
-
                 if (Mathf.Approximately(scalarField[idx], 0.0f))
                 {
                     SGizmos.Scope(
@@ -97,31 +74,6 @@ namespace MCube
                     .Render();
                 }
             }
-        }
-
-        private void OnDrawGizmosMarchingCubes()
-        {
-            if (!bVisibleMarchingCubeGizmos || !scalarField)
-                return;
-            if (marchingCubeTriangles == null)
-                return;
-
-            if (!_material) _material = CreateMaterial();
-            _material.SetPass(0);
-            GL.PushMatrix();
-            GL.MultMatrix(transform.localToWorldMatrix);
-            GL.Begin(GL.TRIANGLES);
-            GL.Color(new Color(1f, 0f, 0f, 0.5f));
-
-            for (int i = 0; i < marchingCubeTriangles.Count; i += 3)
-            {
-                GL.Vertex(marchingCubeTriangles[i]);
-                GL.Vertex(marchingCubeTriangles[i + 1]);
-                GL.Vertex(marchingCubeTriangles[i + 2]);
-            }
-
-            GL.End();
-            GL.PopMatrix();
         }
     }
 }

@@ -1,5 +1,3 @@
-using System;
-using NUnit.Framework.Internal.Builders;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
@@ -33,6 +31,9 @@ namespace Corelib.SUI
         public static SEditorGUILayoutFoldoutHeaderGroup FoldoutHeaderGroup(string prefix, bool foldout) =>
             new SEditorGUILayoutFoldoutHeaderGroup(prefix, foldout);
 
+        public static SEditorGUILayoutFoldout Foldout(string prefix, bool foldout) =>
+            new SEditorGUILayoutFoldout(prefix, foldout);
+
         public static SUIElement Action(UnityAction action) =>
             new SEditorGUILayout(() => action?.Invoke());
 
@@ -47,5 +48,8 @@ namespace Corelib.SUI
 
         public static SEditorGUILayoutMinMaxSlider MinMaxSlider(float minValue, float maxValue)
             => new SEditorGUILayoutMinMaxSlider(minValue, maxValue);
+
+        public static SEditorGUILayoutProperty Property(SerializedProperty property)
+            => new SEditorGUILayoutProperty(property);
     }
 }

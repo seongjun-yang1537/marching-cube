@@ -108,6 +108,28 @@ namespace Corelib.Utils
                 rng.NextInt(left.z, right.z)
             );
         }
+
+        public static int GetAt(this Vector3Int vec, int idx)
+        {
+            switch (idx)
+            {
+                case 0: return vec.x;
+                case 1: return vec.y;
+                case 2: return vec.z;
+            }
+            return -1;
+        }
+
+        public static Vector3Int SetAt(this ref Vector3Int vec, int idx, int value)
+        {
+            switch (idx)
+            {
+                case 0: { vec.x = value; } break;
+                case 1: { vec.y = value; } break;
+                case 2: { vec.z = value; } break;
+            }
+            return vec;
+        }
     }
 }
 

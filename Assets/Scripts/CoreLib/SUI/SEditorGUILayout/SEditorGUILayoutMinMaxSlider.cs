@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,6 +10,9 @@ namespace Corelib.SUI
     {
         private float minValue;
         private float maxValue;
+
+        private float? width;
+        private float? height;
 
         private float limitMin = 0f;
         private float limitMax = 1f;
@@ -34,12 +38,28 @@ namespace Corelib.SUI
             return this;
         }
 
+        public SEditorGUILayoutMinMaxSlider Width(float width)
+        {
+            this.width = width;
+            return this;
+        }
+
+        public SEditorGUILayoutMinMaxSlider Height(float height)
+        {
+            this.height = height;
+            return this;
+        }
+
         public override void Render()
         {
+            List<GUILayoutOption> options = new();
+            if (width != null) options.Add(GUILayout.Width(width.Value));
+            if (height != null) options.Add(GUILayout.Height(height.Value));
+
             float newMin = minValue;
             float newMax = maxValue;
 
-            EditorGUILayout.MinMaxSlider(ref newMin, ref newMax, limitMin, limitMax);
+            EditorGUILayout.MinMaxSlider(ref newMin, ref newMax, limitMin, limitMax, options.ToArray());
 
             newMin = Mathf.Max(newMin, limitMin);
             newMax = Math.Min(newMax, limitMax);

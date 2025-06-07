@@ -22,11 +22,27 @@ namespace Ingame
             ReUnit(units);
         }
 
-        public void ReUnit(List<float> newUnits)
+        public int UnitsCount => units?.Count ?? 0;
+        public int ValueCount => value?.Count ?? 0;
+
+        public float GetValue(int index)
+        {
+            if (value != null && index >= 0 && index < value.Count)
+                return value[index];
+            return 0.5f; // 기본값 또는 오류 처리
+        }
+
+        public void SetValue(int index, float newValue)
+        {
+            if (value != null && index >= 0 && index < value.Count)
+                value[index] = Mathf.Clamp01(newValue);
+        }
+
+        public BSP3DProbabilityCurve ReUnit(List<float> newUnits)
         {
             units = newUnits;
             if (units.Count == 0)
-                return;
+                return this;
             minUnit = units.Min();
             maxUnit = units.Max();
 
@@ -41,6 +57,7 @@ namespace Ingame
                 else
                     value.Add(0.5f);
             }
+            return this;
         }
 
         public void RemoveUnit(int idx) => units.RemoveAt(idx);
@@ -63,11 +80,14 @@ namespace Ingame
         [SerializeField]
         public BSP3DProbabilityCurve zCurve;
 
-        public void ReUnit(List<float> newUnits)
+        public List<BSP3DProbabilityCurve> curves { get => new() { xCurve, yCurve, zCurve }; }
+
+        public BSP3DProbabilityVector3Curve ReUnit(List<float> newUnits)
         {
             xCurve.ReUnit(newUnits);
             yCurve.ReUnit(newUnits);
             zCurve.ReUnit(newUnits);
+            return this;
         }
 
         public void RemoveUnit(int idx)

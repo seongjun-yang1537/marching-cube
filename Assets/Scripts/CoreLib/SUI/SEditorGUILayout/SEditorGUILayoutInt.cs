@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,6 +12,8 @@ namespace Corelib.SUI
         private int value;
         private int? minValue;
         private int? maxValue;
+        private float? width;
+        private float? height;
         private UnityAction<int> onValueChanged;
 
         public SEditorGUILayoutInt(string prefix, int value)
@@ -44,9 +47,25 @@ namespace Corelib.SUI
             return this;
         }
 
+        public SEditorGUILayoutInt Width(float width)
+        {
+            this.width = width;
+            return this;
+        }
+
+        public SEditorGUILayoutInt Height(float height)
+        {
+            this.height = height;
+            return this;
+        }
+
         public override void Render()
         {
-            int newValue = EditorGUILayout.IntField(prefix, value);
+            List<GUILayoutOption> options = new();
+            if (width != null) options.Add(GUILayout.Width(width.Value));
+            if (height != null) options.Add(GUILayout.Height(height.Value));
+
+            int newValue = EditorGUILayout.IntField(prefix, value, options.ToArray());
             if (minValue != null) newValue = Math.Max(minValue.Value, newValue);
             if (maxValue != null) newValue = Math.Min(newValue, maxValue.Value);
 
