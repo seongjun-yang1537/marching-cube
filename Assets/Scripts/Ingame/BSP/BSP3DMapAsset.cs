@@ -52,6 +52,11 @@ namespace Ingame
             root = new BSP3DTreeNode(Vector3Int.zero, size);
         }
 
+        public BSP3DRoom FindPortalRoom()
+            => GetRooms().Find(room => room.roomType == BSP3DRoomType.Portal);
+        public BSP3DRoom FindStartRoom()
+            => GetRooms().Find(room => room.roomType == BSP3DRoomType.Start);
+
         public List<BSP3DTreeNode> GetNodes() => root.ToList();
         public List<BSP3DTreeNode> GetLeafs() => GetNodes()
             .Where(node => node.isLeaf)
@@ -60,5 +65,7 @@ namespace Ingame
         public List<BSP3DTreeNode> GetRoomNodes() => GetLeafs()
             .Where(node => node.room != null)
             .ToList();
+
+        public List<BSP3DRoom> GetRooms() => GetRoomNodes().Select(node => node.room).ToList();
     }
 }

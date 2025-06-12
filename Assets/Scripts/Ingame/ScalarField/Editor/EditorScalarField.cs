@@ -12,13 +12,16 @@ namespace MCube
         Vector3Int inputNewSize;
         void OnEnable()
         {
-            script = (ScalarField)target;
+            script = target as ScalarField;
+            if (!script) return;
 
             inputNewSize = script.size;
         }
 
         public override void OnInspectorGUI()
         {
+            if (!script) return;
+
             Inspect_Size();
         }
 

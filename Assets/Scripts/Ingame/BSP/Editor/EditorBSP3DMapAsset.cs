@@ -335,7 +335,7 @@ namespace Ingame
             .Content(
                 SEditorGUILayout.Int("Max Depth", param.maxDepth)
                     .OnValueChanged(value => param.maxDepth = value)
-                    .Clamp(1, 10)
+                    .Clamp(0, 10)
                 + cellSizeContent
                 + cellSizeRatioContent
                 + curveContent

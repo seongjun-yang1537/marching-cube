@@ -8,6 +8,8 @@ namespace Corelib.Utils
         private static readonly object _lock = new object();
         private static bool isApplicationQuitting = false;
 
+        protected virtual bool ShouldPersist => false;
+
         public static T Instance
         {
             get
@@ -36,7 +38,8 @@ namespace Corelib.Utils
                             _instance = singletonObject.AddComponent<T>();
                             singletonObject.name = $"(Singleton) {typeof(T)}";
 
-                            DontDestroyOnLoad(singletonObject);
+                            if (((Singleton<T>)(object)_instance).ShouldPersist)
+                                DontDestroyOnLoad(singletonObject);
 
                             Debug.Log($"[Singleton] An instance of {typeof(T)} is needed in the scene, so '{singletonObject.name}' was created with DontDestroyOnLoad.");
                         }

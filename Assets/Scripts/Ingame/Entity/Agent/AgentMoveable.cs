@@ -37,7 +37,7 @@ namespace Ingame
 
         protected virtual void ApplyMovement()
         {
-            moveSpeed = Mathf.Lerp(moveSpeed, agentModel.groundSpeed * MOVE_SPEED_CONSTANT, 0.1f);
+            moveSpeed = Mathf.Lerp(moveSpeed, agentModel.nowSpeed * MOVE_SPEED_CONSTANT, 0.1f);
             rigidbody.velocity = new Vector3(
                 moveDirection.x * moveSpeed,
                 rigidbody.velocity.y,

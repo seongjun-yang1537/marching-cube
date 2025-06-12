@@ -10,10 +10,10 @@ namespace Corelib.Utils
         public override void OnEnable()
         {
             base.OnEnable();
-            AddInnerGUI<ComponentCategoryGUI>();
+            // AddInnerGUI<ComponentCategoryGUI>();
 
-            script.gameObject.
-                MaybeAddComponent<ComponentCategory>().hideFlags = HideFlags.HideInInspector;
+            // script.gameObject.
+            // MaybeAddComponent<ComponentCategory>().hideFlags = HideFlags.HideInInspector;
 
             base.OnEnableInnerGUI();
         }

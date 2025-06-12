@@ -52,6 +52,21 @@ namespace Corelib.Utils
             }
             return vec;
         }
+
+        public static Vector3Int RoundToInt(this Vector3 vec)
+            => new Vector3Int(
+                Mathf.RoundToInt(vec.x),
+                Mathf.RoundToInt(vec.y),
+                Mathf.RoundToInt(vec.z)
+            );
+
+        public static Vector3 Centroid(this Vector3 vec, List<Vector3> vecs)
+        {
+            foreach (Vector3 v in vecs) vec += v;
+            int len = vecs.Count;
+            vec /= len;
+            return vec;
+        }
     }
 }
 

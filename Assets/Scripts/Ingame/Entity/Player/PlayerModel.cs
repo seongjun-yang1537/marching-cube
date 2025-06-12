@@ -14,5 +14,8 @@ namespace Ingame
 
         public KeyCode sprintKey = KeyCode.LeftControl;
         public KeyCode jumpKey = KeyCode.Space;
+
+        public bool isSprint;
+        public float slopeLimit;
     }
 }

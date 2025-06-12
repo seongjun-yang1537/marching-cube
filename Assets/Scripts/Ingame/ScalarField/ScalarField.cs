@@ -201,8 +201,6 @@ namespace MCube
 
             this.size = newPaddedSize;
             this.field = newField;
-
-            Debug.Log($"Field successfully padded. New size: {this.size}, Padded with value: {paddingValue}");
         }
 
         public void ClearField() => Indices.ForEach(idx => this[idx] = 0.0f);
@@ -219,6 +217,9 @@ namespace MCube
             int x = rem % size.x;
             return new Vector3Int(x, y, z);
         }
+
+        public bool IsSolid(Vector3Int idx)
+            => this[idx] >= threshold;
 
         private static int GetIndex(int x, int y, int z, Vector3Int size)
             => x + size.x * (y + size.y * z);

@@ -1,10 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
 using Corelib.SUI;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace MCube
@@ -25,31 +21,41 @@ namespace MCube
         [HideInInspector]
         public bool bVisibleMarchingCubeGizmos = true;
 
+        private MeshFilter _meshFilter;
+        private MeshFilter MeshFilter { get => _meshFilter ??= GetComponent<MeshFilter>(); }
+
+
+        private MeshCollider _meshCollider;
+        private MeshCollider MeshCollider { get => _meshCollider ??= GetComponent<MeshCollider>(); }
+
+        private MeshRenderer _meshRenderer;
+        private MeshRenderer MeshRenderer { get => _meshRenderer ??= GetComponent<MeshRenderer>(); }
+
         public void GenerateMarchingCube()
         {
             GenerateMarchingCubeMesh();
         }
 
-        public void GenerateMarchingCubeMesh()
+        public IEnumerator GenerateMarchingCubeMesh()
         {
-            Mesh mesh = CreateMarchingCubeMesh();
+            Mesh mesh = new();
+            yield return CreateMarchingCubeMesh(ret => mesh = ret);
 
-            MeshFilter meshFilter = GetComponent<MeshFilter>();
-            meshFilter.mesh = mesh;
+            MeshFilter.mesh = mesh;
+            MeshCollider.sharedMesh = mesh;
 
-            MeshCollider meshCollider = GetComponent<MeshCollider>();
-            meshCollider.sharedMesh = mesh;
+            yield return null;
         }
 
-        public Mesh CreateMarchingCubeMesh()
+        public IEnumerator CreateMarchingCubeMesh(Action<Mesh> callback)
         {
-            Mesh mesh = MarchingCubeMesher.Create(scalarField).Build();
-            MarchingCubeMesher.ApplyContourLineColor(scalarField, mesh);
+            Mesh mesh = new();
+            yield return MarchingCubeMesher.Create(scalarField).Build(ret => mesh = ret);
 
-            MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
-            meshRenderer.material = caveMaterial;
+            // MarchingCubeMesher.ApplyContourLineColor(scalarField, mesh);
+            MeshRenderer.material = caveMaterial;
 
-            return mesh;
+            callback(mesh);
         }
 
         public void OnDrawGizmosSelected()

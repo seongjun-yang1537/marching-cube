@@ -71,6 +71,11 @@ namespace Corelib.Utils
             uint seed = (uint)(DateTime.Now.Ticks & 0xFFFFFFFF);
             return new MT19937(seed);
         }
+
+        public static MT19937 Create(int seed)
+        {
+            return new MT19937((uint)seed);
+        }
     }
 
 }

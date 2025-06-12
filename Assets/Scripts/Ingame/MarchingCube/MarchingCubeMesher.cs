@@ -1,9 +1,11 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using Corelib.Utils;
 using Sirenix.Utilities;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace MCube
 {
@@ -82,16 +84,24 @@ namespace MCube
             return mask;
         }
 
-        private Dictionary<Vector2Int, int> CreateVertexIndices()
+        private IEnumerator CreateVertexIndices(Action<Dictionary<Vector2Int, int>> callback)
         {
+            const int MAX_BATCH = 100;
+            int batch = 0;
+
             Dictionary<Vector2Int, int> vertexIdx = new();
-            CIterator.GetArray3D(field.size - Vector3Int.one)
-            .ForEach(pos =>
+            foreach (var pos in CIterator.GetArray3D(field.size - Vector3Int.one))
             {
                 int mask = GetCubeMask(pos);
                 List<Vector3Int> deltaPositions = MarchingCube.GetDelatPositions(pos);
                 foreach (var (u, v) in MarchingCube.GetEdgeIterator(mask))
                 {
+                    if (++batch == MAX_BATCH)
+                    {
+                        yield return null;
+                        batch = 0;
+                    }
+
                     (Vector3Int fromPos, Vector3Int toPos) = (deltaPositions[u], deltaPositions[v]);
                     (int fromIdx, int toIdx) = (field.GetIndex(fromPos), field.GetIndex(toPos));
 
@@ -100,8 +110,8 @@ namespace MCube
                         continue;
                     vertexIdx.Add(idxEdge, vertexIdx.Count);
                 }
-            });
-            return vertexIdx;
+            }
+            callback(vertexIdx);
         }
 
         private List<Vector3> CreateVertices(Dictionary<Vector2Int, int> vertexIndices)
@@ -112,11 +122,13 @@ namespace MCube
                 return (Vector3)(field.SpreadIndex(u) + field.SpreadIndex(v)) / 2;
             }).ToList();
 
-        private List<int> CreateTriangles(Dictionary<Vector2Int, int> vertexIndices)
+        private IEnumerator CreateTriangles(Dictionary<Vector2Int, int> vertexIndices, Action<List<int>> callback)
         {
+            const int MAX_BATCH = 100;
+            int batch = 0;
+
             List<int> triangles = new();
-            CIterator.GetArray3D(field.size - Vector3Int.one)
-            .ForEach(pos =>
+            foreach (var pos in CIterator.GetArray3D(field.size - Vector3Int.one))
             {
                 int mask = GetCubeMask(pos);
                 List<Vector3Int> deltaPositions = MarchingCube.GetDelatPositions(pos);
@@ -140,23 +152,34 @@ namespace MCube
                 for (int i = 0; i <= triangleTable.Length - 3; i += 3)
                 {
                     AddTriangle(triangleTable[i], triangleTable[i + 1], triangleTable[i + 2]);
+
+                    if (++batch == MAX_BATCH)
+                    {
+                        yield return null;
+                        batch = 0;
+                    }
                 }
-            });
-            return triangles;
+                callback(triangles);
+            }
         }
 
-        public Mesh Build()
+        public IEnumerator Build(Action<Mesh> callback)
         {
             Mesh mesh = new Mesh();
 
-            Dictionary<Vector2Int, int> vertexIndices = CreateVertexIndices();
+            Dictionary<Vector2Int, int> vertexIndices = new();
+            yield return CreateVertexIndices(ret => vertexIndices = ret);
 
             mesh.vertices = CreateVertices(vertexIndices).ToArray();
-            mesh.triangles = CreateTriangles(vertexIndices).ToArray();
+
+            List<int> triangles = new();
+            yield return CreateTriangles(vertexIndices, ret => triangles = ret);
+            mesh.triangles = triangles.ToArray();
+
             mesh.RecalculateNormals();
             mesh.RecalculateTangents();
 
-            return mesh;
+            callback(mesh);
         }
     }
 }

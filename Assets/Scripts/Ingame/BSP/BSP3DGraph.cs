@@ -103,7 +103,7 @@ namespace Ingame
         {
             this.edges = new(edges);
             edgeCount = edges.Count;
-            nodeCount = edges.Select(edge => Math.Max(edge.from, edge.to)).Max() + 1;
+            nodeCount = edges.Count == 0 ? 0 : edges.Max(e => Math.Max(e.from, e.to)) + 1;
 
             cnt = new List<int>().Resize(nodeCount + 2, 0);
             csr = new List<BSP3DGraphEdge>().Resize(edgeCount);

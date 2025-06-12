@@ -6,7 +6,7 @@ using UnityEngine;
 public class ObserverController : MonoBehaviour
 {
     private const float SPEED_CONSTNANT = 0.01f;
-    private const float SENSITIVITY_CONSTANT = 0.1f;
+    private const float SENSITIVITY_CONSTANT = 5f;
 
     public Camera camera;
 
@@ -17,7 +17,7 @@ public class ObserverController : MonoBehaviour
     public float maxYAngle = 10f;
 
     float finalSpeed { get => speed * SPEED_CONSTNANT; }
-    float finalSensitivity { get => sensitivity * SENSITIVITY_CONSTANT; }
+    float finalSensitivity { get => sensitivity * SENSITIVITY_CONSTANT * Time.deltaTime; }
 
     void Awake()
     {
@@ -69,7 +69,7 @@ public class ObserverController : MonoBehaviour
             return Vector3.zero;
         }
 
-        return Vector3.up * delta * finalSpeed;        
+        return Vector3.up * delta * finalSpeed;
     }
 
     private void UpdateRotation()

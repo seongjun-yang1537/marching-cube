@@ -7,40 +7,36 @@ namespace Corelib.Utils
 {
     public static class ExVector3Int
     {
-        public static readonly List<Vector3Int> DIR6;
-        public static readonly List<Vector3Int> DIR26;
+        public static readonly List<Vector3Int> DIR6 = new()
+    {
+        new Vector3Int(1, 0, 0),
+        new Vector3Int(-1, 0, 0),
+        new Vector3Int(0, 1, 0),
+        new Vector3Int(0, -1, 0),
+        new Vector3Int(0, 0, 1),
+        new Vector3Int(0, 0, -1)
+    };
+
+        public static readonly List<Vector3Int> DIR26 = new();
         public static readonly List<Vector3Int> DIR27;
 
         static ExVector3Int()
         {
-            List<Vector3Int> allDirectionsList = new List<Vector3Int>();
-            for (int z = -1; z <= 1; z++)
+            for (int x = -1; x <= 1; x++)
             {
                 for (int y = -1; y <= 1; y++)
                 {
-                    for (int x = -1; x <= 1; x++)
+                    for (int z = -1; z <= 1; z++)
                     {
                         if (x == 0 && y == 0 && z == 0)
-                        {
                             continue;
-                        }
-                        allDirectionsList.Add(new Vector3Int(x, y, z));
+
+                        DIR26.Add(new Vector3Int(x, y, z));
                     }
                 }
             }
-            DIR26 = allDirectionsList;
-            DIR27 = new(DIR26);
-            DIR27.Add(Vector3Int.zero);
 
-            DIR6 = new()
-            {
-                new Vector3Int(1, 0, 0),
-                new Vector3Int(-1, 0, 0),
-                new Vector3Int(0, 1, 0),
-                new Vector3Int(0, -1, 0),
-                new Vector3Int(0, 0, 1),
-                new Vector3Int(0, 0, -1)
-            };
+            DIR27 = new List<Vector3Int>(DIR26) { Vector3Int.zero };
         }
 
         public static void Deconstruct(this Vector3Int vec, out int x, out int y, out int z)
@@ -129,6 +125,13 @@ namespace Corelib.Utils
                 case 2: { vec.z = value; } break;
             }
             return vec;
+        }
+
+        public static Vector3Int Centroid(this Vector3Int vec, List<Vector3Int> vecs)
+        {
+            foreach (Vector3Int v in vecs) vec += v;
+            int len = vecs.Count;
+            return (vec.ToVector3() / len).RoundToInt();
         }
     }
 }

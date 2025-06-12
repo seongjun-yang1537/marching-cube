@@ -16,6 +16,26 @@ namespace Corelib.Utils
             }
         }
 
+        public static void DestroyAllChildrenWithEditor(this Transform transform)
+        {
+#if UNITY_EDITOR
+            if (!Application.isPlaying)
+            {
+                for (int i = transform.childCount - 1; i >= 0; i--)
+                {
+                    Transform child = transform.GetChild(i);
+                    UnityEditor.Undo.DestroyObjectImmediate(child.gameObject);
+                }
+                return;
+            }
+#endif
+            // 런타임일 땐 일반 삭제
+            for (int i = transform.childCount - 1; i >= 0; i--)
+            {
+                Object.Destroy(transform.GetChild(i).gameObject);
+            }
+        }
+
         public static void DestroyImmediateAllChild(this Transform transform)
         {
             int len = transform.childCount;

@@ -10,118 +10,15 @@ using UnityEngine;
 
 namespace Ingame
 {
-    [Serializable]
-    public class BSP3DCube
+    public enum PlaneFixedAxis
     {
-        public Vector3Int topLeft, bottomRight;
-
-        public Vector3Int size { get => bottomRight - topLeft; }
-        public int lenX { get => bottomRight.x - topLeft.x; }
-        public int lenY { get => bottomRight.y - topLeft.y; }
-        public int lenZ { get => bottomRight.z - topLeft.z; }
-
-        public int area { get => (bottomRight - topLeft).Area(); }
-        public Vector3 center { get => (Vector3)(topLeft + bottomRight) / 2; }
-
-        public BSP3DCube()
-        {
-
-        }
-        public BSP3DCube(Vector3Int topLeft, Vector3Int bottomRight)
-        {
-            this.topLeft = topLeft;
-            this.bottomRight = bottomRight;
-
-            if (!IsValidate())
-                throw new ArgumentException($"Invalid cube bounds: topLeft {topLeft} must be less than or equal to bottomRight {bottomRight}.");
-        }
-
-        private bool IsValidate() => topLeft.LessEqual(bottomRight);
-
-        public bool Overlaps(BSP3DCube other)
-        {
-            if (bottomRight.x < other.topLeft.x || other.bottomRight.x < topLeft.x)
-                return false;
-            if (bottomRight.y < other.topLeft.y || other.bottomRight.y < topLeft.y)
-                return false;
-            if (bottomRight.z < other.topLeft.z || other.bottomRight.z < topLeft.z)
-                return false;
-
-            return true;
-        }
-
-        public bool IsAdjacent(BSP3DCube other) => GetAdjacentRegion(other) != null;
-
-        public BSP3DCube GetAdjacentRegion(BSP3DCube other)
-        {
-            Vector3Int minA = Vector3Int.Min(this.topLeft, this.bottomRight);
-            Vector3Int maxA = Vector3Int.Max(this.topLeft, this.bottomRight);
-            Vector3Int minB = Vector3Int.Min(other.topLeft, other.bottomRight);
-            Vector3Int maxB = Vector3Int.Max(other.topLeft, other.bottomRight);
-
-            if (maxA.x == minB.x || maxB.x == minA.x)
-            {
-                int x = (maxA.x == minB.x) ? maxA.x : maxB.x;
-
-                int yMin = Mathf.Max(minA.y, minB.y);
-                int yMax = Mathf.Min(maxA.y, maxB.y);
-                int zMin = Mathf.Max(minA.z, minB.z);
-                int zMax = Mathf.Min(maxA.z, maxB.z);
-
-                if (yMin < yMax && zMin < zMax)
-                {
-                    return new BSP3DCube(
-                        new Vector3Int(x, yMin, zMin),
-                        new Vector3Int(x, yMax, zMax)
-                    );
-                }
-            }
-
-            if (maxA.y == minB.y || maxB.y == minA.y)
-            {
-                int y = (maxA.y == minB.y) ? maxA.y : maxB.y;
-
-                int xMin = Mathf.Max(minA.x, minB.x);
-                int xMax = Mathf.Min(maxA.x, maxB.x);
-                int zMin = Mathf.Max(minA.z, minB.z);
-                int zMax = Mathf.Min(maxA.z, maxB.z);
-
-                if (xMin < xMax && zMin < zMax)
-                {
-                    return new BSP3DCube(
-                        new Vector3Int(xMin, y, zMin),
-                        new Vector3Int(xMax, y, zMax)
-                    );
-                }
-            }
-
-            if (maxA.z == minB.z || maxB.z == minA.z)
-            {
-                int z = (maxA.z == minB.z) ? maxA.z : maxB.z;
-
-                int xMin = Mathf.Max(minA.x, minB.x);
-                int xMax = Mathf.Min(maxA.x, maxB.x);
-                int yMin = Mathf.Max(minA.y, minB.y);
-                int yMax = Mathf.Min(maxA.y, maxB.y);
-
-                if (xMin < xMax && yMin < yMax)
-                {
-                    return new BSP3DCube(
-                        new Vector3Int(xMin, yMin, z),
-                        new Vector3Int(xMax, yMax, z)
-                    );
-                }
-            }
-
-            return null;
-        }
+        X, Y, Z
     }
 
     [Serializable]
     public class BSP3DPlane : BSP3DCube
     {
-        public Vector3Int size { get => bottomRight - topLeft; }
-        public Vector3 center { get => (Vector3)(topLeft + bottomRight) / 2; }
+        public Vector3Int normal;
 
         public BSP3DPlane() : base()
         {
@@ -130,19 +27,107 @@ namespace Ingame
         public BSP3DPlane(Vector3Int topLeft, Vector3Int bottomRight) : base(topLeft, bottomRight)
         {
         }
-    }
-    [Serializable]
-    public class BSP3DRoom : BSP3DCube
-    {
-        public int idx;
-
-        public BSP3DRoom() : base()
+        public BSP3DPlane(Vector3Int topLeft, Vector3Int bottomRight, Vector3Int normal) : base(topLeft, bottomRight)
         {
+            this.normal = normal;
+        }
 
-        }
-        public BSP3DRoom(Vector3Int topLeft, Vector3Int bottomRight) : base(topLeft, bottomRight)
+        public PlaneFixedAxis GetFixedAxis()
         {
+            if (topLeft.x == bottomRight.x) return PlaneFixedAxis.X;
+            if (topLeft.y == bottomRight.y) return PlaneFixedAxis.Y;
+            if (topLeft.z == bottomRight.z) return PlaneFixedAxis.Z;
+            throw new InvalidOperationException("Plane is not flat on any axis.");
         }
+
+        public Vector2Int Project2D(Vector3Int pos)
+        {
+            return GetFixedAxis() switch
+            {
+                PlaneFixedAxis.X => new Vector2Int(pos.y - topLeft.y, pos.z - topLeft.z),
+                PlaneFixedAxis.Y => new Vector2Int(pos.x - topLeft.x, pos.z - topLeft.z),
+                PlaneFixedAxis.Z => new Vector2Int(pos.x - topLeft.x, pos.y - topLeft.y),
+                _ => throw new InvalidOperationException()
+            };
+        }
+
+        public Vector3Int Unproject2D(Vector2Int pos2D)
+        {
+            return GetFixedAxis() switch
+            {
+                PlaneFixedAxis.X => new Vector3Int(topLeft.x, topLeft.y + pos2D.x, topLeft.z + pos2D.y),
+                PlaneFixedAxis.Y => new Vector3Int(topLeft.x + pos2D.x, topLeft.y, topLeft.z + pos2D.y),
+                PlaneFixedAxis.Z => new Vector3Int(topLeft.x + pos2D.x, topLeft.y + pos2D.y, topLeft.z),
+                _ => throw new InvalidOperationException()
+            };
+        }
+
+        public Vector3Int Project3D(Vector3Int pos)
+        {
+            return GetFixedAxis() switch
+            {
+                PlaneFixedAxis.X => new Vector3Int(topLeft.x, topLeft.y + pos.x, topLeft.z + pos.y),
+                PlaneFixedAxis.Y => new Vector3Int(topLeft.x + pos.x, topLeft.y, topLeft.z + pos.y),
+                PlaneFixedAxis.Z => new Vector3Int(topLeft.x + pos.x, topLeft.y + pos.y, topLeft.z),
+                _ => throw new InvalidOperationException()
+            };
+        }
+
+        public Vector2Int GetSize2D()
+        {
+            return GetFixedAxis() switch
+            {
+                PlaneFixedAxis.X => new Vector2Int(bottomRight.y - topLeft.y, bottomRight.z - topLeft.z),
+                PlaneFixedAxis.Y => new Vector2Int(bottomRight.x - topLeft.x, bottomRight.z - topLeft.z),
+                PlaneFixedAxis.Z => new Vector2Int(bottomRight.x - topLeft.x, bottomRight.y - topLeft.y),
+                _ => throw new InvalidOperationException()
+            };
+        }
+
+        public bool InRange2D(Vector2Int pos)
+        {
+            Vector2Int size = GetSize2D();
+            return pos.GreaterEqual(Vector2Int.zero) && pos.Less(size);
+        }
+
+        public bool InRange3D(Vector3Int pos)
+        {
+            switch (GetFixedAxis())
+            {
+                case PlaneFixedAxis.X:
+                    return pos.x == topLeft.x &&
+                           pos.y >= topLeft.y && pos.y < bottomRight.y &&
+                           pos.z >= topLeft.z && pos.z < bottomRight.z;
+
+                case PlaneFixedAxis.Y:
+                    return pos.y == topLeft.y &&
+                           pos.x >= topLeft.x && pos.x < bottomRight.x &&
+                           pos.z >= topLeft.z && pos.z < bottomRight.z;
+
+                case PlaneFixedAxis.Z:
+                    return pos.z == topLeft.z &&
+                           pos.x >= topLeft.x && pos.x < bottomRight.x &&
+                           pos.y >= topLeft.y && pos.y < bottomRight.y;
+
+                default:
+                    throw new InvalidOperationException("Invalid plane configuration.");
+            }
+        }
+
+        public float DistanceToPoint(Vector3 point)
+        {
+            PlaneFixedAxis axis = GetFixedAxis();
+
+            return axis switch
+            {
+                PlaneFixedAxis.X => Mathf.Abs(point.x - topLeft.x),
+                PlaneFixedAxis.Y => Mathf.Abs(point.y - topLeft.y),
+                PlaneFixedAxis.Z => Mathf.Abs(point.z - topLeft.z),
+                _ => throw new InvalidOperationException()
+            };
+        }
+
+        public float DistanceToPoint(Vector3Int point) => DistanceToPoint((Vector3)point);
     }
 
     [Serializable]
@@ -230,12 +215,15 @@ namespace Ingame
         }
 
         public void GenerateRoom(MT19937 rng = null)
+            => GenerateRoom(rng, Vector3.one, Vector3.one);
+
+        public void GenerateRoom(MT19937 rng, Vector3 minSizeRatio, Vector3 maxSizeRatio)
         {
             BSP3DRoomGenerationParmas param = new()
             {
                 rng = rng,
-                minSizeRatio = new Vector3(0.6f, 0.6f, 0.6f),
-                maxSizeRatio = new Vector3(0.9f, 0.9f, 0.9f),
+                minSizeRatio = minSizeRatio,
+                maxSizeRatio = maxSizeRatio,
             };
             GenerateRoom(param);
         }
