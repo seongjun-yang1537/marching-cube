@@ -15,6 +15,8 @@ namespace Ingame
 
         public Transform body;
 
+        public Inventory inventory;
+
         protected void Awake()
         {
             nowSpeed = groundSpeed;

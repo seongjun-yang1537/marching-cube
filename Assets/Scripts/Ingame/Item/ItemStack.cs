@@ -7,6 +7,7 @@ namespace Ingame
     {
         public int count;
         public ItemData itemData;
+        public ItemID itemID { get => itemData.itemID; }
 
         public bool IsEmpty { get => itemData == null || count == 0; }
 
