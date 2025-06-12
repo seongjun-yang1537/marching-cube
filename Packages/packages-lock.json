@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.coffee.ui-effect": {
+      "version": "https://github.com/mob-sakai/UIEffect.git?path=Packages/src",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      },
+      "hash": "01be18bb28f3fcedb0f0e4b9c7e17ab9d506019f"
+    },
     "com.marijnzwemmer.unity-toolbar-extender": {
       "version": "https://github.com/marijnz/unity-toolbar-extender.git",
       "depth": 0,
