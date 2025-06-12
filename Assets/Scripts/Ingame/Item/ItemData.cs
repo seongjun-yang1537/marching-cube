@@ -5,8 +5,17 @@ namespace Ingame
     public class ItemData
     {
         public ItemID itemID;
-        public int maxStackable;
+        public int maxStackable = 1;
 
         public ItemStack ToStack() => new ItemStack(this);
+
+        public ItemData(ItemID itemID)
+        {
+            this.itemID = itemID;
+        }
+        public ItemData(ItemID itemID, int maxStackable) : this(itemID)
+        {
+            this.maxStackable = maxStackable;
+        }
     }
 }

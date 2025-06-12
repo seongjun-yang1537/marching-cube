@@ -1,8 +1,6 @@
 // Ingame/AgentModel.cs
 
 using UnityEngine;
-using System;
-using Unity.VisualScripting;
 
 namespace Ingame
 {

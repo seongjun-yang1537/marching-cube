@@ -11,5 +11,6 @@ namespace Ingame
         Diamond,
         Wood_Sword,
         Crystal,
+        COUNT,
     }
 }

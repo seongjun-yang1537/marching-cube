@@ -17,11 +17,16 @@ namespace UI
             Render();
         }
 
+        public void SetItemData(ItemData itemData)
+            => SetItemStack(itemData.ToStack());
+
         public void SetItemStack(ItemStack itemStack)
         {
             this.itemStack = itemStack;
             Render();
         }
+
+        public void RemoveItemStack() => SetItemStack(null);
 
         public void Render()
         {
@@ -33,7 +38,7 @@ namespace UI
             }
 
             SetCountUI(itemStack.count);
-            SetIconUI(ItemDB.GetSprite(itemStack.itemID));
+            SetIconUI(ItemDB.GetIconSprite(itemStack.itemID));
         }
 
         private void SetCountUI(int count)

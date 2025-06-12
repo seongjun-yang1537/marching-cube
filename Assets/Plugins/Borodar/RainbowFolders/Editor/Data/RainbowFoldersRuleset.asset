@@ -101,7 +101,7 @@ MonoBehaviour:
     Key: Icons
     Ordinal: 7
     Priority: 0
-    IconType: 2190
+    IconType: 2690
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -388,6 +388,18 @@ MonoBehaviour:
   - Type: 1
     Key: Assets/Models
     Ordinal: 31
+    Priority: 0
+    IconType: 2130
+    SmallIcon: {fileID: 0}
+    LargeIcon: {fileID: 0}
+    IsIconRecursive: 0
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0
+  - Type: 1
+    Key: Assets/Resources/Items/Models
+    Ordinal: 32
     Priority: 0
     IconType: 2130
     SmallIcon: {fileID: 0}

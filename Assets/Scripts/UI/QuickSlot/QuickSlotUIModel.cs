@@ -33,7 +33,7 @@ namespace UI
             }
 
             SetCountUI(itemStack.count);
-            SetIconUI(ItemDB.GetSprite(itemStack.itemID));
+            SetIconUI(ItemDB.GetIconSprite(itemStack.itemID));
         }
 
         private void SetCountUI(int count)
