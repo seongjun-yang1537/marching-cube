@@ -17,5 +17,7 @@ namespace Ingame
 
         public bool isSprint;
         public float slopeLimit;
+
+        public Inventory inventory;
     }
 }
