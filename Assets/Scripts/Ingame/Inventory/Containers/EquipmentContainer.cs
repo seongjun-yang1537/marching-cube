@@ -1,54 +1,74 @@
+using System;
 using System.Collections.Generic;
 
 namespace Ingame
 {
-    public class EquipmentContainer : IItemContainer
+    public class EquipmentContainer : IItemContainer<EquipmentSlotID>
     {
         public List<ItemStack> slots = new();
-        public int SlotCount => throw new System.NotImplementedException();
+        public int SlotCount => slots.Count;
+
         public EquipmentContainer(int count)
         {
             for (int i = 0; i < count; i++) slots.Add(new ItemStack(null, 0));
         }
 
-        public int AddToSlot(int idx, ItemStack itemStack)
+        public ItemStack this[EquipmentSlotID e]
         {
-            throw new System.NotImplementedException();
+            get => GetItem(e);
+            set => SetItem(e, value);
         }
 
-        public bool CanAcceptItem(int idx, ItemStack itemStack)
+        public ItemStack GetItem(EquipmentSlotID slotID) => slots[(int)slotID];
+
+        public ItemStack SetItem(EquipmentSlotID slotID, ItemStack itemStack)
+            => slots[(int)slotID] = itemStack;
+
+        public bool HasItemAt(EquipmentSlotID slotID)
+            => !GetItem(slotID).IsEmpty;
+
+        public bool CanAcceptItem(EquipmentSlotID slotID, ItemStack itemStack)
         {
-            throw new System.NotImplementedException();
+            ItemStack slot = GetItem(slotID);
+            if (slot.IsEmpty) return true;
+            if (slot.itemID == itemStack.itemID && itemStack.count <= slot.Remain)
+                return true;
+            return false;
         }
 
-        public ItemStack GetItem(int idx)
+        public ItemStack RemoveItem(EquipmentSlotID slotID)
         {
-            throw new System.NotImplementedException();
+            ItemStack itemStack = GetItem(slotID);
+            SetItem(slotID, ItemStack.Empty());
+            return itemStack;
         }
 
-        public bool HasItemAt(int idx)
+        public ItemStack AddToSlot(EquipmentSlotID slotID, ItemStack itemStack)
         {
-            throw new System.NotImplementedException();
+            ItemStack slot = GetItem(slotID);
+            if (slot.itemID != itemStack.itemID)
+                return itemStack;
+
+            int count = Math.Min(itemStack.count, GetItem(slotID).Remain);
+            slot.count += count;
+            itemStack.count -= count;
+            return itemStack;
         }
 
-        public bool IsSlotValid(int idx)
+        public ItemStack TakeToSlot(EquipmentSlotID slotID, int count)
         {
-            throw new System.NotImplementedException();
+            ItemStack slot = GetItem(slotID);
+            if (slot.IsEmpty) return ItemStack.Empty();
+
+            count = Math.Min(slot.Remain, count);
+            slot.count -= count;
+
+            return new ItemStack(slot.itemData, count);
         }
 
-        public ItemStack RemoveItem(int idx)
+        public void SwapSlot(EquipmentSlotID from, EquipmentSlotID to)
         {
-            throw new System.NotImplementedException();
-        }
 
-        public ItemStack SetItem(int idx, ItemStack itemData)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void SwapSlot(int from, int to)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

@@ -5,16 +5,33 @@ namespace Ingame
 {
     public class ItemStack
     {
+        public static ItemStack Empty() => new ItemStack(ItemID.None, 0);
+
         public int count;
         public ItemData itemData;
         public ItemID itemID { get => itemData.itemID; }
+        public int maxStackable { get => itemData.maxStackable; }
 
         public bool IsEmpty { get => itemData == null || count == 0; }
+
+        public int Remain { get => itemData.maxStackable - count; }
 
         public ItemStack(ItemData itemData, int count = 1)
         {
             this.itemData = itemData;
             this.count = count;
+        }
+
+        public ItemStack(ItemID itemID, int count = 1)
+        {
+            this.itemData = new ItemData(itemID);
+            this.count = count;
+        }
+
+        public ItemStack(ItemStack other)
+        {
+            this.itemData = other.itemData;
+            this.count = other.count;
         }
 
         public IEnumerator<ItemData> ToItemData()

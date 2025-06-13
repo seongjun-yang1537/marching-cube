@@ -2,6 +2,7 @@ namespace Ingame
 {
     public enum ItemID
     {
+        None,
         Leather_Boots,
         Leather_Chestplate,
         Leather_Ring,

@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Net.Security;
+using Corelib.Utils;
 using UnityEngine;
 
 namespace Ingame
@@ -8,9 +10,13 @@ namespace Ingame
         private const string PATH_ICON_PREFIX = "Items/Icons";
 
         private static Dictionary<ItemID, Sprite> sprites = new();
+        private static Dictionary<ItemID, Texture2D> editorIconTextures = new();
 
         public static Sprite GetIconSprite(ItemID itemID)
         {
+            if (itemID == ItemID.None)
+                return null;
+
             if (!sprites.ContainsKey(itemID))
                 sprites.Add(itemID, Resources.Load<Sprite>($"{PATH_ICON_PREFIX}/{itemID}"));
             if (sprites[itemID] == null)
@@ -19,6 +25,16 @@ namespace Ingame
                 sprites[itemID] = Resources.Load<Sprite>($"{PATH_ICON_PREFIX}/{itemID}");
             }
             return sprites[itemID];
+        }
+
+        public static Texture2D GetEditorIconTexture(ItemID itemID)
+        {
+            if (itemID == ItemID.None)
+                return null;
+
+            if (!editorIconTextures.ContainsKey(itemID))
+                editorIconTextures.Add(itemID, GetIconSprite(itemID).ToTexture2D().ResizeTexture(32, 32));
+            return editorIconTextures[itemID];
         }
     }
 }

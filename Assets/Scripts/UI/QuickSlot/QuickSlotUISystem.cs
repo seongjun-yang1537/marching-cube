@@ -8,7 +8,7 @@ namespace UI
 {
     public class QuickSlotUISystem : SerializedMonoBehaviour, IUIComponent
     {
-        public IItemContainer quickSlotContainer { get; private set; }
+        public QuickSlotContainer quickSlotContainer { get; private set; }
 
         public List<InventorySlotUIModel> slotUIModels;
 
@@ -25,13 +25,13 @@ namespace UI
             Render();
         }
 
-        public void SetContainer(IItemContainer container)
+        public void SetContainer(QuickSlotContainer container)
         {
             quickSlotContainer = container;
 
             int slotCount = quickSlotContainer.SlotCount;
             for (int i = 0; i < slotCount; i++)
-                slotUIModels[i].SetItemStack(quickSlotContainer.GetItem(i));
+                slotUIModels[i].SetItemStack(quickSlotContainer.GetItem((QuickSlotID)i));
 
             Render();
         }

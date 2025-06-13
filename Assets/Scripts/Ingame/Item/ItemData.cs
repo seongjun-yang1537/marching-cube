@@ -4,7 +4,10 @@ namespace Ingame
 {
     public class ItemData
     {
+        public static ItemData Empty() => new ItemData(ItemID.None, 0);
+
         public ItemID itemID;
+        public EquipmentType equipType;
         public int maxStackable = 1;
 
         public ItemStack ToStack() => new ItemStack(this);

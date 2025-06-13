@@ -10,6 +10,5 @@ namespace Ingame
         Slot5,
         Slot6,
         Left,
-        COUNT,
     }
 }

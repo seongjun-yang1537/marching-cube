@@ -32,6 +32,5 @@ namespace Ingame
         Slot27,
         Slot28,
         Slot29,
-        COUNT,
     }
 }

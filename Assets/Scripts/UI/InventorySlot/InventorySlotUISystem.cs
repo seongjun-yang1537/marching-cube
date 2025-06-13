@@ -3,12 +3,13 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using System.Linq;
 using Ingame;
+using System;
 
 namespace UI
 {
     public class InventorySlotUISystem : SerializedMonoBehaviour, IUIComponent
     {
-        public IItemContainer inventoryContainer { get; private set; }
+        public InventoryContainer inventoryContainer { get; private set; }
 
         public List<InventorySlotUIModel> slotUIModels;
 
@@ -20,13 +21,13 @@ namespace UI
                 .ToList();
         }
 
-        public void SetContainer(IItemContainer container)
+        public void SetContainer(InventoryContainer container)
         {
             inventoryContainer = container;
 
             int slotCount = inventoryContainer.SlotCount;
             for (int i = 0; i < slotCount; i++)
-                slotUIModels[i].SetItemStack(inventoryContainer.GetItem(i));
+                slotUIModels[i].SetItemStack(inventoryContainer.GetItem((InventorySlotID)i));
 
             Render();
         }

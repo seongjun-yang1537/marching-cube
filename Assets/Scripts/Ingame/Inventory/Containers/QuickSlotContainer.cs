@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Ingame
 {
-    public class QuickSlotContainer : IItemContainer
+    public class QuickSlotContainer : IItemContainer<QuickSlotID>
     {
         public List<ItemStack> slots = new();
         public int SlotCount => slots.Count;
@@ -14,77 +14,62 @@ namespace Ingame
             for (int i = 0; i < count; i++) slots.Add(new ItemStack(null, 0));
         }
 
-        public ItemStack GetItem(int idx)
+        public ItemStack this[QuickSlotID e]
         {
-            ValidateIndex(idx);
-            return slots[idx];
+            get => GetItem(e);
+            set => SetItem(e, value);
         }
 
-        public ItemStack SetItem(int idx, ItemStack itemStack)
-        {
-            ValidateIndex(idx);
-            var prev = slots[idx];
-            slots[idx] = itemStack;
-            return prev;
-        }
+        public ItemStack GetItem(QuickSlotID slotID) => slots[(int)slotID];
 
-        public bool HasItemAt(int idx)
-        {
-            if (!IsSlotValid(idx)) return false;
-            var item = slots[idx];
-            return item != null && !item.IsEmpty;
-        }
+        public ItemStack SetItem(QuickSlotID slotID, ItemStack itemStack)
+            => slots[(int)slotID] = itemStack;
 
-        public bool IsSlotValid(int idx)
-        {
-            return idx >= 0 && idx < SlotCount;
-        }
+        public bool HasItemAt(QuickSlotID slotID)
+            => !GetItem(slotID).IsEmpty;
 
-        public ItemStack RemoveItem(int idx)
+        public bool CanAcceptItem(QuickSlotID slotID, ItemStack itemStack)
         {
-            ValidateIndex(idx);
-            var prev = slots[idx];
-            slots[idx] = new ItemStack(null, 0);
-            return prev;
-        }
-
-        public bool CanAcceptItem(int idx, ItemStack itemStack)
-        {
-            if (!IsSlotValid(idx)) return false;
-            var slot = slots[idx];
-
+            ItemStack slot = GetItem(slotID);
             if (slot.IsEmpty) return true;
-
-            return slot.itemData == itemStack.itemData && slot.count < slot.itemData.maxStackable;
+            if (slot.itemID == itemStack.itemID && itemStack.count <= slot.Remain)
+                return true;
+            return false;
         }
 
-        public int AddToSlot(int idx, ItemStack itemStack)
+        public ItemStack RemoveItem(QuickSlotID slotID)
         {
-            if (!CanAcceptItem(idx, itemStack)) return 0;
-
-            var slot = slots[idx];
-
-            if (slot.IsEmpty)
-            {
-                slots[idx] = new ItemStack(itemStack.itemData, Mathf.Min(itemStack.count, itemStack.itemData.maxStackable));
-                return slots[idx].count;
-            }
-            else
-            {
-                int added = slot.Add(itemStack.count);
-                return added;
-            }
+            ItemStack itemStack = GetItem(slotID);
+            SetItem(slotID, ItemStack.Empty());
+            return itemStack;
         }
 
-        private void ValidateIndex(int idx)
+        public ItemStack AddToSlot(QuickSlotID slotID, ItemStack itemStack)
         {
-            if (!IsSlotValid(idx))
-                throw new IndexOutOfRangeException($"Invalid slot index: {idx}");
+            ItemStack slot = GetItem(slotID);
+            if (slot.itemID != itemStack.itemID)
+                return itemStack;
+
+            int count = Math.Min(itemStack.count, GetItem(slotID).Remain);
+            slot.count += count;
+            itemStack.count -= count;
+            return itemStack;
         }
 
-        public void SwapSlot(int from, int to)
+        public ItemStack TakeToSlot(QuickSlotID slotID, int count)
         {
-            throw new NotImplementedException();
+            ItemStack slot = GetItem(slotID);
+            if (slot.IsEmpty) return ItemStack.Empty();
+
+            count = Math.Min(slot.Remain, count);
+            slot.count -= count;
+
+            return new ItemStack(slot.itemData, count);
+        }
+
+        public void SwapSlot(QuickSlotID from, QuickSlotID to)
+        {
+
         }
     }
 }
