@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dfdfa9fd2217f0478fe1631be5e9a23, type: 3}
-  m_Name: Boards
-  m_EditorClassIdentifier: 
+  m_Script: {fileID: 0}
+  m_Name: Tasks
+  m_EditorClassIdentifier: Assembly-CSharp-Editor:ProjectPlanner:Tasks
   _all: []
