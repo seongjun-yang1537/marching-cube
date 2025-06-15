@@ -5,7 +5,7 @@ namespace Ingame
 {
     public class PlayerController : AgentController
     {
-        protected PlayerModel playerModel;
+        public PlayerModel playerModel { get; private set; }
 
         protected void Awake()
         {

@@ -9,7 +9,7 @@ namespace Ingame
 {
     public partial class EditorAgentModel : InnerEditor<AgentModel>
     {
-        private class InventoryGUI : InnerGUI<AgentModel>
+        private class BagGUI : InnerGUI<AgentModel>
         {
             private Inventory inventory { get => script.inventory; }
 
@@ -56,14 +56,14 @@ namespace Ingame
                         {
                             if (itemCount > 0)
                                 inventory.SetItemSlot(
-                                    (InventorySlotID)selectedIdx,
+                                    (BagSlotID)selectedIdx,
                                     new ItemStack(itemID, itemCount)
                                 );
                         })
                         + SEditorGUILayout.Button("Remove")
                         .OnClick(() =>
                         {
-                            inventory.SetItemSlot((InventorySlotID)selectedIdx, ItemData.Empty());
+                            inventory.SetItemSlot((BagSlotID)selectedIdx, ItemData.Empty());
                         })
                     )
                 );
@@ -84,7 +84,7 @@ namespace Ingame
             private List<GUIContent> CreateItemStackGUIContents()
             {
                 List<GUIContent> contents = new();
-                foreach (InventorySlotID slotID in Enum.GetValues(typeof(InventorySlotID)))
+                foreach (BagSlotID slotID in Enum.GetValues(typeof(BagSlotID)))
                     contents.Add(CreateItemStackGUIContent(inventory.GetItemSlot(slotID)));
                 return contents;
             }

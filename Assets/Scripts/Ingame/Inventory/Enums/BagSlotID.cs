@@ -1,6 +1,6 @@
 namespace Ingame
 {
-    public enum InventorySlotID
+    public enum BagSlotID
     {
         Slot0,
         Slot1,

@@ -5,13 +5,14 @@ using Ingame;
 
 namespace UI
 {
-    [CustomEditor(typeof(InventorySlotUIModel))]
-    public class EditorInventorySlotUIModel : Editor
+    [CustomEditor(typeof(BagSlotUIModel))]
+    public class EditorBagSlotUIModel : EditorUIComponentBehaviour
     {
-        InventorySlotUIModel script;
-        void OnEnable()
+        BagSlotUIModel script;
+        protected void OnEnable()
         {
-            script = (InventorySlotUIModel)target;
+            base.OnEnable();
+            script = (BagSlotUIModel)target;
         }
 
         ItemID selectedItemID;

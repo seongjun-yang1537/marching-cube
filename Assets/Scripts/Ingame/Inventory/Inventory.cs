@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using Corelib.Utils;
 using NUnit.Framework.Interfaces;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Ingame
 {
     [Serializable]
     public class Inventory
     {
-        private InventoryContainer inventoryContainer;
-        private QuickSlotContainer quickSlotContainer;
-        private EquipmentContainer equipmentContainer;
+        public BagContainer bagContainer { get; private set; }
+        public QuickSlotContainer quickSlotContainer { get; private set; }
+        public EquipmentContainer equipmentContainer { get; private set; }
+
+        public UnityEvent<BagSlotID, ItemStack> onChangedBag { get => bagContainer.onValueChanged; }
+        public UnityEvent<QuickSlotID, ItemStack> onChangedQuickSlot { get => quickSlotContainer.onValueChanged; }
+        public UnityEvent<EquipmentSlotID, ItemStack> onChangedEquipment { get => equipmentContainer.onValueChanged; }
 
         public Inventory()
         {
@@ -20,20 +25,20 @@ namespace Ingame
 
         private void InitializeContainers()
         {
-            inventoryContainer = new InventoryContainer(ExEnum.Count<InventorySlotID>());
+            bagContainer = new BagContainer(ExEnum.Count<BagSlotID>());
             quickSlotContainer = new QuickSlotContainer(ExEnum.Count<QuickSlotID>());
             equipmentContainer = new EquipmentContainer(ExEnum.Count<EquipmentSlotID>());
         }
 
-        public ItemStack GetItemSlot(InventorySlotID slotID)
-            => inventoryContainer.GetItem(slotID);
+        public ItemStack GetItemSlot(BagSlotID slotID)
+            => bagContainer.GetItem(slotID);
 
-        public void SetItemSlot(InventorySlotID slotID, ItemData itemData)
+        public void SetItemSlot(BagSlotID slotID, ItemData itemData)
             => SetItemSlot(slotID, itemData.ToStack());
-        public void SetItemSlot(InventorySlotID slotID, ItemStack itemStack)
+        public void SetItemSlot(BagSlotID slotID, ItemStack itemStack)
         {
-            inventoryContainer.RemoveItem(slotID);
-            inventoryContainer.SetItem(slotID, itemStack);
+            bagContainer.RemoveItem(slotID);
+            bagContainer.SetItem(slotID, itemStack);
         }
 
         #region Inventory Methods
@@ -43,9 +48,9 @@ namespace Ingame
 
             itemStack = new ItemStack(itemStack);
 
-            for (int i = 0; i < inventoryContainer.SlotCount; i++)
+            for (int i = 0; i < bagContainer.SlotCount; i++)
             {
-                var slot = inventoryContainer.slots[i];
+                var slot = bagContainer.slots[i];
                 if (!slot.IsEmpty && slot.itemID == itemStack.itemID)
                 {
                     int added = slot.Add(itemStack.count);
@@ -54,12 +59,12 @@ namespace Ingame
                 }
             }
 
-            for (int i = 0; i < inventoryContainer.SlotCount; i++)
+            for (int i = 0; i < bagContainer.SlotCount; i++)
             {
-                if (inventoryContainer[i].IsEmpty)
+                if (bagContainer[i].IsEmpty)
                 {
                     int toPlace = Math.Min(itemStack.count, itemStack.maxStackable);
-                    inventoryContainer.slots[i] = new ItemStack(itemStack.itemData, toPlace);
+                    bagContainer.slots[i] = new ItemStack(itemStack.itemData, toPlace);
                     itemStack.count -= toPlace;
                     if (itemStack.count <= 0) return ItemStack.Empty();
                 }
@@ -68,19 +73,19 @@ namespace Ingame
             return itemStack.count > 0 ? itemStack : ItemStack.Empty();
         }
 
-        public ItemStack AddItem(InventorySlotID slotID, ItemStack itemStack)
+        public ItemStack AddItem(BagSlotID slotID, ItemStack itemStack)
         {
-            return inventoryContainer.AddToSlot(slotID, itemStack);
+            return bagContainer.AddToSlot(slotID, itemStack);
         }
 
-        public ItemStack TakeItem(InventorySlotID slotID, int count)
+        public ItemStack TakeItem(BagSlotID slotID, int count)
         {
-            return inventoryContainer.TakeToSlot(slotID, count);
+            return bagContainer.TakeToSlot(slotID, count);
         }
 
-        public ItemStack RemoveItem(InventorySlotID slotID)
+        public ItemStack RemoveItem(BagSlotID slotID)
         {
-            return inventoryContainer.RemoveItem(slotID);
+            return bagContainer.RemoveItem(slotID);
         }
 
         #endregion
@@ -142,9 +147,9 @@ namespace Ingame
             return null;
         }
 
-        public ItemStack Equip(InventorySlotID slotID)
+        public ItemStack Equip(BagSlotID slotID)
         {
-            var itemToEquip = inventoryContainer.GetItem(slotID);
+            var itemToEquip = bagContainer.GetItem(slotID);
             if (itemToEquip.IsEmpty) return ItemStack.Empty();
 
             RemoveItem(slotID);

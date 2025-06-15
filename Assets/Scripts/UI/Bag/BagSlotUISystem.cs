@@ -3,40 +3,38 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using System.Linq;
 using Ingame;
+using System;
 
 namespace UI
 {
-    public class QuickSlotUISystem : SerializedMonoBehaviour
+    public class BagSlotUISystem : UIComponentBahaviour
     {
-        public QuickSlotContainer quickSlotContainer { get; private set; }
+        public BagContainer bagContainer { get; private set; }
 
         public List<BagSlotUIModel> slotUIModels;
 
-        private void Awake()
+        protected void Awake()
         {
+            base.Awake();
+
             slotUIModels = transform.Cast<Transform>()
                 .Select(t => t.GetComponent<BagSlotUIModel>())
                 .Where(model => model != null)
                 .ToList();
         }
 
-        private void Start()
+        public void SetContainer(BagContainer container)
         {
-            Render();
-        }
+            bagContainer = container;
 
-        public void SetContainer(QuickSlotContainer container)
-        {
-            quickSlotContainer = container;
-
-            int slotCount = quickSlotContainer.SlotCount;
+            int slotCount = bagContainer.SlotCount;
             for (int i = 0; i < slotCount; i++)
-                slotUIModels[i].SetItemStack(quickSlotContainer.GetItem((QuickSlotID)i));
+                slotUIModels[i].SetItemStack(bagContainer.GetItem((BagSlotID)i));
 
             Render();
         }
 
-        public void Render()
+        public override void Render()
         {
             foreach (BagSlotUIModel model in slotUIModels)
                 model.Render();

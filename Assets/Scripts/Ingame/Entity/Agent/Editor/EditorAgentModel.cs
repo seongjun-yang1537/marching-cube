@@ -7,7 +7,7 @@ namespace Ingame
     [CustomEditor(typeof(AgentModel))]
     public partial class EditorAgentModel : InnerEditor<AgentModel>
     {
-        private InnerGUI<AgentModel> guiInventory;
+        private InnerGUI<AgentModel> guiBag;
         private InnerGUI<AgentModel> guiQuickSlot;
         private InnerGUI<AgentModel> guiEquipment;
 
@@ -15,7 +15,7 @@ namespace Ingame
         {
             base.OnEnable();
 
-            guiInventory = AddInnerGUI<InventoryGUI>();
+            guiBag = AddInnerGUI<BagGUI>();
             guiQuickSlot = AddInnerGUI<QuickSlotGUI>();
             guiEquipment = AddInnerGUI<EquipmentGUI>();
         }
@@ -48,7 +48,7 @@ namespace Ingame
                     )
                     + SEditorGUILayout.Action(() =>
                     {
-                        if (showInventory) guiInventory.OnInspectorGUI();
+                        if (showInventory) guiBag.OnInspectorGUI();
                     })
                 )
 

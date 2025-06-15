@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace UI
 {
-    public class QuickSlotUIModel : MonoBehaviour, IUIComponent
+    public class QuickSlotUIModel : MonoBehaviour
     {
         public ItemStack itemStack { get; private set; }
         public Image imgIcon;

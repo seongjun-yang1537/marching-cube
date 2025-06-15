@@ -2,20 +2,24 @@ using System;
 using System.Collections.Generic;
 using Corelib.Utils;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Ingame
 {
-    public class InventoryContainer : IItemContainer<InventorySlotID>
+    public class BagContainer : IItemContainer<BagSlotID>
     {
+        public UnityEvent<BagSlotID, ItemStack> onValueChanged;
+
         public List<ItemStack> slots = new();
         public int SlotCount => slots.Count;
 
-        public InventoryContainer(int count)
+        public BagContainer(int count)
         {
-            for (int i = 0; i < count; i++) slots.Add(new ItemStack(null, 0));
+            for (int i = 0; i < count; i++) slots.Add(ItemStack.Empty());
+            onValueChanged = new();
         }
 
-        public ItemStack this[InventorySlotID e]
+        public ItemStack this[BagSlotID e]
         {
             get => GetItem(e);
             set => SetItem(e, value);
@@ -23,19 +27,23 @@ namespace Ingame
 
         public ItemStack this[int e]
         {
-            get => GetItem((InventorySlotID)e);
-            set => SetItem((InventorySlotID)e, value);
+            get => GetItem((BagSlotID)e);
+            set => SetItem((BagSlotID)e, value);
         }
 
-        public ItemStack GetItem(InventorySlotID slotID) => slots[(int)slotID];
+        public ItemStack GetItem(BagSlotID slotID) => slots[(int)slotID];
 
-        public ItemStack SetItem(InventorySlotID slotID, ItemStack itemStack)
-            => slots[(int)slotID] = itemStack;
+        public ItemStack SetItem(BagSlotID slotID, ItemStack itemStack)
+        {
+            slots[(int)slotID] = itemStack;
+            onValueChanged.Invoke(slotID, itemStack);
+            return itemStack;
+        }
 
-        public bool HasItemAt(InventorySlotID slotID)
+        public bool HasItemAt(BagSlotID slotID)
             => !GetItem(slotID).IsEmpty;
 
-        public bool CanAcceptItem(InventorySlotID slotID, ItemStack itemStack)
+        public bool CanAcceptItem(BagSlotID slotID, ItemStack itemStack)
         {
             ItemStack slot = GetItem(slotID);
             if (slot.IsEmpty) return true;
@@ -44,14 +52,14 @@ namespace Ingame
             return false;
         }
 
-        public ItemStack RemoveItem(InventorySlotID slotID)
+        public ItemStack RemoveItem(BagSlotID slotID)
         {
             ItemStack itemStack = GetItem(slotID);
             SetItem(slotID, ItemStack.Empty());
             return itemStack;
         }
 
-        public ItemStack AddToSlot(InventorySlotID slotID, ItemStack itemStack)
+        public ItemStack AddToSlot(BagSlotID slotID, ItemStack itemStack)
         {
             ItemStack slot = GetItem(slotID);
             if (slot.itemID != itemStack.itemID)
@@ -60,10 +68,11 @@ namespace Ingame
             int count = Math.Min(itemStack.count, GetItem(slotID).Remain);
             slot.count += count;
             itemStack.count -= count;
+            onValueChanged.Invoke(slotID, itemStack);
             return itemStack;
         }
 
-        public ItemStack TakeToSlot(InventorySlotID slotID, int count)
+        public ItemStack TakeToSlot(BagSlotID slotID, int count)
         {
             ItemStack slot = GetItem(slotID);
             if (slot.IsEmpty) return ItemStack.Empty();
@@ -71,10 +80,12 @@ namespace Ingame
             count = Math.Min(slot.Remain, count);
             slot.count -= count;
 
-            return new ItemStack(slot.itemData, count);
+            ItemStack remain = new ItemStack(slot.itemData, count);
+            onValueChanged.Invoke(slotID, remain);
+            return remain;
         }
 
-        public void SwapSlot(InventorySlotID from, InventorySlotID to)
+        public void SwapSlot(BagSlotID from, BagSlotID to)
         {
 
         }

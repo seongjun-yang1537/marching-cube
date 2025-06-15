@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 namespace Ingame
 {
     public class EquipmentContainer : IItemContainer<EquipmentSlotID>
     {
+        public UnityEvent<EquipmentSlotID, ItemStack> onValueChanged = new();
         public List<ItemStack> slots = new();
         public int SlotCount => slots.Count;
 
@@ -19,10 +21,20 @@ namespace Ingame
             set => SetItem(e, value);
         }
 
+        public ItemStack this[int e]
+        {
+            get => GetItem((EquipmentSlotID)e);
+            set => SetItem((EquipmentSlotID)e, value);
+        }
+
         public ItemStack GetItem(EquipmentSlotID slotID) => slots[(int)slotID];
 
         public ItemStack SetItem(EquipmentSlotID slotID, ItemStack itemStack)
-            => slots[(int)slotID] = itemStack;
+        {
+            slots[(int)slotID] = itemStack;
+            onValueChanged.Invoke(slotID, itemStack);
+            return itemStack;
+        }
 
         public bool HasItemAt(EquipmentSlotID slotID)
             => !GetItem(slotID).IsEmpty;
@@ -52,6 +64,7 @@ namespace Ingame
             int count = Math.Min(itemStack.count, GetItem(slotID).Remain);
             slot.count += count;
             itemStack.count -= count;
+            onValueChanged.Invoke(slotID, itemStack);
             return itemStack;
         }
 
@@ -63,7 +76,9 @@ namespace Ingame
             count = Math.Min(slot.Remain, count);
             slot.count -= count;
 
-            return new ItemStack(slot.itemData, count);
+            ItemStack remain = new ItemStack(slot.itemData, count);
+            onValueChanged.Invoke(slotID, remain);
+            return remain;
         }
 
         public void SwapSlot(EquipmentSlotID from, EquipmentSlotID to)

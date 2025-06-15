@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace UI
 {
-    public class InventorySlotUIModel : MonoBehaviour, IUIComponent
+    public class BagSlotUIModel : UIComponentBahaviour
     {
         public ItemStack itemStack { get; private set; }
         public Image imgIcon;
@@ -28,7 +28,7 @@ namespace UI
 
         public void RemoveItemStack() => SetItemStack(null);
 
-        public void Render()
+        public override void Render()
         {
             if (itemStack == null)
             {

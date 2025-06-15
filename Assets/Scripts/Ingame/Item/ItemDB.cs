@@ -16,12 +16,11 @@ namespace Ingame
         {
             if (itemID == ItemID.None)
                 return null;
-
             if (!sprites.ContainsKey(itemID))
                 sprites.Add(itemID, Resources.Load<Sprite>($"{PATH_ICON_PREFIX}/{itemID}"));
             if (sprites[itemID] == null)
             {
-                Debug.LogError($"Not Have Icon Sprite {itemID}");
+                Debug.Log($"Not Have Icon Sprite {itemID}");
                 sprites[itemID] = Resources.Load<Sprite>($"{PATH_ICON_PREFIX}/{itemID}");
             }
             return sprites[itemID];

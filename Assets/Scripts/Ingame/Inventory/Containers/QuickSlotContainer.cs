@@ -1,11 +1,15 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Ingame
 {
     public class QuickSlotContainer : IItemContainer<QuickSlotID>
     {
+        public UnityEvent<QuickSlotID, ItemStack> onValueChanged = new();
+
         public List<ItemStack> slots = new();
         public int SlotCount => slots.Count;
 
@@ -20,10 +24,20 @@ namespace Ingame
             set => SetItem(e, value);
         }
 
+        public ItemStack this[int e]
+        {
+            get => GetItem((QuickSlotID)e);
+            set => SetItem((QuickSlotID)e, value);
+        }
+
         public ItemStack GetItem(QuickSlotID slotID) => slots[(int)slotID];
 
         public ItemStack SetItem(QuickSlotID slotID, ItemStack itemStack)
-            => slots[(int)slotID] = itemStack;
+        {
+            slots[(int)slotID] = itemStack;
+            onValueChanged.Invoke(slotID, itemStack);
+            return itemStack;
+        }
 
         public bool HasItemAt(QuickSlotID slotID)
             => !GetItem(slotID).IsEmpty;
@@ -53,6 +67,7 @@ namespace Ingame
             int count = Math.Min(itemStack.count, GetItem(slotID).Remain);
             slot.count += count;
             itemStack.count -= count;
+            onValueChanged.Invoke(slotID, itemStack);
             return itemStack;
         }
 
@@ -64,7 +79,9 @@ namespace Ingame
             count = Math.Min(slot.Remain, count);
             slot.count -= count;
 
-            return new ItemStack(slot.itemData, count);
+            ItemStack remain = new ItemStack(slot.itemData, count);
+            onValueChanged.Invoke(slotID, remain);
+            return remain;
         }
 
         public void SwapSlot(QuickSlotID from, QuickSlotID to)
