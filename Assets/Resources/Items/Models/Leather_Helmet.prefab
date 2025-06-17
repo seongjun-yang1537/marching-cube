@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6795257947758027424}
   - component: {fileID: -7322870745773696361}
   - component: {fileID: 3760759090110065522}
-  - component: {fileID: 2446368578635827390}
+  - component: {fileID: 2669224407094081407}
   m_Layer: 8
   m_Name: Leather_Helmet
   m_TagString: Untagged
@@ -111,8 +111,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &2446368578635827390
-BoxCollider:
+--- !u!135 &2669224407094081407
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -130,8 +130,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-  m_Center: {x: 0, y: 0.125, z: 0}
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0.15, z: 0}
 --- !u!1 &8391417216789096440
 GameObject:
   m_ObjectHideFlags: 0

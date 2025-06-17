@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1554813956712628588}
   - component: {fileID: 7974879037409915837}
   - component: {fileID: 7954750260073493843}
-  - component: {fileID: 2576099628089079683}
+  - component: {fileID: 3214117849478348314}
   m_Layer: 8
   m_Name: Leather_Boots
   m_TagString: Untagged
@@ -111,8 +111,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &2576099628089079683
-BoxCollider:
+--- !u!135 &3214117849478348314
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -130,8 +130,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-  m_Center: {x: 0, y: 0.125, z: 0}
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0.15, z: 0}
 --- !u!1 &5762163548748164983
 GameObject:
   m_ObjectHideFlags: 0

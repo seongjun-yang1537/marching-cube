@@ -53,12 +53,17 @@ namespace Ingame
 
         protected virtual void OnDropItem(ItemStack itemStack)
         {
+            DropItemByForward(itemStack, transform.forward);
+        }
+
+        protected virtual void DropItemByForward(ItemStack itemStack, Vector3 forward)
+        {
             GameObject go = CreateDropItem(itemStack);
             Transform tr = go.transform;
-            tr.position = transform.position + Vector3.up;
+            tr.position = transform.position + 1.5f * Vector3.up;
 
             Rigidbody rigidbody = go.GetComponent<Rigidbody>();
-            rigidbody.AddForce(transform.forward * dropForce, ForceMode.Impulse);
+            rigidbody.AddForce(forward * dropForce, ForceMode.Impulse);
         }
     }
 }

@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 7098353088185330863}
   - component: {fileID: 5731285431400708166}
   - component: {fileID: 7636625097130302859}
-  - component: {fileID: 4967268070408305624}
+  - component: {fileID: -5894708371751369846}
   m_Layer: 8
   m_Name: Leather_Ring
   m_TagString: Untagged
@@ -143,8 +143,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &4967268070408305624
-BoxCollider:
+--- !u!135 &-5894708371751369846
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -162,8 +162,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-  m_Center: {x: 0, y: 0.125, z: 0}
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0.15, z: 0}
 --- !u!1001 &1546911530702494170
 PrefabInstance:
   m_ObjectHideFlags: 0

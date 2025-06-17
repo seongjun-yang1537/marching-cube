@@ -105,6 +105,7 @@ namespace Ingame
             ItemStack takenStack = currentItem.itemData.ToStack(amountToTake);
 
             currentItem.count -= amountToTake;
+            if (currentItem.count == 0) currentItem = ItemStack.Empty();
             SetItem(slotIndex, currentItem);
 
             return takenStack;

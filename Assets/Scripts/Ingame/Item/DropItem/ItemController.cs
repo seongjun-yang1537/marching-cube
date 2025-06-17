@@ -12,12 +12,12 @@ namespace Ingame
         private ItemModel itemModel;
 
         private Rigidbody rigidbody;
-        private BoxCollider boxCollider;
+        private SphereCollider sphereCollider;
 
         protected void Awake()
         {
             rigidbody = GetComponent<Rigidbody>();
-            boxCollider = GetComponent<BoxCollider>();
+            sphereCollider = GetComponent<SphereCollider>();
 
             itemModel = GetComponent<ItemModel>();
             ChangeItemState(ItemModelState.Held);
@@ -36,13 +36,13 @@ namespace Ingame
                 case ItemModelState.Held:
                     {
                         rigidbody.isKinematic = true;
-                        boxCollider.enabled = false;
+                        sphereCollider.enabled = false;
                     }
                     break;
                 case ItemModelState.Dropped:
                     {
                         rigidbody.isKinematic = false;
-                        boxCollider.enabled = true;
+                        sphereCollider.enabled = true;
                     }
                     break;
             }

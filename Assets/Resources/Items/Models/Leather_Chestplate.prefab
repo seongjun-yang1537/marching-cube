@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 465675067315439044}
   - component: {fileID: -6654154606039605081}
   - component: {fileID: 8401956255662200223}
-  - component: {fileID: 4618041594367004799}
+  - component: {fileID: -7502326847902736299}
   m_Layer: 8
   m_Name: Leather_Chestplate
   m_TagString: Untagged
@@ -143,8 +143,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &4618041594367004799
-BoxCollider:
+--- !u!135 &-7502326847902736299
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -162,8 +162,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-  m_Center: {x: 0, y: 0.125, z: 0}
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0.15, z: 0}
 --- !u!1001 &7186018319575489404
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6029925807118904763}
   - component: {fileID: -658258059508253561}
   - component: {fileID: 3472905663924267051}
-  - component: {fileID: 3738129685211322198}
+  - component: {fileID: -8668496581376497209}
   m_Layer: 8
   m_Name: Leather_Leggins
   m_TagString: Untagged
@@ -143,8 +143,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &3738129685211322198
-BoxCollider:
+--- !u!135 &-8668496581376497209
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -162,8 +162,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-  m_Center: {x: 0, y: 0.125, z: 0}
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0.15, z: 0}
 --- !u!1001 &8159251500202598128
 PrefabInstance:
   m_ObjectHideFlags: 0

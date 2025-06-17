@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 2541295302029545769}
   - component: {fileID: 493249306500889136}
   - component: {fileID: 7241207251474852643}
-  - component: {fileID: 3536454931346100823}
+  - component: {fileID: 5608230818065133852}
   m_Layer: 8
   m_Name: Leather_Pandent
   m_TagString: Untagged
@@ -143,8 +143,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &3536454931346100823
-BoxCollider:
+--- !u!135 &5608230818065133852
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -162,8 +162,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-  m_Center: {x: 0, y: 0.125, z: 0}
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0.15, z: 0}
 --- !u!1001 &8938957210199763297
 PrefabInstance:
   m_ObjectHideFlags: 0
