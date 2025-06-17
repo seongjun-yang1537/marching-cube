@@ -33,6 +33,11 @@ namespace Ingame
             {
                 UIManager.Instance.ToggleInventoryUI();
             }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+
+            }
         }
 
         private void FixedUpdate()

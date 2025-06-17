@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Corelib.Utils;
 using UnityEngine;
 
@@ -17,7 +16,7 @@ namespace Ingame
 
             agentModel = (AgentModel)entityModel;
 
-            agentModel.onHeldItem.AddListener(itemStack => OnItemStack(itemStack));
+            agentModel.onHeldItem.AddListener(itemSlot => OnItemStack(itemSlot.itemStack));
         }
 
         private void ClearHeldItem()

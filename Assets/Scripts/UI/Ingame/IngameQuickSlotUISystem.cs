@@ -40,8 +40,8 @@ namespace UI
             slots.SetContainer(inventory.quickSlotContainer);
         }
 
-        private ItemStack GetQuickSlotItem(int num)
-            => inventory.quickSlotContainer[num];
+        private ItemSlot GetQuickSlotItem(int num)
+            => inventory.quickSlotContainer.GetSlot(num);
 
         private void OnKeyDownQuick(int num)
         {
