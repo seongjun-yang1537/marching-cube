@@ -1,8 +1,6 @@
 // Ingame/AgentModel.cs
 
 using UnityEngine;
-using System;
-using Unity.VisualScripting;
 
 namespace Ingame
 {
@@ -14,6 +12,8 @@ namespace Ingame
         public float jumpForce;
 
         public Transform body;
+
+        public Inventory inventory;
 
         protected void Awake()
         {

@@ -1,10 +1,11 @@
+using UI;
 using UnityEngine;
 
 namespace Ingame
 {
     public class PlayerController : AgentController
     {
-        protected PlayerModel playerModel;
+        public PlayerModel playerModel { get; private set; }
 
         protected void Awake()
         {
@@ -27,6 +28,11 @@ namespace Ingame
 
             playerModel.isSprint = Input.GetKey(playerModel.sprintKey);
             playerModel.nowSpeed = playerModel.isSprint ? playerModel.sprintSpeed : playerModel.groundSpeed;
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                UIManager.Instance.ToggleInventoryUI();
+            }
         }
 
         private void FixedUpdate()
