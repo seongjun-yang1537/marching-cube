@@ -87711,7 +87711,7 @@ GameObject:
   - component: {fileID: 645992225}
   - component: {fileID: 645992227}
   m_Layer: 0
-  m_Name: Cameras
+  m_Name: '- Cameras'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87776,7 +87776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 653539116}
   m_Layer: 0
-  m_Name: Managers
+  m_Name: '- Managers'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87790,7 +87790,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 653539115}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -87826,7 +87826,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661975152}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -93080,7 +93080,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913142840}
   serializedVersion: 2
-  m_LocalRotation: {x: -3.1350918e-16, y: -0.000000025513838, z: -7.998822e-24, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.81, y: 3.0824373, z: 3.679995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -93191,7 +93191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952308219}
   m_Layer: 0
-  m_Name: Canvases
+  m_Name: '- Canvases'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105640,15 +105640,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6177677663973957952, guid: eb3c2adc046946545a6597e2dfef816a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6177677663973957952, guid: eb3c2adc046946545a6597e2dfef816a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6177677663973957952, guid: eb3c2adc046946545a6597e2dfef816a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6177677663973957952, guid: eb3c2adc046946545a6597e2dfef816a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

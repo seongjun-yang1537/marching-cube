@@ -1,23 +1,35 @@
 using Corelib.Utils;
 using UnityEngine;
+
 namespace Ingame
 {
-    public class DropItemController : MonoBehaviour
+    [RequireComponent(typeof(ItemModel))]
+    public class ItemView : MonoBehaviour
     {
+        public Transform body;
         public float rotateSpeed = 30f;
         public float hoverHeight = 0.1f;
         public float hoverSpeed = 2.5f;
 
-        public Transform body;
+        private ItemModel itemModel;
 
         protected void Awake()
         {
             body = transform.FindInChild(nameof(body));
+
+            itemModel = GetComponent<ItemModel>();
         }
 
         protected void Update()
         {
-            UpdateAnimation();
+            switch (itemModel.state)
+            {
+                case ItemModelState.Dropped:
+                    {
+                        UpdateAnimation();
+                    }
+                    break;
+            }
         }
 
         private void UpdateAnimation()

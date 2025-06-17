@@ -56,31 +56,19 @@ namespace Ingame
             if (!script.mapAsset)
                 return;
 
-            SEditorGUILayout.Vertical("helpbox")
+            SEditorGUILayout.FoldGroup("BSP3D MapAsset Inspector", showBSP3DMapAssetScriptableObject)
+            .OnValueChanged(value => showBSP3DMapAssetScriptableObject = value)
             .Content(
-                SGUILayout.Horizontal(
-                    SGUILayout.Space(15)
-                    + SEditorGUILayout.FoldoutHeaderGroup("BSP3D MapAsset Inspector", showBSP3DMapAssetScriptableObject)
-                    .OnValueChanged(value => showBSP3DMapAssetScriptableObject = value)
-                )
+                SEditorGUILayout.Action(() =>
+                {
+                    if (BSP3DMapAssetEditor == null || BSP3DMapAssetEditor.target != script.mapAsset)
+                    {
+                        BSP3DMapAssetEditor = CreateEditor(script.mapAsset);
+                    }
+                    BSP3DMapAssetEditor.OnInspectorGUI();
+                })
             )
             .Render();
-
-            if (showBSP3DMapAssetScriptableObject)
-            {
-                SEditorGUILayout.Vertical("helpbox")
-                .Content(
-                    SEditorGUILayout.Action(() =>
-                    {
-                        if (BSP3DMapAssetEditor == null || BSP3DMapAssetEditor.target != script.mapAsset)
-                        {
-                            BSP3DMapAssetEditor = CreateEditor(script.mapAsset);
-                        }
-                        BSP3DMapAssetEditor.OnInspectorGUI();
-                    })
-                )
-                .Render();
-            }
         }
 
         private void Inspector_GizmosOption()

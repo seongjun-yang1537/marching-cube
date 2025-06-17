@@ -32,5 +32,10 @@ namespace Ingame
         {
             return moveable?.IsGrounded() ?? false;
         }
+
+        public virtual void ChangeHeldItem(ItemStack itemStack)
+        {
+            agentModel.SetHeldItem(itemStack);
+        }
     }
 }

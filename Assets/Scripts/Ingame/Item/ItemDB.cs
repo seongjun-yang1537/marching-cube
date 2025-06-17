@@ -8,11 +8,11 @@ namespace Ingame
     public static class ItemDB
     {
         private const string PATH_ICON_PREFIX = "Items/Icons";
-        private const string PATH_DROPITEM_PREFIX = "Items/DropItems";
+        private const string PATH_MODELS_PREFIX = "Items/Models";
 
         private static Dictionary<ItemID, Sprite> sprites = new();
         private static Dictionary<ItemID, Texture2D> editorIconTextures = new();
-        private static Dictionary<ItemID, GameObject> dropItems = new();
+        private static Dictionary<ItemID, GameObject> models = new();
 
         public static Sprite GetIconSprite(ItemID itemID)
         {
@@ -38,12 +38,12 @@ namespace Ingame
             return editorIconTextures[itemID];
         }
 
-        public static GameObject GetDropItem(ItemID itemID)
+        public static GameObject GetItemModel(ItemID itemID)
         {
-            if (!dropItems.ContainsKey(itemID))
-                dropItems.Add(itemID, Resources.Load<GameObject>($"{PATH_DROPITEM_PREFIX}/{itemID}"));
+            if (!models.ContainsKey(itemID))
+                models.Add(itemID, Resources.Load<GameObject>($"{PATH_MODELS_PREFIX}/{itemID}"));
 
-            return dropItems[itemID];
+            return models[itemID];
         }
     }
 }

@@ -100,6 +100,8 @@ MonoBehaviour:
                     - {x: 7, y: 2, z: 3}
                     - {x: 8, y: 2, z: 2}
                     - {x: 9, y: 2, z: 3}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 9, y: 3}
                     plane:
                       topLeft: {x: 1, y: 0, z: 13}
@@ -133,6 +135,8 @@ MonoBehaviour:
                     - {x: 7, y: 2, z: 14}
                     - {x: 8, y: 2, z: 13}
                     - {x: 9, y: 2, z: 13}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 9, y: 11}
                     plane:
                       topLeft: {x: 1, y: 3, z: 2}
@@ -238,6 +242,8 @@ MonoBehaviour:
                     - {x: 7, y: 4, z: 12}
                     - {x: 8, y: 4, z: 12}
                     - {x: 9, y: 3, z: 12}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 9, y: 11}
                     plane:
                       topLeft: {x: 1, y: 0, z: 2}
@@ -343,6 +349,8 @@ MonoBehaviour:
                     - {x: 7, y: 1, z: 12}
                     - {x: 8, y: 1, z: 12}
                     - {x: 9, y: 1, z: 12}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 11}
                     plane:
                       topLeft: {x: 1, y: 0, z: 2}
@@ -382,6 +390,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: 1, y: 1, z: 12}
                     - {x: 1, y: 2, z: 12}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 11}
                     plane:
                       topLeft: {x: 10, y: 0, z: 2}
@@ -421,6 +431,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: 10, y: 1, z: 12}
                     - {x: 10, y: 2, z: 12}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             - childs: []
               cube:
@@ -471,6 +483,8 @@ MonoBehaviour:
                     - {x: 7, y: 2, z: 25}
                     - {x: 8, y: 2, z: 25}
                     - {x: 9, y: 2, z: 25}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 9, y: 3}
                     plane:
                       topLeft: {x: 1, y: 0, z: 44}
@@ -504,6 +518,8 @@ MonoBehaviour:
                     - {x: 7, y: 2, z: 45}
                     - {x: 8, y: 2, z: 45}
                     - {x: 9, y: 2, z: 44}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 9, y: 18}
                     plane:
                       topLeft: {x: 1, y: 3, z: 26}
@@ -672,6 +688,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 9, y: 18}
                     plane:
                       topLeft: {x: 1, y: 0, z: 26}
@@ -840,6 +858,8 @@ MonoBehaviour:
                     - {x: 7, y: 1, z: 43}
                     - {x: 8, y: 1, z: 43}
                     - {x: 9, y: 1, z: 43}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 18}
                     plane:
                       topLeft: {x: 1, y: 0, z: 26}
@@ -900,6 +920,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: 1, y: 1, z: 43}
                     - {x: 1, y: 2, z: 43}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 18}
                     plane:
                       topLeft: {x: 10, y: 0, z: 26}
@@ -960,6 +982,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: 10, y: 1, z: 43}
                     - {x: 10, y: 2, z: 43}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             cube:
               topLeft: {x: 0, y: 0, z: 0}
@@ -1045,6 +1069,8 @@ MonoBehaviour:
                     - {x: 9, y: 11, z: 8}
                     - {x: 10, y: 11, z: 8}
                     - {x: 11, y: 11, z: 9}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 9, y: 5}
                     plane:
                       topLeft: {x: 3, y: 7, z: 29}
@@ -1096,6 +1122,8 @@ MonoBehaviour:
                     - {x: 9, y: 11, z: 29}
                     - {x: 10, y: 11, z: 30}
                     - {x: 11, y: 11, z: 30}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 9, y: 21}
                     plane:
                       topLeft: {x: 3, y: 12, z: 8}
@@ -1291,6 +1319,8 @@ MonoBehaviour:
                     - {x: 9, y: 12, z: 28}
                     - {x: 10, y: 13, z: 28}
                     - {x: 11, y: 13, z: 28}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 9, y: 21}
                     plane:
                       topLeft: {x: 3, y: 7, z: 8}
@@ -1486,6 +1516,8 @@ MonoBehaviour:
                     - {x: 9, y: 7, z: 28}
                     - {x: 10, y: 7, z: 28}
                     - {x: 11, y: 7, z: 28}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 5, y: 21}
                     plane:
                       topLeft: {x: 3, y: 7, z: 8}
@@ -1597,6 +1629,8 @@ MonoBehaviour:
                     - {x: 4, y: 9, z: 28}
                     - {x: 3, y: 10, z: 28}
                     - {x: 3, y: 11, z: 28}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 5, y: 21}
                     plane:
                       topLeft: {x: 12, y: 7, z: 8}
@@ -1708,6 +1742,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             - childs: []
               cube:
@@ -1776,6 +1812,8 @@ MonoBehaviour:
                     - {x: 9, y: 9, z: 33}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 9, y: 5}
                     plane:
                       topLeft: {x: 3, y: 5, z: 43}
@@ -1827,6 +1865,8 @@ MonoBehaviour:
                     - {x: 9, y: 9, z: 43}
                     - {x: 10, y: 9, z: 44}
                     - {x: 11, y: 9, z: 44}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 9, y: 9}
                     plane:
                       topLeft: {x: 3, y: 10, z: 34}
@@ -1914,6 +1954,8 @@ MonoBehaviour:
                     - {x: 9, y: 11, z: 42}
                     - {x: 10, y: 11, z: 42}
                     - {x: 11, y: 11, z: 42}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 9, y: 9}
                     plane:
                       topLeft: {x: 3, y: 5, z: 34}
@@ -2001,6 +2043,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: 11, y: 6, z: 42}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 5, y: 9}
                     plane:
                       topLeft: {x: 3, y: 5, z: 34}
@@ -2052,6 +2096,8 @@ MonoBehaviour:
                     - {x: 4, y: 7, z: 42}
                     - {x: 4, y: 8, z: 42}
                     - {x: 3, y: 9, z: 42}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 5, y: 9}
                     plane:
                       topLeft: {x: 12, y: 5, z: 34}
@@ -2103,6 +2149,8 @@ MonoBehaviour:
                     - {x: 12, y: 7, z: 42}
                     - {x: 12, y: 8, z: 42}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             cube:
               topLeft: {x: 0, y: 5, z: 0}
@@ -2187,6 +2235,8 @@ MonoBehaviour:
                     - {x: 23, y: 3, z: 5}
                     - {x: 24, y: 3, z: 6}
                     - {x: 25, y: 3, z: 6}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 9, y: 3}
                     plane:
                       topLeft: {x: 17, y: 1, z: 31}
@@ -2220,6 +2270,8 @@ MonoBehaviour:
                     - {x: 23, y: 3, z: 31}
                     - {x: 24, y: 3, z: 31}
                     - {x: 25, y: 3, z: 31}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 9, y: 26}
                     plane:
                       topLeft: {x: 17, y: 4, z: 5}
@@ -2460,6 +2512,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: 24, y: 4, z: 30}
                     - {x: 25, y: 4, z: 30}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 9, y: 26}
                     plane:
                       topLeft: {x: 17, y: 1, z: 5}
@@ -2700,6 +2754,8 @@ MonoBehaviour:
                     - {x: 23, y: 1, z: 30}
                     - {x: 24, y: 1, z: 30}
                     - {x: 25, y: 1, z: 30}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 26}
                     plane:
                       topLeft: {x: 17, y: 1, z: 5}
@@ -2784,6 +2840,8 @@ MonoBehaviour:
                     - {x: 18, y: 1, z: 30}
                     - {x: 18, y: 2, z: 30}
                     - {x: 17, y: 3, z: 30}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 26}
                     plane:
                       topLeft: {x: 26, y: 1, z: 5}
@@ -2868,6 +2926,8 @@ MonoBehaviour:
                     - {x: 26, y: 1, z: 30}
                     - {x: 26, y: 2, z: 30}
                     - {x: 26, y: 3, z: 30}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             - childs: []
               cube:
@@ -2926,6 +2986,8 @@ MonoBehaviour:
                     - {x: 17, y: 11, z: 9}
                     - {x: 18, y: 11, z: 9}
                     - {x: 19, y: 11, z: 9}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 5}
                     plane:
                       topLeft: {x: 13, y: 7, z: 35}
@@ -2967,6 +3029,8 @@ MonoBehaviour:
                     - {x: 17, y: 11, z: 36}
                     - {x: 18, y: 11, z: 36}
                     - {x: 19, y: 11, z: 36}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 27}
                     plane:
                       topLeft: {x: 13, y: 12, z: 8}
@@ -3162,6 +3226,8 @@ MonoBehaviour:
                     - {x: 17, y: 12, z: 34}
                     - {x: 18, y: 12, z: 34}
                     - {x: 19, y: 12, z: 34}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 27}
                     plane:
                       topLeft: {x: 13, y: 7, z: 8}
@@ -3357,6 +3423,8 @@ MonoBehaviour:
                     - {x: 17, y: 7, z: 34}
                     - {x: 18, y: 7, z: 34}
                     - {x: 19, y: 8, z: 34}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 5, y: 27}
                     plane:
                       topLeft: {x: 13, y: 7, z: 8}
@@ -3498,6 +3566,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 5, y: 27}
                     plane:
                       topLeft: {x: 20, y: 7, z: 8}
@@ -3639,6 +3709,8 @@ MonoBehaviour:
                     - {x: 21, y: 9, z: 34}
                     - {x: 21, y: 10, z: 34}
                     - {x: 21, y: 11, z: 34}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             cube:
               topLeft: {x: 13, y: 0, z: 0}
@@ -3714,6 +3786,8 @@ MonoBehaviour:
                     - {x: 30, y: 11, z: 9}
                     - {x: 31, y: 11, z: 8}
                     - {x: 32, y: 11, z: 9}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 5, y: 7}
                     plane:
                       topLeft: {x: 28, y: 5, z: 32}
@@ -3755,6 +3829,8 @@ MonoBehaviour:
                     - {x: 30, y: 11, z: 32}
                     - {x: 31, y: 11, z: 32}
                     - {x: 32, y: 11, z: 33}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 5, y: 24}
                     plane:
                       topLeft: {x: 28, y: 12, z: 8}
@@ -3881,6 +3957,8 @@ MonoBehaviour:
                     - {x: 30, y: 12, z: 31}
                     - {x: 31, y: 13, z: 31}
                     - {x: 32, y: 12, z: 31}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 5, y: 24}
                     plane:
                       topLeft: {x: 28, y: 5, z: 8}
@@ -4007,6 +4085,8 @@ MonoBehaviour:
                     - {x: 30, y: 5, z: 31}
                     - {x: 31, y: 4, z: 31}
                     - {x: 32, y: 3, z: 31}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 24}
                     plane:
                       topLeft: {x: 28, y: 5, z: 8}
@@ -4181,6 +4261,8 @@ MonoBehaviour:
                     - {x: 28, y: 9, z: 31}
                     - {x: 28, y: 10, z: 31}
                     - {x: 28, y: 11, z: 31}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 24}
                     plane:
                       topLeft: {x: 33, y: 5, z: 8}
@@ -4355,6 +4437,8 @@ MonoBehaviour:
                     - {x: 34, y: 9, z: 31}
                     - {x: 34, y: 10, z: 31}
                     - {x: 34, y: 11, z: 31}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             - childs: []
               cube:
@@ -4427,6 +4511,8 @@ MonoBehaviour:
                     - {x: 43, y: 12, z: 1}
                     - {x: 44, y: 12, z: 1}
                     - {x: 45, y: 12, z: 1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 7}
                     plane:
                       topLeft: {x: 39, y: 6, z: 27}
@@ -4482,6 +4568,8 @@ MonoBehaviour:
                     - {x: 43, y: 12, z: 29}
                     - {x: 44, y: 12, z: 29}
                     - {x: 45, y: 12, z: 40}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 26}
                     plane:
                       topLeft: {x: 39, y: 13, z: 1}
@@ -4670,6 +4758,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 26}
                     plane:
                       topLeft: {x: 39, y: 6, z: 1}
@@ -4858,6 +4948,8 @@ MonoBehaviour:
                     - {x: 43, y: 5, z: 26}
                     - {x: 44, y: 5, z: 26}
                     - {x: 45, y: 5, z: 26}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 26}
                     plane:
                       topLeft: {x: 39, y: 6, z: 1}
@@ -5046,6 +5138,8 @@ MonoBehaviour:
                     - {x: 39, y: 10, z: 26}
                     - {x: 40, y: 11, z: 26}
                     - {x: 39, y: 12, z: 26}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 26}
                     plane:
                       topLeft: {x: 46, y: 6, z: 1}
@@ -5234,6 +5328,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: 47, y: 12, z: 26}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             cube:
               topLeft: {x: 27, y: 0, z: 0}
@@ -5336,6 +5432,8 @@ MonoBehaviour:
                     - {x: 7, y: 18, z: 8}
                     - {x: 8, y: 18, z: 8}
                     - {x: 9, y: 18, z: 8}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 4}
                     plane:
                       topLeft: {x: 3, y: 15, z: 26}
@@ -5370,6 +5468,8 @@ MonoBehaviour:
                     - {x: 7, y: 18, z: 26}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 18}
                     plane:
                       topLeft: {x: 3, y: 19, z: 8}
@@ -5502,6 +5602,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 18}
                     plane:
                       topLeft: {x: 3, y: 15, z: 8}
@@ -5634,6 +5736,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 4, y: 18}
                     plane:
                       topLeft: {x: 3, y: 15, z: 8}
@@ -5712,6 +5816,8 @@ MonoBehaviour:
                     - {x: 4, y: 16, z: 25}
                     - {x: 3, y: 17, z: 25}
                     - {x: 4, y: 18, z: 25}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 4, y: 18}
                     plane:
                       topLeft: {x: 10, y: 15, z: 8}
@@ -5790,6 +5896,8 @@ MonoBehaviour:
                     - {x: 12, y: 16, z: 25}
                     - {x: -1, y: -1, z: -1}
                     - {x: 12, y: 18, z: 25}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             - childs: []
               cube:
@@ -5845,6 +5953,8 @@ MonoBehaviour:
                     - {x: 7, y: 18, z: 32}
                     - {x: 8, y: 18, z: 33}
                     - {x: 9, y: 18, z: 33}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 4}
                     plane:
                       topLeft: {x: 2, y: 15, z: 47}
@@ -5883,6 +5993,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 14}
                     plane:
                       topLeft: {x: 2, y: 19, z: 33}
@@ -6001,6 +6113,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 14}
                     plane:
                       topLeft: {x: 2, y: 15, z: 33}
@@ -6119,6 +6233,8 @@ MonoBehaviour:
                     - {x: 7, y: 15, z: 46}
                     - {x: 8, y: 15, z: 46}
                     - {x: 9, y: 15, z: 46}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 4, y: 14}
                     plane:
                       topLeft: {x: 2, y: 15, z: 33}
@@ -6181,6 +6297,8 @@ MonoBehaviour:
                     - {x: 3, y: 16, z: 46}
                     - {x: 2, y: 17, z: 46}
                     - {x: 3, y: 18, z: 46}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 4, y: 14}
                     plane:
                       topLeft: {x: 10, y: 15, z: 33}
@@ -6243,6 +6361,8 @@ MonoBehaviour:
                     - {x: 10, y: 16, z: 46}
                     - {x: 10, y: 17, z: 46}
                     - {x: 11, y: 18, z: 46}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             cube:
               topLeft: {x: 0, y: 14, z: 0}
@@ -6322,6 +6442,8 @@ MonoBehaviour:
                     - {x: 24, y: 17, z: 4}
                     - {x: 25, y: 17, z: 4}
                     - {x: 26, y: 17, z: 3}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 13, y: 3}
                     plane:
                       topLeft: {x: 14, y: 15, z: 30}
@@ -6367,6 +6489,8 @@ MonoBehaviour:
                     - {x: 24, y: 17, z: 31}
                     - {x: 25, y: 17, z: 30}
                     - {x: 26, y: 17, z: 30}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 13, y: 27}
                     plane:
                       topLeft: {x: 14, y: 18, z: 3}
@@ -6724,6 +6848,8 @@ MonoBehaviour:
                     - {x: 24, y: 19, z: 29}
                     - {x: 25, y: 19, z: 29}
                     - {x: 26, y: 19, z: 29}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 13, y: 27}
                     plane:
                       topLeft: {x: 14, y: 15, z: 3}
@@ -7081,6 +7207,8 @@ MonoBehaviour:
                     - {x: 24, y: 15, z: 29}
                     - {x: 25, y: 16, z: 29}
                     - {x: 26, y: 15, z: 29}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 27}
                     plane:
                       topLeft: {x: 14, y: 15, z: 3}
@@ -7168,6 +7296,8 @@ MonoBehaviour:
                     - {x: 17, y: 15, z: 29}
                     - {x: 15, y: 16, z: 29}
                     - {x: 15, y: 17, z: 29}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 27}
                     plane:
                       topLeft: {x: 27, y: 15, z: 3}
@@ -7255,6 +7385,8 @@ MonoBehaviour:
                     - {x: 27, y: 15, z: 29}
                     - {x: 28, y: 16, z: 29}
                     - {x: 27, y: 17, z: 29}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             - childs: []
               cube:
@@ -7299,6 +7431,8 @@ MonoBehaviour:
                     - {x: 41, y: 16, z: 19}
                     - {x: 42, y: 16, z: 20}
                     - {x: 43, y: 16, z: 20}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 3}
                     plane:
                       topLeft: {x: 37, y: 14, z: 46}
@@ -7326,6 +7460,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 25}
                     plane:
                       topLeft: {x: 37, y: 17, z: 21}
@@ -7507,6 +7643,8 @@ MonoBehaviour:
                     - {x: 41, y: 19, z: 45}
                     - {x: 42, y: 19, z: 45}
                     - {x: 43, y: 19, z: 45}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 25}
                     plane:
                       topLeft: {x: 37, y: 14, z: 21}
@@ -7688,6 +7826,8 @@ MonoBehaviour:
                     - {x: 41, y: 14, z: 45}
                     - {x: 42, y: 14, z: 45}
                     - {x: 43, y: 14, z: 45}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 25}
                     plane:
                       topLeft: {x: 37, y: 14, z: 21}
@@ -7769,6 +7909,8 @@ MonoBehaviour:
                     - {x: 38, y: 14, z: 45}
                     - {x: 37, y: 15, z: 45}
                     - {x: 37, y: 16, z: 45}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 25}
                     plane:
                       topLeft: {x: 44, y: 14, z: 21}
@@ -7850,6 +7992,8 @@ MonoBehaviour:
                     - {x: 45, y: 14, z: 45}
                     - {x: 45, y: 15, z: 45}
                     - {x: 45, y: 16, z: 45}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             cube:
               topLeft: {x: 14, y: 14, z: 0}
@@ -7928,6 +8072,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: 7, y: 24, z: 10}
                     - {x: 8, y: 24, z: 10}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 3}
                     plane:
                       topLeft: {x: 2, y: 22, z: 39}
@@ -7955,6 +8101,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: 7, y: 24, z: 40}
                     - {x: 8, y: 24, z: 40}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 29}
                     plane:
                       topLeft: {x: 2, y: 25, z: 10}
@@ -8164,6 +8312,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 29}
                     plane:
                       topLeft: {x: 2, y: 22, z: 10}
@@ -8373,6 +8523,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 29}
                     plane:
                       topLeft: {x: 2, y: 22, z: 10}
@@ -8466,6 +8618,8 @@ MonoBehaviour:
                     - {x: 4, y: 22, z: 38}
                     - {x: 3, y: 23, z: 38}
                     - {x: 3, y: 24, z: 38}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 29}
                     plane:
                       topLeft: {x: 9, y: 22, z: 10}
@@ -8559,6 +8713,8 @@ MonoBehaviour:
                     - {x: 9, y: 22, z: 38}
                     - {x: 9, y: 23, z: 38}
                     - {x: 9, y: 24, z: 38}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             - childs: []
               cube:
@@ -8612,6 +8768,8 @@ MonoBehaviour:
                     - {x: 19, y: 23, z: 2}
                     - {x: 20, y: 23, z: 2}
                     - {x: 21, y: 23, z: 2}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 10, y: 3}
                     plane:
                       topLeft: {x: 12, y: 21, z: 36}
@@ -8648,6 +8806,8 @@ MonoBehaviour:
                     - {x: 19, y: 23, z: 37}
                     - {x: 20, y: 23, z: 37}
                     - {x: 21, y: 23, z: 38}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 10, y: 34}
                     plane:
                       topLeft: {x: 12, y: 24, z: 2}
@@ -8994,6 +9154,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 10, y: 34}
                     plane:
                       topLeft: {x: 12, y: 21, z: 2}
@@ -9340,6 +9502,8 @@ MonoBehaviour:
                     - {x: 19, y: 22, z: 35}
                     - {x: 20, y: 22, z: 35}
                     - {x: 21, y: 22, z: 35}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 34}
                     plane:
                       topLeft: {x: 12, y: 21, z: 2}
@@ -9448,6 +9612,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 34}
                     plane:
                       topLeft: {x: 22, y: 21, z: 2}
@@ -9556,6 +9722,8 @@ MonoBehaviour:
                     - {x: 17, y: 21, z: 35}
                     - {x: 22, y: 22, z: 35}
                     - {x: 22, y: 23, z: 35}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             cube:
               topLeft: {x: 0, y: 20, z: 0}
@@ -9628,6 +9796,8 @@ MonoBehaviour:
                     - {x: 32, y: 24, z: 1}
                     - {x: 33, y: 24, z: 7}
                     - {x: 34, y: 24, z: 7}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 4}
                     plane:
                       topLeft: {x: 27, y: 21, z: 33}
@@ -9666,6 +9836,8 @@ MonoBehaviour:
                     - {x: 32, y: 24, z: 33}
                     - {x: 33, y: 24, z: 34}
                     - {x: 34, y: 24, z: 33}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 26}
                     plane:
                       topLeft: {x: 27, y: 25, z: 7}
@@ -9880,6 +10052,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 26}
                     plane:
                       topLeft: {x: 27, y: 21, z: 7}
@@ -10094,6 +10268,8 @@ MonoBehaviour:
                     - {x: 32, y: 21, z: 32}
                     - {x: 33, y: 21, z: 32}
                     - {x: 34, y: 21, z: 32}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 4, y: 26}
                     plane:
                       topLeft: {x: 27, y: 21, z: 7}
@@ -10204,6 +10380,8 @@ MonoBehaviour:
                     - {x: 27, y: 22, z: 32}
                     - {x: 27, y: 23, z: 32}
                     - {x: 27, y: 24, z: 32}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 4, y: 26}
                     plane:
                       topLeft: {x: 35, y: 21, z: 7}
@@ -10314,6 +10492,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             - childs: []
               cube:
@@ -10358,6 +10538,8 @@ MonoBehaviour:
                     - {x: 41, y: 24, z: 9}
                     - {x: 42, y: 24, z: 10}
                     - {x: 43, y: 24, z: 11}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 3}
                     plane:
                       topLeft: {x: 37, y: 22, z: 35}
@@ -10385,6 +10567,8 @@ MonoBehaviour:
                     - {x: 41, y: 24, z: 36}
                     - {x: 42, y: 24, z: 35}
                     - {x: 43, y: 24, z: 35}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 25}
                     plane:
                       topLeft: {x: 37, y: 25, z: 10}
@@ -10566,6 +10750,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 25}
                     plane:
                       topLeft: {x: 37, y: 22, z: 10}
@@ -10747,6 +10933,8 @@ MonoBehaviour:
                     - {x: 41, y: 22, z: 34}
                     - {x: 42, y: 22, z: 34}
                     - {x: 43, y: 22, z: 34}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 25}
                     plane:
                       topLeft: {x: 37, y: 22, z: 10}
@@ -10828,6 +11016,8 @@ MonoBehaviour:
                     - {x: 39, y: 22, z: 34}
                     - {x: 38, y: 23, z: 34}
                     - {x: 38, y: 24, z: 34}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 25}
                     plane:
                       topLeft: {x: 44, y: 22, z: 10}
@@ -10909,6 +11099,8 @@ MonoBehaviour:
                     - {x: 43, y: 22, z: 34}
                     - {x: 45, y: 23, z: 34}
                     - {x: 45, y: 24, z: 34}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             cube:
               topLeft: {x: 25, y: 20, z: 0}
@@ -11032,6 +11224,8 @@ MonoBehaviour:
                     - {x: 6, y: 30, z: 5}
                     - {x: 7, y: 30, z: 4}
                     - {x: 8, y: 30, z: 4}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 4}
                     plane:
                       topLeft: {x: 1, y: 27, z: 12}
@@ -11070,6 +11264,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 7}
                     plane:
                       topLeft: {x: 1, y: 31, z: 5}
@@ -11132,6 +11328,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 7}
                     plane:
                       topLeft: {x: 1, y: 27, z: 5}
@@ -11194,6 +11392,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 4, y: 7}
                     plane:
                       topLeft: {x: 1, y: 27, z: 5}
@@ -11228,6 +11428,8 @@ MonoBehaviour:
                     - {x: 1, y: 28, z: 11}
                     - {x: 1, y: 29, z: 11}
                     - {x: 1, y: 30, z: 11}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 4, y: 7}
                     plane:
                       topLeft: {x: 9, y: 27, z: 5}
@@ -11262,6 +11464,8 @@ MonoBehaviour:
                     - {x: 10, y: 28, z: 11}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             - childs: []
               cube:
@@ -11303,6 +11507,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 6, y: 3}
                     plane:
                       topLeft: {x: 0, y: 28, z: 33}
@@ -11327,6 +11533,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 6, y: 15}
                     plane:
                       topLeft: {x: 0, y: 31, z: 18}
@@ -11423,6 +11631,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 6, y: 15}
                     plane:
                       topLeft: {x: 0, y: 28, z: 18}
@@ -11519,6 +11729,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 15}
                     plane:
                       topLeft: {x: 0, y: 28, z: 18}
@@ -11570,6 +11782,8 @@ MonoBehaviour:
                     - {x: 1, y: 28, z: 32}
                     - {x: 1, y: 29, z: 32}
                     - {x: 1, y: 30, z: 32}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 15}
                     plane:
                       topLeft: {x: 6, y: 28, z: 18}
@@ -11621,6 +11835,8 @@ MonoBehaviour:
                     - {x: 6, y: 28, z: 32}
                     - {x: 6, y: 29, z: 32}
                     - {x: 6, y: 30, z: 32}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             cube:
               topLeft: {x: 0, y: 26, z: 0}
@@ -11692,6 +11908,8 @@ MonoBehaviour:
                   - {x: -1, y: -1, z: -1}
                   - {x: -1, y: -1, z: -1}
                   - {x: -1, y: -1, z: -1}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 8, y: 4}
                   plane:
                     topLeft: {x: 0, y: 27, z: 43}
@@ -11730,6 +11948,8 @@ MonoBehaviour:
                   - {x: 5, y: 30, z: 43}
                   - {x: 6, y: 30, z: 44}
                   - {x: 7, y: 30, z: 44}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 8, y: 7}
                   plane:
                     topLeft: {x: 0, y: 31, z: 36}
@@ -11792,6 +12012,8 @@ MonoBehaviour:
                   - {x: -1, y: -1, z: -1}
                   - {x: -1, y: -1, z: -1}
                   - {x: -1, y: -1, z: -1}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 8, y: 7}
                   plane:
                     topLeft: {x: 0, y: 27, z: 36}
@@ -11854,6 +12076,8 @@ MonoBehaviour:
                   - {x: 5, y: 27, z: 42}
                   - {x: 6, y: 26, z: 42}
                   - {x: 7, y: 26, z: 42}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 4, y: 7}
                   plane:
                     topLeft: {x: 0, y: 27, z: 36}
@@ -11888,6 +12112,8 @@ MonoBehaviour:
                   - {x: 1, y: 28, z: 42}
                   - {x: 1, y: 29, z: 42}
                   - {x: 1, y: 30, z: 42}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 4, y: 7}
                   plane:
                     topLeft: {x: 8, y: 27, z: 36}
@@ -11922,6 +12148,8 @@ MonoBehaviour:
                   - {x: 10, y: 28, z: 42}
                   - {x: 10, y: 29, z: 42}
                   - {x: 10, y: 30, z: 42}
+                  validIndicies: []
+                  validPoses: []
             depth: 4
           cube:
             topLeft: {x: 0, y: 26, z: 0}
@@ -11987,6 +12215,8 @@ MonoBehaviour:
                     - {x: 20, y: 28, z: 4}
                     - {x: 21, y: 28, z: 4}
                     - {x: 22, y: 28, z: 4}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 3}
                     plane:
                       topLeft: {x: 15, y: 26, z: 13}
@@ -12017,6 +12247,8 @@ MonoBehaviour:
                     - {x: 20, y: 28, z: 14}
                     - {x: 21, y: 28, z: 14}
                     - {x: 22, y: 28, z: 14}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 10}
                     plane:
                       topLeft: {x: 15, y: 29, z: 3}
@@ -12103,6 +12335,8 @@ MonoBehaviour:
                     - {x: 20, y: 30, z: 12}
                     - {x: 21, y: 30, z: 12}
                     - {x: 22, y: 29, z: 12}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 10}
                     plane:
                       topLeft: {x: 15, y: 26, z: 3}
@@ -12189,6 +12423,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 10}
                     plane:
                       topLeft: {x: 15, y: 26, z: 3}
@@ -12225,6 +12461,8 @@ MonoBehaviour:
                     - {x: 15, y: 26, z: 12}
                     - {x: 15, y: 27, z: 12}
                     - {x: 16, y: 28, z: 12}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 10}
                     plane:
                       topLeft: {x: 23, y: 26, z: 3}
@@ -12261,6 +12499,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             - childs: []
               cube:
@@ -12316,6 +12556,8 @@ MonoBehaviour:
                     - {x: 19, y: 30, z: 19}
                     - {x: 20, y: 30, z: 19}
                     - {x: 21, y: 30, z: 19}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 4}
                     plane:
                       topLeft: {x: 14, y: 27, z: 31}
@@ -12354,6 +12596,8 @@ MonoBehaviour:
                     - {x: 19, y: 30, z: 32}
                     - {x: 20, y: 30, z: 32}
                     - {x: 21, y: 30, z: 32}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 11}
                     plane:
                       topLeft: {x: 14, y: 31, z: 20}
@@ -12448,6 +12692,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 11}
                     plane:
                       topLeft: {x: 14, y: 27, z: 20}
@@ -12542,6 +12788,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 4, y: 11}
                     plane:
                       topLeft: {x: 14, y: 27, z: 20}
@@ -12592,6 +12840,8 @@ MonoBehaviour:
                     - {x: 13, y: 28, z: 30}
                     - {x: 13, y: 29, z: 30}
                     - {x: 14, y: 30, z: 30}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 4, y: 11}
                     plane:
                       topLeft: {x: 22, y: 27, z: 20}
@@ -12642,6 +12892,8 @@ MonoBehaviour:
                     - {x: 22, y: 28, z: 30}
                     - {x: 23, y: 29, z: 30}
                     - {x: 23, y: 30, z: 30}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             cube:
               topLeft: {x: 11, y: 26, z: 0}
@@ -12713,6 +12965,8 @@ MonoBehaviour:
                   - {x: 19, y: 29, z: 36}
                   - {x: 20, y: 29, z: 36}
                   - {x: 21, y: 29, z: 36}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 8, y: 4}
                   plane:
                     topLeft: {x: 14, y: 26, z: 45}
@@ -12751,6 +13005,8 @@ MonoBehaviour:
                   - {x: 19, y: 29, z: 47}
                   - {x: 20, y: 29, z: 47}
                   - {x: 21, y: 29, z: 47}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 8, y: 8}
                   plane:
                     topLeft: {x: 14, y: 30, z: 37}
@@ -12821,6 +13077,8 @@ MonoBehaviour:
                   - {x: -1, y: -1, z: -1}
                   - {x: -1, y: -1, z: -1}
                   - {x: -1, y: -1, z: -1}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 8, y: 8}
                   plane:
                     topLeft: {x: 14, y: 26, z: 37}
@@ -12891,6 +13149,8 @@ MonoBehaviour:
                   - {x: 19, y: 26, z: 44}
                   - {x: 20, y: 26, z: 44}
                   - {x: 21, y: 26, z: 44}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 4, y: 8}
                   plane:
                     topLeft: {x: 14, y: 26, z: 37}
@@ -12929,6 +13189,8 @@ MonoBehaviour:
                   - {x: 14, y: 27, z: 44}
                   - {x: 14, y: 28, z: 44}
                   - {x: 14, y: 29, z: 44}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 4, y: 8}
                   plane:
                     topLeft: {x: 22, y: 26, z: 37}
@@ -12967,6 +13229,8 @@ MonoBehaviour:
                   - {x: 23, y: 27, z: 44}
                   - {x: 23, y: 28, z: 44}
                   - {x: 23, y: 29, z: 44}
+                  validIndicies: []
+                  validPoses: []
             depth: 4
           cube:
             topLeft: {x: 11, y: 26, z: 0}
@@ -13052,6 +13316,8 @@ MonoBehaviour:
                   - {x: 30, y: 29, z: 3}
                   - {x: 31, y: 29, z: 3}
                   - {x: 32, y: 29, z: 3}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 7, y: 4}
                   plane:
                     topLeft: {x: 26, y: 26, z: 17}
@@ -13086,6 +13352,8 @@ MonoBehaviour:
                   - {x: -1, y: -1, z: -1}
                   - {x: -1, y: -1, z: -1}
                   - {x: -1, y: -1, z: -1}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 7, y: 14}
                   plane:
                     topLeft: {x: 26, y: 30, z: 3}
@@ -13190,6 +13458,8 @@ MonoBehaviour:
                   - {x: -1, y: -1, z: -1}
                   - {x: -1, y: -1, z: -1}
                   - {x: -1, y: -1, z: -1}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 7, y: 14}
                   plane:
                     topLeft: {x: 26, y: 26, z: 3}
@@ -13294,6 +13564,8 @@ MonoBehaviour:
                   - {x: -1, y: -1, z: -1}
                   - {x: -1, y: -1, z: -1}
                   - {x: -1, y: -1, z: -1}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 4, y: 14}
                   plane:
                     topLeft: {x: 26, y: 26, z: 3}
@@ -13356,6 +13628,8 @@ MonoBehaviour:
                   - {x: 25, y: 27, z: 16}
                   - {x: 25, y: 28, z: 16}
                   - {x: 25, y: 29, z: 16}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 4, y: 14}
                   plane:
                     topLeft: {x: 33, y: 26, z: 3}
@@ -13418,6 +13692,8 @@ MonoBehaviour:
                   - {x: -1, y: -1, z: -1}
                   - {x: -1, y: -1, z: -1}
                   - {x: -1, y: -1, z: -1}
+                  validIndicies: []
+                  validPoses: []
             depth: 4
           - childs:
             - childs: []
@@ -13462,6 +13738,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 5, y: 4}
                     plane:
                       topLeft: {x: 25, y: 27, z: 25}
@@ -13488,6 +13766,8 @@ MonoBehaviour:
                     - {x: 27, y: 30, z: 27}
                     - {x: 28, y: 30, z: 27}
                     - {x: 29, y: 30, z: 27}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 5, y: 6}
                     plane:
                       topLeft: {x: 25, y: 31, z: 19}
@@ -13524,6 +13804,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 5, y: 6}
                     plane:
                       topLeft: {x: 25, y: 27, z: 19}
@@ -13560,6 +13842,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 4, y: 6}
                     plane:
                       topLeft: {x: 25, y: 27, z: 19}
@@ -13590,6 +13874,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 4, y: 6}
                     plane:
                       topLeft: {x: 30, y: 27, z: 19}
@@ -13620,6 +13906,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             - childs: []
               cube:
@@ -13658,6 +13946,8 @@ MonoBehaviour:
                     - {x: 27, y: 29, z: 36}
                     - {x: 28, y: 29, z: 37}
                     - {x: 29, y: 29, z: 37}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 5, y: 3}
                     plane:
                       topLeft: {x: 25, y: 27, z: 47}
@@ -13679,6 +13969,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 5, y: 11}
                     plane:
                       topLeft: {x: 25, y: 30, z: 36}
@@ -13740,6 +14032,8 @@ MonoBehaviour:
                     - {x: 27, y: 30, z: 46}
                     - {x: 28, y: 31, z: 46}
                     - {x: 29, y: 31, z: 46}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 5, y: 11}
                     plane:
                       topLeft: {x: 25, y: 27, z: 36}
@@ -13801,6 +14095,8 @@ MonoBehaviour:
                     - {x: 27, y: 28, z: 46}
                     - {x: 28, y: 28, z: 46}
                     - {x: 29, y: 28, z: 46}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 11}
                     plane:
                       topLeft: {x: 25, y: 27, z: 36}
@@ -13840,6 +14136,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: 26, y: 28, z: 46}
                     - {x: 26, y: 29, z: 46}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 11}
                     plane:
                       topLeft: {x: 30, y: 27, z: 36}
@@ -13879,6 +14177,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: 30, y: 28, z: 46}
                     - {x: 31, y: 29, z: 46}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             cube:
               topLeft: {x: 24, y: 26, z: 19}
@@ -13960,6 +14260,8 @@ MonoBehaviour:
                     - {x: 41, y: 29, z: 5}
                     - {x: 42, y: 29, z: 5}
                     - {x: 43, y: 29, z: 5}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 3}
                     plane:
                       topLeft: {x: 36, y: 27, z: 17}
@@ -13990,6 +14292,8 @@ MonoBehaviour:
                     - {x: 41, y: 29, z: 17}
                     - {x: 42, y: 29, z: 17}
                     - {x: 43, y: 29, z: 17}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 12}
                     plane:
                       topLeft: {x: 36, y: 30, z: 5}
@@ -14092,6 +14396,8 @@ MonoBehaviour:
                     - {x: 41, y: 30, z: 16}
                     - {x: 42, y: 30, z: 16}
                     - {x: 43, y: 30, z: 16}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 8, y: 12}
                     plane:
                       topLeft: {x: 36, y: 27, z: 5}
@@ -14194,6 +14500,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 12}
                     plane:
                       topLeft: {x: 36, y: 27, z: 5}
@@ -14236,6 +14544,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 3, y: 12}
                     plane:
                       topLeft: {x: 44, y: 27, z: 5}
@@ -14278,6 +14588,8 @@ MonoBehaviour:
                     - {x: 43, y: 27, z: 16}
                     - {x: 43, y: 28, z: 16}
                     - {x: 44, y: 29, z: 16}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             - childs: []
               cube:
@@ -14329,6 +14641,8 @@ MonoBehaviour:
                     - {x: 38, y: 30, z: 22}
                     - {x: 39, y: 30, z: 22}
                     - {x: 40, y: 30, z: 22}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 4}
                     plane:
                       topLeft: {x: 34, y: 27, z: 30}
@@ -14363,6 +14677,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 8}
                     plane:
                       topLeft: {x: 34, y: 31, z: 22}
@@ -14425,6 +14741,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 7, y: 8}
                     plane:
                       topLeft: {x: 34, y: 27, z: 22}
@@ -14487,6 +14805,8 @@ MonoBehaviour:
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
                     - {x: -1, y: -1, z: -1}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 4, y: 8}
                     plane:
                       topLeft: {x: 34, y: 27, z: 22}
@@ -14525,6 +14845,8 @@ MonoBehaviour:
                     - {x: 35, y: 28, z: 29}
                     - {x: 35, y: 29, z: 29}
                     - {x: 35, y: 30, z: 29}
+                    validIndicies: []
+                    validPoses: []
                   - size: {x: 4, y: 8}
                     plane:
                       topLeft: {x: 41, y: 27, z: 22}
@@ -14563,6 +14885,8 @@ MonoBehaviour:
                     - {x: 42, y: 28, z: 29}
                     - {x: 42, y: 29, z: 29}
                     - {x: 42, y: 30, z: 29}
+                    validIndicies: []
+                    validPoses: []
               depth: 5
             cube:
               topLeft: {x: 34, y: 26, z: 0}
@@ -14642,6 +14966,8 @@ MonoBehaviour:
                   - {x: 43, y: 30, z: 31}
                   - {x: 44, y: 30, z: 32}
                   - {x: 45, y: 30, z: 32}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 10, y: 4}
                   plane:
                     topLeft: {x: 36, y: 27, z: 41}
@@ -14688,6 +15014,8 @@ MonoBehaviour:
                   - {x: 43, y: 30, z: 42}
                   - {x: 44, y: 30, z: 42}
                   - {x: 45, y: 30, z: 42}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 10, y: 9}
                   plane:
                     topLeft: {x: 36, y: 31, z: 32}
@@ -14784,6 +15112,8 @@ MonoBehaviour:
                   - {x: -1, y: -1, z: -1}
                   - {x: -1, y: -1, z: -1}
                   - {x: -1, y: -1, z: -1}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 10, y: 9}
                   plane:
                     topLeft: {x: 36, y: 27, z: 32}
@@ -14880,6 +15210,8 @@ MonoBehaviour:
                   - {x: 43, y: 27, z: 40}
                   - {x: 44, y: 27, z: 40}
                   - {x: 45, y: 28, z: 40}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 4, y: 9}
                   plane:
                     topLeft: {x: 36, y: 27, z: 32}
@@ -14922,6 +15254,8 @@ MonoBehaviour:
                   - {x: 37, y: 28, z: 40}
                   - {x: 36, y: 29, z: 40}
                   - {x: 36, y: 30, z: 40}
+                  validIndicies: []
+                  validPoses: []
                 - size: {x: 4, y: 9}
                   plane:
                     topLeft: {x: 46, y: 27, z: 32}
@@ -14964,6 +15298,8 @@ MonoBehaviour:
                   - {x: 46, y: 28, z: 40}
                   - {x: 46, y: 29, z: 40}
                   - {x: 46, y: 30, z: 40}
+                  validIndicies: []
+                  validPoses: []
             depth: 4
           cube:
             topLeft: {x: 34, y: 26, z: 0}

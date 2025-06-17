@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 namespace Ingame
 {
-    public static class ItemSystem
+    public static class ItemSlotSystem
     {
         public static void Swap(ItemSlot from, ItemSlot to)
         {
@@ -86,7 +86,7 @@ namespace Ingame
             itemSlot.ownerContainer.SetItem(itemSlot.slotIdx, itemSlot.itemStack);
         }
 
-        public void SwapItemSlot(ItemSlot from, ItemSlot to) => ItemSystem.Swap(from, to);
+        public void SwapItemSlot(ItemSlot from, ItemSlot to) => ItemSlotSystem.Swap(from, to);
 
         public ItemStack AddItem(ItemStack itemStack)
         {
@@ -131,7 +131,7 @@ namespace Ingame
 
             if (toEquipSlot != null)
             {
-                ItemSystem.Swap(fromBagSlot, toEquipSlot);
+                ItemSlotSystem.Swap(fromBagSlot, toEquipSlot);
             }
         }
 
@@ -143,7 +143,7 @@ namespace Ingame
             ItemSlot emptyBagSlot = FindEmptySlotInBag();
             if (emptyBagSlot != null)
             {
-                ItemSystem.Swap(fromEquipSlot, emptyBagSlot);
+                ItemSlotSystem.Swap(fromEquipSlot, emptyBagSlot);
             }
         }
 
@@ -153,7 +153,7 @@ namespace Ingame
             ItemSlot toQuickSlot = quickSlotContainer.GetSlot(quickSlotID);
             if (toQuickSlot == null) return;
 
-            ItemSystem.Swap(fromSlot, toQuickSlot);
+            ItemSlotSystem.Swap(fromSlot, toQuickSlot);
         }
 
         public void UnAssign(QuickSlotID quickSlotID)

@@ -25,11 +25,11 @@ Transform:
   m_GameObject: {fileID: 730866429456014074}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1065106393557362875}
+  - {fileID: 7537721391915748120}
   m_Father: {fileID: 4236417734078427340}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5930453181841991602
@@ -80,8 +80,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b018882517ce564399a99ee7c981a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: 0
-  count: 1
+  onState:
+    m_PersistentCalls:
+      m_Calls: []
+  state: 0
 --- !u!114 &6029925807118904763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +99,6 @@ MonoBehaviour:
   rotateSpeed: 45
   hoverHeight: 0.1
   hoverSpeed: 2.5
-  body: {fileID: 0}
 --- !u!54 &3472905663924267051
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -145,7 +146,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.125, z: 0}
 --- !u!1001 &8159251500202598128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -154,6 +155,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 442923142130816117}
     m_Modifications:
+    - target: {fileID: 1846512860640204264, guid: 531361254acc3d84ca4ad4c0e2789fb2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846512860640204264, guid: 531361254acc3d84ca4ad4c0e2789fb2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846512860640204264, guid: 531361254acc3d84ca4ad4c0e2789fb2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846512860640204264, guid: 531361254acc3d84ca4ad4c0e2789fb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846512860640204264, guid: 531361254acc3d84ca4ad4c0e2789fb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846512860640204264, guid: 531361254acc3d84ca4ad4c0e2789fb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846512860640204264, guid: 531361254acc3d84ca4ad4c0e2789fb2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846512860640204264, guid: 531361254acc3d84ca4ad4c0e2789fb2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846512860640204264, guid: 531361254acc3d84ca4ad4c0e2789fb2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3063963066755623806, guid: 531361254acc3d84ca4ad4c0e2789fb2, type: 3}
       propertyPath: m_Name
       value: Leather_Leggins
@@ -215,8 +252,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 531361254acc3d84ca4ad4c0e2789fb2, type: 3}
---- !u!4 &1065106393557362875 stripped
+--- !u!4 &7537721391915748120 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 9219845480771352139, guid: 531361254acc3d84ca4ad4c0e2789fb2, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1846512860640204264, guid: 531361254acc3d84ca4ad4c0e2789fb2, type: 3}
   m_PrefabInstance: {fileID: 8159251500202598128}
   m_PrefabAsset: {fileID: 0}

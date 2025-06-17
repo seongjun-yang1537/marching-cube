@@ -8,11 +8,13 @@ namespace Ingame
     {
         public UnityEvent<Vector3> onPlayerTeleport = new();
 
-        private PlayerModel _playerModel;
-        public PlayerModel PlayerModel { get => _playerModel ??= FindPlayer(); }
+        private PlayerController _playerController;
+        public PlayerController PlayerController { get => _playerController ??= FindPlayerController(); }
 
-        private PlayerModel FindPlayer()
-            => GameObject.FindWithTag("Player")?.GetComponent<PlayerModel>();
+        public PlayerModel PlayerModel { get => PlayerController.playerModel; }
+
+        private PlayerController FindPlayerController()
+            => GameObject.FindWithTag("Player")?.GetComponent<PlayerController>();
 
         public void TeleportPlayer(Vector3 worldPosition)
         {

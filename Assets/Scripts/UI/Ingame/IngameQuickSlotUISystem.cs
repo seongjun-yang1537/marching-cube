@@ -7,6 +7,7 @@ namespace UI
 {
     public class IngameQuickSlotUISystem : UIComponentBahaviour
     {
+        private PlayerController playerController { get => PlayerManager.Instance.PlayerController; }
         private Inventory inventory { get => PlayerManager.Instance.PlayerModel.inventory; }
         public UnityEvent<int> onKeyDownQuick = new();
 
@@ -39,9 +40,13 @@ namespace UI
             slots.SetContainer(inventory.quickSlotContainer);
         }
 
+        private ItemStack GetQuickSlotItem(int num)
+            => inventory.quickSlotContainer[num];
+
         private void OnKeyDownQuick(int num)
         {
             uiSelection.SetIndex(num);
+            playerController.ChangeHeldItem(GetQuickSlotItem(num));
         }
     }
 }
