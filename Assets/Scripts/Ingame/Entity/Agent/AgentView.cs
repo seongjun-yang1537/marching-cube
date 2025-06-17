@@ -56,7 +56,6 @@ namespace Ingame
             GameObject go = CreateDropItem(itemStack);
             Transform tr = go.transform;
             tr.position = transform.position + Vector3.up;
-            Debug.Log(tr.position);
 
             Rigidbody rigidbody = go.GetComponent<Rigidbody>();
             rigidbody.AddForce(transform.forward * dropForce, ForceMode.Impulse);

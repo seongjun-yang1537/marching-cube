@@ -119,6 +119,11 @@ namespace Ingame
         public ItemStack TakeItem(EquipmentSlotID slotID, int count) => equipmentContainer.TakeToSlot((int)slotID, count);
         public ItemStack TakeItem(BagSlotID slotID, int count) => bagContainer.TakeToSlot((int)slotID, count);
         public ItemStack TakeItem(QuickSlotID slotID, int count) => quickSlotContainer.TakeToSlot((int)slotID, count);
+        public ItemStack TakeItem(ItemSlot itemSlot, int count)
+        {
+            if (itemSlot.ownerContainer == null) return ItemStack.Empty();
+            return itemSlot.ownerContainer.TakeToSlot(itemSlot.slotIdx, count);
+        }
 
         public void Equip(ItemSlot fromBagSlot)
         {

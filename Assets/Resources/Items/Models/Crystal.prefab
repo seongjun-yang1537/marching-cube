@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7048420503714354493}
   - component: {fileID: 7172456262472053727}
   - component: {fileID: 4772718726597935010}
+  - component: {fileID: 8200972726565615058}
   - component: {fileID: 4173127955596248042}
   - component: {fileID: 5898801609609371961}
   m_Layer: 8
@@ -65,6 +66,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 45
+  hoverHeight: 0.1
+  hoverSpeed: 2.5
+--- !u!114 &8200972726565615058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877661305527123002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cbe3403d0fb32c4684d109d95faab77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 0}
+  rotateSpeed: 30
   hoverHeight: 0.1
   hoverSpeed: 2.5
 --- !u!54 &4173127955596248042

@@ -32,11 +32,11 @@ namespace Ingame
             onHeldItem.Invoke(heldItemSlot);
         }
 
-        public void DropItem(ItemSlot itemSlot)
+        public void DropItem(ItemSlot itemSlot, int count = 1)
         {
             if (itemSlot.itemStack.IsEmpty) return;
             ItemStack itemStack = new ItemStack(itemSlot.itemStack);
-            inventory.RemoveItemSlot(itemSlot);
+            inventory.TakeItem(itemSlot, count);
 
             onDropItem.Invoke(itemStack);
             if (itemSlot.EqualSlot(heldItemSlot))

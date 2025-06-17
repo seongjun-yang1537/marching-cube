@@ -5660,6 +5660,9 @@ MonoBehaviour:
   onHeldItem:
     m_PersistentCalls:
       m_Calls: []
+  onDropItem:
+    m_PersistentCalls:
+      m_Calls: []
   nowSpeed: 0
   groundSpeed: 1
   flySpeed: 0
@@ -5779,6 +5782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c1c980ab70843b4385e42e676ec5bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropForce: 10
   heldItemSocket: {fileID: 1027181465956962402}
 --- !u!1001 &4036635404010310889
 PrefabInstance:
