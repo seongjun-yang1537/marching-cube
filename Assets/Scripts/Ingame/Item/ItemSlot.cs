@@ -27,5 +27,8 @@ namespace Ingame
             this.slotIdx = other.slotIdx;
             this.itemStack = new ItemStack(other.itemStack);
         }
+
+        public bool EqualSlot(ItemSlot other)
+            => slotType == other.slotType && slotIdx == other.slotIdx;
     }
 }

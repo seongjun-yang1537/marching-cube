@@ -36,7 +36,7 @@ namespace Ingame
 
             if (Input.GetKeyDown(KeyCode.Q))
             {
-
+                DropItem(playerModel.heldItemSlot);
             }
         }
 

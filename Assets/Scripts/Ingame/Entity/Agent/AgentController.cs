@@ -37,5 +37,10 @@ namespace Ingame
         {
             agentModel.SetHeldItem(itemSlot);
         }
+
+        public virtual void DropItem(ItemSlot itemSlot)
+        {
+            agentModel.DropItem(itemSlot);
+        }
     }
 }

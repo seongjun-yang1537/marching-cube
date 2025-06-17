@@ -8,6 +8,7 @@ namespace Ingame
     public class AgentModel : EntityModel
     {
         public UnityEvent<ItemSlot> onHeldItem = new();
+        public UnityEvent<ItemStack> onDropItem = new();
 
         public float nowSpeed;
         public float groundSpeed;
@@ -31,9 +32,15 @@ namespace Ingame
             onHeldItem.Invoke(heldItemSlot);
         }
 
-        public void DropHeldItem()
+        public void DropItem(ItemSlot itemSlot)
         {
+            if (itemSlot.itemStack.IsEmpty) return;
+            ItemStack itemStack = new ItemStack(itemSlot.itemStack);
+            inventory.RemoveItemSlot(itemSlot);
 
+            onDropItem.Invoke(itemStack);
+            if (itemSlot.EqualSlot(heldItemSlot))
+                onHeldItem.Invoke(heldItemSlot);
         }
     }
 }
