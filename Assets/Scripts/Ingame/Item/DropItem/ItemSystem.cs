@@ -5,7 +5,32 @@ namespace Ingame
 {
     public class ItemSystem : Singleton<ItemSystem>
     {
-        public static ItemController Spawn(ItemSpawnContext context)
+        public static ItemController SpawnHeldItem(ItemSpawnContext context)
+        {
+            GameObject go = Instantiate(ItemDB.GetItemModel(context.itemID));
+            go.name = $"[HeldItem]{context.itemID}";
+
+            Transform tr = go.transform;
+            tr.SetParent(Instance.transform);
+            tr.position = context.position;
+
+            ItemModel model = go.GetComponent<ItemModel>();
+            model.itemStack = context.itemStack;
+
+            ItemController controller = go.GetComponent<ItemController>();
+            controller.ChangeItemState(ItemModelState.Held);
+
+            return controller;
+        }
+
+        public static ItemController SpawnHeldItem(Vector3 position, ItemStack itemStack)
+            => SpawnHeldItem(ItemSpawnContext.Builder()
+                .SetPosition(position)
+                .SetItemStack(itemStack)
+                .Build()
+            );
+
+        public static ItemController SpawnDropItem(ItemSpawnContext context)
         {
             GameObject go = Instantiate(ItemDB.GetItemModel(context.itemID));
             go.name = $"[DropItem]{context.itemID}";
@@ -18,16 +43,17 @@ namespace Ingame
             model.itemStack = context.itemStack;
 
             ItemController controller = go.GetComponent<ItemController>();
+            controller.ChangeItemState(ItemModelState.Dropped);
 
             return controller;
         }
 
-        public static ItemController Spawn(Vector3 position, ItemStack itemStack)
-            => Spawn(ItemSpawnContext.Builder()
+        public static ItemController SpawnDropItem(Vector3 position, ItemStack itemStack)
+            => SpawnDropItem(ItemSpawnContext.Builder()
                 .SetPosition(position)
                 .SetItemStack(itemStack)
                 .Build()
-                );
+            );
     }
 
     public struct ItemSpawnContext

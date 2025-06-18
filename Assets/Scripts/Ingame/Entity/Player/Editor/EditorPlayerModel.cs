@@ -13,7 +13,7 @@ namespace Ingame
             playerModel = (PlayerModel)target;
         }
 
-        bool isPlayerFold;
+        bool isPlayerFold = true;
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
@@ -27,7 +27,17 @@ namespace Ingame
 
         private SUIElement RenderPlayerModel()
         {
-            return SEditorGUILayout.Vertical();
+            return SEditorGUILayout.Vertical()
+            .Content(
+                SEditorGUILayout.Float($"Stemina ({playerModel.steminaRatio.ToString("F2")})%", playerModel.stemina)
+                .OnValueChanged(value => playerModel.SetStemina(value))
+                + SEditorGUILayout.Float("Max Stemina", playerModel.steminaMax)
+                .OnValueChanged(value => playerModel.SetSteminaMax(value))
+                + SEditorGUILayout.Float($"Fuel ({playerModel.fuelRatio.ToString("F2")})%", playerModel.fuel)
+                .OnValueChanged(value => playerModel.SetStemina(value))
+                + SEditorGUILayout.Float("Max Fuel", playerModel.fuelMax)
+                .OnValueChanged(value => playerModel.SetSteminaMax(value))
+            );
         }
     }
 }

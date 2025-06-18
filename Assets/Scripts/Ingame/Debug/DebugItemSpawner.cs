@@ -20,7 +20,7 @@ namespace Ingame
         {
             ItemStack itemStack = new ItemStack(itemID, count);
 
-            ItemController controller = ItemSystem.Spawn(transform.position, itemStack);
+            ItemController controller = ItemSystem.SpawnDropItem(transform.position, itemStack);
             Rigidbody rigidbody = controller.GetComponent<Rigidbody>();
 
             Vector3 upVector = (Random.insideUnitSphere + Vector3.up * 5).normalized;

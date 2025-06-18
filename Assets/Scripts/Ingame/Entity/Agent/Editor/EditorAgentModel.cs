@@ -24,7 +24,7 @@ namespace Ingame
             guiEquipment = InnerEditor<AgentModel>.CreateInnerGUI<EquipmentGUI>(agentModel);
         }
 
-        bool isFoldAgent;
+        bool isFoldAgent = true;
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();

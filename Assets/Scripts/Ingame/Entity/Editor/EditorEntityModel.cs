@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using Corelib.SUI;
+using Unity.VisualScripting;
 
 namespace Ingame
 {
@@ -13,21 +14,30 @@ namespace Ingame
             entityModel = (EntityModel)target;
         }
 
-        bool isEntityFold;
+        bool isEntityFold = true;
         public override void OnInspectorGUI()
         {
+            serializedObject.Update();
+
             SEditorGUILayout.FoldGroup("Entity Model", isEntityFold)
             .OnValueChanged(value => isEntityFold = value)
             .Content(
                 RenderEntityModel()
             )
             .Render();
+
+            serializedObject.ApplyModifiedProperties();
         }
 
         private SUIElement RenderEntityModel()
         {
             return SEditorGUILayout.Vertical()
-            .Content(SEditorGUILayout.Label("hello"));
+            .Content(
+                SEditorGUILayout.Float($"Life ({entityModel.lifeRatio.ToString("F2")})%", entityModel.life)
+                .OnValueChanged(value => entityModel.SetLife(value))
+                + SEditorGUILayout.Float("Max Life", entityModel.lifeMax)
+                .OnValueChanged(value => entityModel.SetLifeMax(value))
+            );
         }
     }
 }

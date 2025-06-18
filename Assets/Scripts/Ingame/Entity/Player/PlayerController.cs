@@ -1,11 +1,15 @@
 using UI;
+using Unity.VisualScripting;
 using UnityEngine;
+using Zenject;
 
 namespace Ingame
 {
     public class PlayerController : AgentController
     {
         public PlayerModel playerModel { get; private set; }
+
+        [Inject] private IJetpackable jetpackable;
 
         protected void Awake()
         {
@@ -26,7 +30,13 @@ namespace Ingame
                 Jump();
             }
 
-            playerModel.isSprint = Input.GetKey(playerModel.sprintKey);
+            playerModel.isSprint = Input.GetKey(playerModel.sprintKey) && playerModel.stemina > 0.5f;
+
+            if (Input.GetKey(playerModel.sprintKey) && playerModel.stemina > 0f)
+                playerModel.ReduceStemina(Time.deltaTime);
+            else
+                playerModel.RecoverStemina(Time.deltaTime * playerModel.steminaMax);
+
             playerModel.nowSpeed = playerModel.isSprint ? playerModel.sprintSpeed : playerModel.groundSpeed;
 
             if (Input.GetKeyDown(KeyCode.E))
@@ -37,6 +47,15 @@ namespace Ingame
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 DropItem(playerModel.heldItemSlot);
+            }
+
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                jetpackable.ActivateJetpack();
+            }
+            else
+            {
+                jetpackable.DeactivateJetpack();
             }
         }
 
