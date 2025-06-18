@@ -15,6 +15,7 @@ namespace Ingame
         Iron_Pickaxe,
         Iron_Axe,
         Iron_Shovel,
+        Torch,
         COUNT,
     }
 }
