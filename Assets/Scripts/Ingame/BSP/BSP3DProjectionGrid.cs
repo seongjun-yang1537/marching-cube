@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Corelib.Utils;
 using UnityEngine;
 
 namespace Ingame
@@ -86,6 +87,9 @@ namespace Ingame
             ret = hit.point;
             return true;
         }
+
+        public List<Vector2Int> GetValidIndicies()
+            => CIterator.GetArray2D(size).Where(idx => this[idx] != -Vector3Int.one).ToList();
 
         public Vector3Int this[int x, int y]
         {

@@ -129,8 +129,10 @@ namespace Ingame
                 + SEditorGUILayout.Button("Generate")
                 .OnClick(() =>
                 {
+                    MT19937 rng = script.seed == -1 ? MT19937.Create() : MT19937.Create(script.seed);
+
                     BSP3DGenerationContext context =
-                        new BSP3DGenerationContext.Builder(MT19937.Create(script.seed), script)
+                        new BSP3DGenerationContext.Builder(rng, script)
                         .Preset(BSP3DGenerationPreset.CAVE)
                         .ProgressCallback(progress => progressGeneration = progress)
                         .Build();
