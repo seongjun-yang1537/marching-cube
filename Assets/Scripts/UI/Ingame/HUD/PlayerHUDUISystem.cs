@@ -12,10 +12,8 @@ namespace UI
 
         private PlayerModel playerModel { get => PlayerManager.Instance.PlayerModel; }
 
-        protected void Awake()
+        protected void Start()
         {
-            base.Awake();
-
             uiPlayerLifeGauge = GetChildUI<UIPlayerLifeGauge>();
             uiPlayerSteminaGauge = GetChildUI<UIPlayerSteminaGauge>();
             uiPlayerLifeText = GetChildUI<UIPlayerLifeText>();
@@ -25,10 +23,7 @@ namespace UI
             playerModel.onLifeMax.AddListener(lifeMax => Render());
             playerModel.onStemina.AddListener(stemina => Render());
             playerModel.onSteminaMax.AddListener(steminaMax => Render());
-        }
 
-        protected void Start()
-        {
             Render();
         }
 

@@ -1,7 +1,6 @@
 using UI;
 using Unity.VisualScripting;
 using UnityEngine;
-using Zenject;
 
 namespace Ingame
 {
@@ -9,7 +8,12 @@ namespace Ingame
     {
         public PlayerModel playerModel { get; private set; }
 
-        [Inject] private IJetpackable jetpackable;
+        private IJetpackable jetpackable;
+
+        public void Construct(IJetpackable jetpackable)
+        {
+            this.jetpackable = jetpackable;
+        }
 
         protected void Awake()
         {

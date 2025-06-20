@@ -91995,21 +91995,28 @@ MonoBehaviour:
   _monoInstallers: []
   _installerPrefabs: []
   _autoRun: 1
+  <Initialized>k__BackingField: 0
   OnPreInstall:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   OnPostInstall:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   OnPreResolve:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   OnPostResolve:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   _parentNewObjectsUnderSceneContext: 0
   _contractNames: []
   _parentContractNames: []
+  _hasInstalled: 0
+  _hasResolved: 0
 --- !u!4 &1412333933
 Transform:
   m_ObjectHideFlags: 0
@@ -94013,11 +94020,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27a8df9f89147cb4e8c04bfcc67064ff, type: 3}
---- !u!1 &1770986193 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9163433485311794449, guid: eb3c2adc046946545a6597e2dfef816a, type: 3}
-  m_PrefabInstance: {fileID: 8586829525847751215}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1805150145
 GameObject:
   m_ObjectHideFlags: 0
@@ -107467,10 +107469,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1805150146}
     m_Modifications:
-    - target: {fileID: 4434471788499698983, guid: eb3c2adc046946545a6597e2dfef816a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6177677663973957952, guid: eb3c2adc046946545a6597e2dfef816a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.81
@@ -107518,45 +107516,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9163433485311794449, guid: eb3c2adc046946545a6597e2dfef816a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8586829525847751226}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb3c2adc046946545a6597e2dfef816a, type: 3}
 --- !u!4 &8586829525847751216 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6177677663973957952, guid: eb3c2adc046946545a6597e2dfef816a, type: 3}
   m_PrefabInstance: {fileID: 8586829525847751215}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8586829525847751225 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6213451437288546931, guid: eb3c2adc046946545a6597e2dfef816a, type: 3}
-  m_PrefabInstance: {fileID: 8586829525847751215}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770986193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3fdedc14c1d1d24aae6b9a757e288a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8586829525847751226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770986193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08eca9f7688a0a24685b89133b020c8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _scriptableObjectInstallers: []
-  _monoInstallers:
-  - {fileID: 8586829525847751225}
-  _installerPrefabs: []
-  _autoRun: 1
-  _kernel: {fileID: 0}
 --- !u!224 &8592749557351373676
 RectTransform:
   m_ObjectHideFlags: 0

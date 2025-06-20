@@ -25148,7 +25148,7 @@ GameObject:
   - component: {fileID: 7333252379509375853}
   - component: {fileID: 5576890513292453202}
   - component: {fileID: 6656969449296932791}
-  - component: {fileID: 6213451437288546931}
+  - component: {fileID: 7630394247024801388}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -25348,14 +25348,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9163433485311794449}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c1c980ab70843b4385e42e676ec5bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dropForce: 10
   heldItemSocket: {fileID: 1027181465956962402}
---- !u!114 &6213451437288546931
+--- !u!114 &7630394247024801388
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -25367,6 +25367,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3fdedc14c1d1d24aae6b9a757e288a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentReference:
+    TypeName: 
+  autoRun: 1
+  autoInjectGameObjects: []
+  playerModel: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!1001 &4036635404010310889
 PrefabInstance:
   m_ObjectHideFlags: 0

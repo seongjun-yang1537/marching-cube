@@ -1,15 +1,12 @@
 using UnityEngine;
-using Zenject;
+using VContainer;
 
 namespace Ingame
 {
     public class DefaultJetpackable : MonoBehaviour, IJetpackable
     {
-
-
         private PlayerModel playerModel;
 
-        [Inject]
         public void Construct(PlayerModel model)
         {
             playerModel = model;
