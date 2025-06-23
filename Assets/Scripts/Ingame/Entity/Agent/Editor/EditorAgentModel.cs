@@ -4,41 +4,65 @@ using UnityEditor;
 using UnityEngine;
 namespace Ingame
 {
-    [CustomEditor(typeof(AgentModel))]
-    public partial class EditorAgentModel : InnerEditor<AgentModel>
+    [CustomEditor(typeof(AgentModel), true)]
+    public partial class EditorAgentModel : EditorEntityModel
     {
+        AgentModel agentModel;
+
         private InnerGUI<AgentModel> guiBag;
         private InnerGUI<AgentModel> guiQuickSlot;
         private InnerGUI<AgentModel> guiEquipment;
 
-        public void OnEnable()
+        protected void OnEnable()
         {
             base.OnEnable();
 
-            guiBag = AddInnerGUI<BagGUI>();
-            guiQuickSlot = AddInnerGUI<QuickSlotGUI>();
-            guiEquipment = AddInnerGUI<EquipmentGUI>();
+            agentModel = (AgentModel)target;
+
+            guiBag = InnerEditor<AgentModel>.CreateInnerGUI<BagGUI>(agentModel);
+            guiQuickSlot = InnerEditor<AgentModel>.CreateInnerGUI<QuickSlotGUI>(agentModel);
+            guiEquipment = InnerEditor<AgentModel>.CreateInnerGUI<EquipmentGUI>(agentModel);
         }
 
+        bool isFoldAgent = true;
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
-            Inspector_Inventory();
+
+            SEditorGUILayout.FoldGroup("Agent Model", isFoldAgent)
+            .OnValueChanged(value => isFoldAgent = value)
+            .Content(
+                RenderAgentModel()
+            )
+            .Render();
+        }
+
+        private SUIElement RenderAgentModel()
+        {
+            return SEditorGUILayout.Vertical()
+                .Content(
+                    RenderHeldItem()
+                    + RenderInventory()
+                );
+        }
+
+        private SUIElement RenderHeldItem()
+        {
+            return SEditorGUILayout.Vertical()
+            .Content(
+
+            );
         }
 
         bool showInventory;
         bool showQuickSlot;
         bool showEquipment;
 
-        private void Inspector_Inventory()
+        private SUIElement RenderInventory()
         {
-            SEditorGUILayout.Vertical("box")
+            return SEditorGUILayout.Group("Inventory")
             .Content(
-                SEditorGUILayout.Label("[Inventory]")
-                .Bold()
-                .Align(TextAnchor.MiddleCenter)
-
-                + SEditorGUILayout.Vertical("helpbox")
+                SEditorGUILayout.Vertical("helpbox")
                 .Content(
                     SEditorGUILayout.Horizontal()
                     .Content(
@@ -48,7 +72,7 @@ namespace Ingame
                     )
                     + SEditorGUILayout.Action(() =>
                     {
-                        if (showInventory) guiBag.OnInspectorGUI();
+                        if (showInventory) guiBag?.OnInspectorGUI();
                     })
                 )
 
@@ -62,7 +86,7 @@ namespace Ingame
                     )
                     + SEditorGUILayout.Action(() =>
                     {
-                        if (showQuickSlot) guiQuickSlot.OnInspectorGUI();
+                        if (showQuickSlot) guiQuickSlot?.OnInspectorGUI();
                     })
                 )
 
@@ -76,30 +100,10 @@ namespace Ingame
                     )
                     + SEditorGUILayout.Action(() =>
                     {
-                        if (showEquipment) guiEquipment.OnInspectorGUI();
+                        if (showEquipment) guiEquipment?.OnInspectorGUI();
                     })
                 )
-            )
-            .Render();
-        }
-
-        private void RenderInventory()
-        {
-            SEditorGUILayout.Vertical("box")
-            .Content(
-
-            )
-            .Render();
-        }
-
-        private void RenderQuickSlot()
-        {
-
-        }
-
-        private void RenderEquipment()
-        {
-
+            );
         }
     }
 }

@@ -58,10 +58,6 @@ namespace Ingame
 
             transform.DestroyAllChildrenWithEditor();
             yield return BSP3DGenerator.GenerateAsync(context);
-
-
-            ScalarFieldModel.scalarField = mapAsset.scalarField;
-            yield return ScalarFieldModel.GenerateMarchingCubeMesh();
         }
 
         public BSP3DRoom FindPortalRoom() => mapAsset.FindPortalRoom();
@@ -207,7 +203,7 @@ namespace Ingame
 
                         CIterator.GetArray2D(grid.size)
                             .Where(pos => grid[pos] != -Vector3Int.one)
-                            .ForEach(pos => SGizmos.Cube(grid[pos], Vector3.one).Render());
+                            .ForEach(pos => SGizmos.Sphere(grid[pos], 0.25f).Render());
                     }
                 })
             )

@@ -7,7 +7,7 @@ using UnityEditor;
 using UnityEngine;
 namespace Ingame
 {
-    public partial class EditorAgentModel : InnerEditor<AgentModel>
+    public partial class EditorAgentModel : EditorEntityModel
     {
         private class BagGUI : InnerGUI<AgentModel>
         {

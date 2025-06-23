@@ -2143,11 +2143,11 @@ MonoBehaviour:
     visibleBSPArea: 1
     visibleRoom: 0
     visibleRoomGraph: 0
-    visibleRoomAreaGrid: 0
     _visibleRoomProjectionGrid:
       m_keys: 000000000100000002000000030000000400000005000000
       m_values: 000000000000
   mapAsset: {fileID: 11400000, guid: d080a6e35b751f844bfd53533a12fbaf, type: 2}
+  seed: 0
 --- !u!4 &774426675
 Transform:
   m_ObjectHideFlags: 0
@@ -4259,11 +4259,11 @@ MonoBehaviour:
     visibleBSPArea: 0
     visibleRoom: 0
     visibleRoomGraph: 0
-    visibleRoomAreaGrid: 0
     _visibleRoomProjectionGrid:
       m_keys: 000000000100000002000000030000000400000005000000
       m_values: 000000000000
   mapAsset: {fileID: 11400000, guid: 505046a059d7d8a48894937b17db21fe, type: 2}
+  seed: 0
 --- !u!4 &1278198101
 Transform:
   m_ObjectHideFlags: 0

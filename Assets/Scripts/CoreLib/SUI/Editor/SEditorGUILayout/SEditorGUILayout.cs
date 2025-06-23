@@ -80,5 +80,8 @@ namespace Corelib.SUI
                 EditorGUI.DrawRect(rect, new Color(0.3f, 0.3f, 0.3f));
                 GUILayout.Space(1f);
             });
+
+        public static SEditorGUILayoutFoldGroup FoldGroup(string label, bool foldout)
+            => new SEditorGUILayoutFoldGroup(label, foldout);
     }
 }

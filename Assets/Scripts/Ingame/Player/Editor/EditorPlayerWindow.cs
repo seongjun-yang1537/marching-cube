@@ -19,7 +19,8 @@ namespace Ingame
 
         private void OnEnable()
         {
-            drawer = new(PlayerModel.inventory);
+            if (PlayerModel != null)
+                drawer = new(PlayerModel.inventory);
             EditorApplication.playModeStateChanged += OnPlayModeStateChange;
         }
 
@@ -34,6 +35,7 @@ namespace Ingame
             {
                 case PlayModeStateChange.EnteredPlayMode:
                     _playerModel = null;
+                    if (PlayerModel == null) return;
                     drawer = new(PlayerModel.inventory);
                     break;
             }
@@ -47,7 +49,7 @@ namespace Ingame
                 SEditorGUILayout.Object("Player Model", PlayerModel, typeof(PlayerModel))
                 + SEditorGUILayout.Group("Inventory")
                 .Content(
-                    SEditorGUILayout.Action(() => drawer.OnInspectorGUI())
+                    SEditorGUILayout.Action(() => drawer?.OnInspectorGUI())
                 )
             )
             .Render();

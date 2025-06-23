@@ -25,7 +25,9 @@ namespace Ingame
             .AddStep(new Pipelines.CellularAutomataProcessor())
             .AddStep(new Pipelines.ScalaFieldPostProcessor())
             .AddStep(new Pipelines.RoomDataInjection())
-            .AddStep(new Pipelines.RoomObjectSpawner());
+            .AddStep(new Pipelines.ScalarFieldMeshBuilder())
+            .AddStep(new Pipelines.RoomObjectSpawner())
+            .AddStep(new Pipelines.RoomEntitySpawner());
 
         private static readonly BSP3DGenerationPipeline testbedPipeline =
             BSP3DGenerationPipeline.Create()
@@ -36,6 +38,7 @@ namespace Ingame
             .AddStep(new Pipelines.ScalarFieldGenerator())
             .AddStep(new Pipelines.ScalaFieldPostProcessor())
             .AddStep(new Pipelines.RoomDataInjection())
+            .AddStep(new Pipelines.ScalarFieldMeshBuilder())
             .AddStep(new Pipelines.RoomObjectSpawner());
 
         public static IEnumerator GenerateAsync(BSP3DGenerationContext context)

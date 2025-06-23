@@ -18,7 +18,9 @@ namespace Ingame
 
         public void Spawn()
         {
-            DropItemController controller = DropItemSystem.Spawn(transform.position, itemID, count);
+            ItemStack itemStack = new ItemStack(itemID, count);
+
+            ItemController controller = ItemSystem.SpawnDropItem(transform.position, itemStack);
             Rigidbody rigidbody = controller.GetComponent<Rigidbody>();
 
             Vector3 upVector = (Random.insideUnitSphere + Vector3.up * 5).normalized;

@@ -12,6 +12,10 @@ namespace Ingame
         Diamond,
         Wood_Sword,
         Crystal,
+        Iron_Pickaxe,
+        Iron_Axe,
+        Iron_Shovel,
+        Torch,
         COUNT,
     }
 }

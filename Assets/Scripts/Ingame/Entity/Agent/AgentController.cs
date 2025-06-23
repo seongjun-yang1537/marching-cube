@@ -32,5 +32,15 @@ namespace Ingame
         {
             return moveable?.IsGrounded() ?? false;
         }
+
+        public virtual void ChangeHeldItem(ItemSlot itemSlot)
+        {
+            agentModel.SetHeldItem(itemSlot);
+        }
+
+        public virtual void DropItem(ItemSlot itemSlot)
+        {
+            agentModel.DropItem(itemSlot);
+        }
     }
 }

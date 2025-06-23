@@ -21,16 +21,6 @@ namespace MCube
         [HideInInspector]
         public bool bVisibleMarchingCubeGizmos = true;
 
-        private MeshFilter _meshFilter;
-        private MeshFilter MeshFilter { get => _meshFilter ??= GetComponent<MeshFilter>(); }
-
-
-        private MeshCollider _meshCollider;
-        private MeshCollider MeshCollider { get => _meshCollider ??= GetComponent<MeshCollider>(); }
-
-        private MeshRenderer _meshRenderer;
-        private MeshRenderer MeshRenderer { get => _meshRenderer ??= GetComponent<MeshRenderer>(); }
-
         public void GenerateMarchingCube()
         {
             GenerateMarchingCubeMesh();
@@ -41,8 +31,11 @@ namespace MCube
             Mesh mesh = new();
             yield return CreateMarchingCubeMesh(ret => mesh = ret);
 
-            MeshFilter.mesh = mesh;
-            MeshCollider.sharedMesh = mesh;
+            MeshFilter meshFilter = GetComponent<MeshFilter>();
+            MeshCollider meshCollider = GetComponent<MeshCollider>();
+
+            meshFilter.mesh = mesh;
+            meshCollider.sharedMesh = mesh;
 
             yield return null;
         }
@@ -53,7 +46,9 @@ namespace MCube
             yield return MarchingCubeMesher.Create(scalarField).Build(ret => mesh = ret);
 
             // MarchingCubeMesher.ApplyContourLineColor(scalarField, mesh);
-            MeshRenderer.material = caveMaterial;
+            MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+
+            meshRenderer.material = caveMaterial;
 
             callback(mesh);
         }
