@@ -79,7 +79,7 @@ namespace UI
             {
                 UIItemSlot uiItemSlot = GetItemSlotByEventData(eventData);
                 if (uiItemSlot == null) return;
-                inventory.SwapItemSlot(selectedItemSlot, uiItemSlot.itemSlot);
+                inventory.Swap(selectedItemSlot, uiItemSlot.itemSlot);
                 SelectSlot(uiItemSlot);
                 uiDraggingItem.SetItemStack(null);
             }

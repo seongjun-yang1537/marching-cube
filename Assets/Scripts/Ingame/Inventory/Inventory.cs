@@ -6,47 +6,6 @@ using UnityEngine.Events;
 
 namespace Ingame
 {
-    public static class ItemSlotSystem
-    {
-        public static void Swap(ItemSlot from, ItemSlot to)
-        {
-            if (from == null || to == null) return;
-            if (from.ownerContainer == to.ownerContainer)
-            {
-                from.ownerContainer.SwapSlot(from.slotIdx, to.slotIdx);
-            }
-            else
-            {
-                var fromContainer = from.ownerContainer;
-                var toContainer = to.ownerContainer;
-                ItemStack fromItem = new ItemStack(from.itemStack);
-                ItemStack toItem = new ItemStack(to.itemStack);
-                if (!fromContainer.CanAcceptItem(from.slotIdx, toItem) ||
-                    !toContainer.CanAcceptItem(to.slotIdx, fromItem))
-                {
-                    return;
-                }
-
-                fromContainer.SetItem(from.slotIdx, toItem);
-                toContainer.SetItem(to.slotIdx, fromItem);
-            }
-        }
-
-        public static void Move(ItemSlot from, ItemSlot to)
-        {
-            if (from == null || to == null || from.itemStack.IsEmpty) return;
-            if (to.itemStack.IsEmpty || to.itemStack.itemID == from.itemStack.itemID)
-            {
-                ItemStack remainder = to.ownerContainer.AddToSlot(to.slotIdx, from.itemStack);
-                from.ownerContainer.SetItem(from.slotIdx, remainder);
-            }
-            else
-            {
-                Swap(from, to);
-            }
-        }
-    }
-
     [Serializable]
     public class Inventory
     {
@@ -86,7 +45,43 @@ namespace Ingame
             itemSlot.ownerContainer.SetItem(itemSlot.slotIdx, itemSlot.itemStack);
         }
 
-        public void SwapItemSlot(ItemSlot from, ItemSlot to) => ItemSlotSystem.Swap(from, to);
+        public void Swap(ItemSlot from, ItemSlot to)
+        {
+            if (from == null || to == null) return;
+            if (from.ownerContainer == to.ownerContainer)
+            {
+                from.ownerContainer.SwapSlot(from.slotIdx, to.slotIdx);
+            }
+            else
+            {
+                var fromContainer = from.ownerContainer;
+                var toContainer = to.ownerContainer;
+                ItemStack fromItem = new ItemStack(from.itemStack);
+                ItemStack toItem = new ItemStack(to.itemStack);
+                if (!fromContainer.CanAcceptItem(from.slotIdx, toItem) ||
+                    !toContainer.CanAcceptItem(to.slotIdx, fromItem))
+                {
+                    return;
+                }
+
+                fromContainer.SetItem(from.slotIdx, toItem);
+                toContainer.SetItem(to.slotIdx, fromItem);
+            }
+        }
+
+        public void Move(ItemSlot from, ItemSlot to)
+        {
+            if (from == null || to == null || from.itemStack.IsEmpty) return;
+            if (to.itemStack.IsEmpty || to.itemStack.itemID == from.itemStack.itemID)
+            {
+                ItemStack remainder = to.ownerContainer.AddToSlot(to.slotIdx, from.itemStack);
+                from.ownerContainer.SetItem(from.slotIdx, remainder);
+            }
+            else
+            {
+                Swap(from, to);
+            }
+        }
 
         public ItemStack AddItem(ItemStack itemStack)
         {
@@ -136,7 +131,7 @@ namespace Ingame
 
             if (toEquipSlot != null)
             {
-                ItemSlotSystem.Swap(fromBagSlot, toEquipSlot);
+                Swap(fromBagSlot, toEquipSlot);
             }
         }
 
@@ -148,7 +143,7 @@ namespace Ingame
             ItemSlot emptyBagSlot = FindEmptySlotInBag();
             if (emptyBagSlot != null)
             {
-                ItemSlotSystem.Swap(fromEquipSlot, emptyBagSlot);
+                Swap(fromEquipSlot, emptyBagSlot);
             }
         }
 
@@ -158,7 +153,7 @@ namespace Ingame
             ItemSlot toQuickSlot = quickSlotContainer.GetSlot(quickSlotID);
             if (toQuickSlot == null) return;
 
-            ItemSlotSystem.Swap(fromSlot, toQuickSlot);
+            Swap(fromSlot, toQuickSlot);
         }
 
         public void UnAssign(QuickSlotID quickSlotID)
